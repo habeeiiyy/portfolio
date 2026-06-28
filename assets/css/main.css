@@ -729,8 +729,9 @@ section,
   justify-content: center;
   overflow: hidden;
   background:
-    radial-gradient(circle at top left, rgba(255, 255, 255, 0.16), transparent 28%),
-    linear-gradient(135deg, #08131f 0%, #12324a 45%, #0d1b2a 100%);
+    linear-gradient(135deg, rgba(6, 15, 29, 0.95) 0%, rgba(17, 63, 96, 0.75) 45%, rgba(9, 25, 43, 0.95) 100%),
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.18), transparent 28%),
+    linear-gradient(90deg, #0b1424 0%, #153a56 100%);
 }
 
 .hero::before {
