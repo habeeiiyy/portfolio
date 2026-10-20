@@ -42,13 +42,13 @@
         </button>
         <nav class="titlebar-menus" aria-label="Window Menu">
           <button type="button" class="titlebar-menu-item" onclick="window.switchFile('socials.json')">File</button>
-          <button type="button" class="titlebar-menu-item" onclick="window.switchFile('about.html')">Edit</button>
-          <button type="button" class="titlebar-menu-item" onclick="window.switchFile('skills.json')">Selection</button>
-          <button type="button" class="titlebar-menu-item" onclick="window.switchFile('services.py')">View</button>
-          <button type="button" class="titlebar-menu-item" onclick="window.switchFile('resume.md')">Go</button>
+          <button type="button" class="titlebar-menu-item" onclick="window.switchFile('socials.json')">Edit</button>
+          <button type="button" class="titlebar-menu-item" onclick="window.switchFile('socials.json')">Selection</button>
+          <button type="button" class="titlebar-menu-item" onclick="window.switchFile('socials.json')">View</button>
+          <button type="button" class="titlebar-menu-item" onclick="window.switchFile('socials.json')">Go</button>
           <button type="button" class="titlebar-menu-item" onclick="window.toggleTerminal()">Run</button>
           <button type="button" class="titlebar-menu-item" onclick="window.toggleTerminal()">Terminal</button>
-          <button type="button" class="titlebar-menu-item" onclick="window.switchFile('contact.html')">Help</button>
+          <button type="button" class="titlebar-menu-item" onclick="window.switchFile('socials.json')">Help</button>
         </nav>
       </div>
 
@@ -79,14 +79,14 @@
           <button type="button" id="activity-explorer-btn" class="activity-btn active" title="Explorer (Ctrl+B)" aria-label="Explorer">
             <i class="bi bi-files" aria-hidden="true"></i>
           </button>
-          <button type="button" class="activity-btn" title="Search Files" aria-label="Search" onclick="window.switchFile('skills.json')">
+          <button type="button" class="activity-btn" title="Search Files" aria-label="Search" onclick="window.switchFile('socials.json')">
             <i class="bi bi-search" aria-hidden="true"></i>
           </button>
           <button type="button" class="activity-btn" title="Ongoing Project: SmashUp" aria-label="SmashUp Repo" onclick="window.open('https://github.com/habeeiiyy/SmashUp', '_blank', 'noopener,noreferrer')">
             <i class="bi bi-code-slash" style="color: #55ff55;" aria-hidden="true"></i>
             <span class="activity-badge">NEW</span>
           </button>
-          <button type="button" class="activity-btn" title="Services &amp; Scalability" aria-label="Services" onclick="window.switchFile('services.py')">
+          <button type="button" class="activity-btn" title="Services &amp; Scalability" aria-label="Services" onclick="window.switchFile('socials.json')">
             <i class="bi bi-grid-fill" aria-hidden="true"></i>
           </button>
           <button type="button" id="activity-terminal-btn" class="activity-btn" title="Interactive Terminal (Ctrl+`)" aria-label="Terminal">
@@ -124,43 +124,43 @@
             <li role="none">
               <a href="index.html" class="explorer-item" data-file="home.py" role="treeitem">
                 <i class="bi bi-filetype-py file-icon icon-py" aria-hidden="true"></i>
-                <span>home.py</span>
+                <span>home.py <span class="tab-hint">(Overview)</span></span>
               </a>
             </li>
             <li role="none">
               <a href="about.html" class="explorer-item" data-file="about.html" role="treeitem">
                 <i class="bi bi-filetype-html file-icon icon-html" aria-hidden="true"></i>
-                <span>about.html</span>
+                <span>about.html <span class="tab-hint">(About)</span></span>
               </a>
             </li>
             <li role="none">
               <a href="resume.html" class="explorer-item" data-file="resume.md" role="treeitem">
                 <i class="bi bi-filetype-md file-icon icon-md" aria-hidden="true"></i>
-                <span>resume.md</span>
+                <span>resume.md <span class="tab-hint">(Growth)</span></span>
               </a>
             </li>
             <li role="none">
               <a href="skills.html" class="explorer-item" data-file="skills.json" role="treeitem">
                 <i class="bi bi-filetype-json file-icon icon-json" aria-hidden="true"></i>
-                <span>skills.json</span>
+                <span>skills.json <span class="tab-hint">(Learning)</span></span>
               </a>
             </li>
             <li role="none">
               <a href="services.html" class="explorer-item" data-file="services.py" role="treeitem">
                 <i class="bi bi-filetype-py file-icon icon-py" aria-hidden="true"></i>
-                <span>services.py</span>
+                <span>services.py <span class="tab-hint">(Focus)</span></span>
               </a>
             </li>
             <li role="none">
               <a href="contact.html" class="explorer-item" data-file="contact.html" role="treeitem">
                 <i class="bi bi-filetype-html file-icon icon-html" aria-hidden="true"></i>
-                <span>contact.html</span>
+                <span>contact.html <span class="tab-hint">(Contact)</span></span>
               </a>
             </li>
             <li role="none">
               <a href="socials.html" class="explorer-item active" data-file="socials.json" role="treeitem">
                 <i class="bi bi-filetype-json file-icon icon-json" aria-hidden="true"></i>
-                <span>socials.json</span>
+                <span>socials.json <span class="tab-hint">(Socials)</span></span>
               </a>
             </li>
           </ul>
@@ -173,37 +173,37 @@
         <div class="vscode-tabs-bar" role="tablist" aria-label="Editor Tabs">
           <a href="index.html" class="editor-tab" data-file="home.py" role="tab" aria-selected="false" id="tab-home">
             <i class="bi bi-filetype-py file-icon icon-py" aria-hidden="true"></i>
-            <span>home.py</span>
+            <span>home.py <span class="tab-hint">(Overview)</span></span>
             <span class="tab-close" title="Close tab">&times;</span>
           </a>
           <a href="about.html" class="editor-tab" data-file="about.html" role="tab" aria-selected="false" id="tab-about">
             <i class="bi bi-filetype-html file-icon icon-html" aria-hidden="true"></i>
-            <span>about.html</span>
+            <span>about.html <span class="tab-hint">(About)</span></span>
             <span class="tab-close" title="Close tab">&times;</span>
           </a>
           <a href="resume.html" class="editor-tab" data-file="resume.md" role="tab" aria-selected="false" id="tab-resume">
             <i class="bi bi-filetype-md file-icon icon-md" aria-hidden="true"></i>
-            <span>resume.md</span>
+            <span>resume.md <span class="tab-hint">(Growth)</span></span>
             <span class="tab-close" title="Close tab">&times;</span>
           </a>
           <a href="skills.html" class="editor-tab" data-file="skills.json" role="tab" aria-selected="false" id="tab-skills">
             <i class="bi bi-filetype-json file-icon icon-json" aria-hidden="true"></i>
-            <span>skills.json</span>
+            <span>skills.json <span class="tab-hint">(Learning)</span></span>
             <span class="tab-close" title="Close tab">&times;</span>
           </a>
           <a href="services.html" class="editor-tab" data-file="services.py" role="tab" aria-selected="false" id="tab-services">
             <i class="bi bi-filetype-py file-icon icon-py" aria-hidden="true"></i>
-            <span>services.py</span>
+            <span>services.py <span class="tab-hint">(Focus)</span></span>
             <span class="tab-close" title="Close tab">&times;</span>
           </a>
           <a href="contact.html" class="editor-tab" data-file="contact.html" role="tab" aria-selected="false" id="tab-contact">
             <i class="bi bi-filetype-html file-icon icon-html" aria-hidden="true"></i>
-            <span>contact.html</span>
+            <span>contact.html <span class="tab-hint">(Contact)</span></span>
             <span class="tab-close" title="Close tab">&times;</span>
           </a>
           <a href="socials.html" class="editor-tab active" data-file="socials.json" role="tab" aria-selected="true" id="tab-socials">
             <i class="bi bi-filetype-json file-icon icon-json" aria-hidden="true"></i>
-            <span>socials.json</span>
+            <span>socials.json <span class="tab-hint">(Socials)</span></span>
             <span class="tab-close" title="Close tab">&times;</span>
           </a>
         </div>
@@ -256,7 +256,12 @@
             32<br>
             33<br>
             34<br>
-            35
+            35<br>
+            36<br>
+            37<br>
+            38<br>
+            39<br>
+            40
           </div>
 
           <!-- Scrollable Content Views -->
@@ -276,11 +281,11 @@
 
               <h2 class="section-h2">
                 <i class="bi bi-share" aria-hidden="true"></i>
-                <span>Social Links &amp; Projects</span>
+                <span>Online Profiles &amp; Repositories</span>
               </h2>
 
               <p style="font-size: 1.05rem; color: var(--text-main); margin-bottom: 24px;">
-                Connect with Habeeb across platforms for development services, technical updates, and open-source work:
+                Connect with Habeeb across platforms for development updates, open-source work, and technical discussions:
               </p>
 
               <div class="socials-cards-grid">
@@ -297,9 +302,9 @@
                 </a>
 
                 <a href="https://www.linkedin.com/in/habeeiiyy" target="_blank" rel="noopener noreferrer" class="social-card">
-                  <i class="bi bi-linkedin social-card-icon" aria-hidden="true"></i>
-                  <div class="social-card-name">LinkedIn</div>
-                  <div class="social-card-handle">habeeiiyy</div>
+                  <i class="bi bi-linkedin social-card-icon" style="color: #0a66c2;" aria-hidden="true"></i>
+                  <div class="social-card-name">LinkedIn Profile</div>
+                  <div class="social-card-handle">Habeeb P</div>
                 </a>
 
                 <a href="https://twitter.com/habeeiiyy" target="_blank" rel="noopener noreferrer" class="social-card">
@@ -307,53 +312,22 @@
                   <div class="social-card-name">Twitter / X</div>
                   <div class="social-card-handle">@habeeiiyy</div>
                 </a>
-              </div>
 
-              <div style="margin-top: 14px; margin-bottom: 30px; display: flex; flex-wrap: wrap; gap: 12px;">
-                <a href="https://wa.me/919497844660" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-animated">
-                  <i class="bi bi-whatsapp wa-icon" aria-hidden="true"></i>
-                  <span>Let's talk on WhatsApp</span>
+                <a href="https://wa.me/919497844660" target="_blank" rel="noopener noreferrer" class="social-card">
+                  <i class="bi bi-whatsapp social-card-icon" style="color: #25d366;" aria-hidden="true"></i>
+                  <div class="social-card-name">WhatsApp Direct</div>
+                  <div class="social-card-handle">Chat Directly</div>
                 </a>
-                <a href="mailto:habeebdeveloper.india@gmail.com" class="btn-email-direct">
-                  <i class="bi bi-envelope-fill" aria-hidden="true"></i>
-                  <span>Email Directly</span>
+
+                <a href="mailto:habeebdeveloper.india@gmail.com" class="social-card">
+                  <i class="bi bi-envelope social-card-icon" style="color: var(--accent);" aria-hidden="true"></i>
+                  <div class="social-card-name">Email Channel</div>
+                  <div class="social-card-handle">habee...india@gmail.com</div>
                 </a>
-              </div>
-
-              <h2 class="section-h2" style="margin-top: 36px;">
-                <i class="bi bi-diagram-3" aria-hidden="true"></i>
-                <span>Engineering Workflow</span>
-              </h2>
-
-              <div class="process-grid">
-                <div class="process-box">
-                  <div class="process-step">Phase 01</div>
-                  <h3 class="process-title">Architecture &amp; Schema</h3>
-                  <p class="process-desc">
-                    Designing clean database schemas in PostgreSQL, defining REST API contracts, and planning asynchronous task boundaries.
-                  </p>
-                </div>
-
-                <div class="process-box">
-                  <div class="process-step">Phase 02</div>
-                  <h3 class="process-title">Development &amp; Concurrency</h3>
-                  <p class="process-desc">
-                    Building robust Django backends and React frontends, with Celery, Redis, and RabbitMQ handling background worker tasks.
-                  </p>
-                </div>
-
-                <div class="process-box">
-                  <div class="process-step">Phase 03</div>
-                  <h3 class="process-title">Dockerization &amp; Deployment</h3>
-                  <p class="process-desc">
-                    Packaging applications with Docker, tuning query performance and cache hits, and executing production deployment.
-                  </p>
-                </div>
               </div>
             </section>
 
           </div>
-        </div></div>
         </div>
 
         <!-- Collapsible Bottom Terminal Panel -->
@@ -395,6 +369,7 @@ Type 'help' to see available commands or type 'about', 'skills', 'smashup', 'exp
           <i class="bi bi-box" aria-hidden="true"></i>
           <span>SmashUp</span>
         </a>
+        <a href="contact.html" class="statusbar-recruiter-pill" title="Recruiter Status: Open for Junior Roles &amp; Internships"><span class="status-dot" style="width:6px;height:6px;background-color:#55ff55;"></span> <span>Open for Roles</span></a>
         <button type="button" class="statusbar-item" title="0 Errors, 0 Warnings" aria-label="Problems">
           <i class="bi bi-x-circle" aria-hidden="true"></i> <span>0</span>
           <i class="bi bi-exclamation-triangle" aria-hidden="true" style="margin-left: 4px;"></i> <span>0</span>
@@ -418,7 +393,7 @@ Type 'help' to see available commands or type 'about', 'skills', 'smashup', 'exp
 
   </div>
 
-  <!-- Floating WhatsApp Action Button (Minecraft style square) -->
+  <!-- Floating WhatsApp Action Button -->
   <div class="fab-whatsapp" aria-label="Chat on WhatsApp">
     <a href="https://wa.me/919497844660" target="_blank" rel="noopener noreferrer" class="fab-btn" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
       <i class="bi bi-whatsapp" aria-hidden="true"></i>

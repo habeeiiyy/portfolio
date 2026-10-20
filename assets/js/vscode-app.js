@@ -284,14 +284,12 @@
 
       case "skills":
         appendTerminalText(
-          "Core Technical Skills:\n" +
-          "  • Python (90%)\n" +
-          "  • Django & REST APIs (85%)\n" +
-          "  • PostgreSQL (PgSQL) (85%)\n" +
-          "  • Redis (80%)\n" +
-          "  • React & JavaScript (75%)\n" +
-          "  • Celery & RabbitMQ (80%)\n" +
-          "  • Docker (75%)"
+          "Core Engineering Competencies:\n" +
+          "  • Development (95%)\n" +
+          "  • Scalability (90%)\n" +
+          "  • Bug Fixing (92%)\n" +
+          "  • Deployment (85%)\n" +
+          "Stack: Python, Django, React, PostgreSQL, Redis, Celery, RabbitMQ, Docker"
         );
         window.switchFile("skills.json");
         break;

@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Resume & Experience - Habeeb P | VS Code Portfolio</title>
+  <title>Resume & Growth Timeline - Habeeb P | VS Code Portfolio</title>
   <meta name="description" content="Habeeb P is a full stack developer from Palakkad, Kerala specializing in Python, Django, React, PostgreSQL, Docker, Celery, Redis, and RabbitMQ.">
   <meta name="keywords" content="Habeeb, Habeeb P, full stack developer, Python Django developer, React developer, PostgreSQL, Redis, Celery, SmashUp, web developer Kerala, VS Code portfolio">
   <link rel="canonical" href="https://habeeiiyy.in/resume.html">
@@ -42,13 +42,13 @@
         </button>
         <nav class="titlebar-menus" aria-label="Window Menu">
           <button type="button" class="titlebar-menu-item" onclick="window.switchFile('resume.md')">File</button>
-          <button type="button" class="titlebar-menu-item" onclick="window.switchFile('about.html')">Edit</button>
-          <button type="button" class="titlebar-menu-item" onclick="window.switchFile('skills.json')">Selection</button>
-          <button type="button" class="titlebar-menu-item" onclick="window.switchFile('services.py')">View</button>
+          <button type="button" class="titlebar-menu-item" onclick="window.switchFile('resume.md')">Edit</button>
+          <button type="button" class="titlebar-menu-item" onclick="window.switchFile('resume.md')">Selection</button>
+          <button type="button" class="titlebar-menu-item" onclick="window.switchFile('resume.md')">View</button>
           <button type="button" class="titlebar-menu-item" onclick="window.switchFile('resume.md')">Go</button>
           <button type="button" class="titlebar-menu-item" onclick="window.toggleTerminal()">Run</button>
           <button type="button" class="titlebar-menu-item" onclick="window.toggleTerminal()">Terminal</button>
-          <button type="button" class="titlebar-menu-item" onclick="window.switchFile('contact.html')">Help</button>
+          <button type="button" class="titlebar-menu-item" onclick="window.switchFile('resume.md')">Help</button>
         </nav>
       </div>
 
@@ -79,14 +79,14 @@
           <button type="button" id="activity-explorer-btn" class="activity-btn active" title="Explorer (Ctrl+B)" aria-label="Explorer">
             <i class="bi bi-files" aria-hidden="true"></i>
           </button>
-          <button type="button" class="activity-btn" title="Search Files" aria-label="Search" onclick="window.switchFile('skills.json')">
+          <button type="button" class="activity-btn" title="Search Files" aria-label="Search" onclick="window.switchFile('resume.md')">
             <i class="bi bi-search" aria-hidden="true"></i>
           </button>
           <button type="button" class="activity-btn" title="Ongoing Project: SmashUp" aria-label="SmashUp Repo" onclick="window.open('https://github.com/habeeiiyy/SmashUp', '_blank', 'noopener,noreferrer')">
             <i class="bi bi-code-slash" style="color: #55ff55;" aria-hidden="true"></i>
             <span class="activity-badge">NEW</span>
           </button>
-          <button type="button" class="activity-btn" title="Services &amp; Scalability" aria-label="Services" onclick="window.switchFile('services.py')">
+          <button type="button" class="activity-btn" title="Services &amp; Scalability" aria-label="Services" onclick="window.switchFile('resume.md')">
             <i class="bi bi-grid-fill" aria-hidden="true"></i>
           </button>
           <button type="button" id="activity-terminal-btn" class="activity-btn" title="Interactive Terminal (Ctrl+`)" aria-label="Terminal">
@@ -124,43 +124,43 @@
             <li role="none">
               <a href="index.html" class="explorer-item" data-file="home.py" role="treeitem">
                 <i class="bi bi-filetype-py file-icon icon-py" aria-hidden="true"></i>
-                <span>home.py</span>
+                <span>home.py <span class="tab-hint">(Overview)</span></span>
               </a>
             </li>
             <li role="none">
               <a href="about.html" class="explorer-item" data-file="about.html" role="treeitem">
                 <i class="bi bi-filetype-html file-icon icon-html" aria-hidden="true"></i>
-                <span>about.html</span>
+                <span>about.html <span class="tab-hint">(About)</span></span>
               </a>
             </li>
             <li role="none">
               <a href="resume.html" class="explorer-item active" data-file="resume.md" role="treeitem">
                 <i class="bi bi-filetype-md file-icon icon-md" aria-hidden="true"></i>
-                <span>resume.md</span>
+                <span>resume.md <span class="tab-hint">(Growth)</span></span>
               </a>
             </li>
             <li role="none">
               <a href="skills.html" class="explorer-item" data-file="skills.json" role="treeitem">
                 <i class="bi bi-filetype-json file-icon icon-json" aria-hidden="true"></i>
-                <span>skills.json</span>
+                <span>skills.json <span class="tab-hint">(Learning)</span></span>
               </a>
             </li>
             <li role="none">
               <a href="services.html" class="explorer-item" data-file="services.py" role="treeitem">
                 <i class="bi bi-filetype-py file-icon icon-py" aria-hidden="true"></i>
-                <span>services.py</span>
+                <span>services.py <span class="tab-hint">(Focus)</span></span>
               </a>
             </li>
             <li role="none">
               <a href="contact.html" class="explorer-item" data-file="contact.html" role="treeitem">
                 <i class="bi bi-filetype-html file-icon icon-html" aria-hidden="true"></i>
-                <span>contact.html</span>
+                <span>contact.html <span class="tab-hint">(Contact)</span></span>
               </a>
             </li>
             <li role="none">
               <a href="socials.html" class="explorer-item" data-file="socials.json" role="treeitem">
                 <i class="bi bi-filetype-json file-icon icon-json" aria-hidden="true"></i>
-                <span>socials.json</span>
+                <span>socials.json <span class="tab-hint">(Socials)</span></span>
               </a>
             </li>
           </ul>
@@ -173,37 +173,37 @@
         <div class="vscode-tabs-bar" role="tablist" aria-label="Editor Tabs">
           <a href="index.html" class="editor-tab" data-file="home.py" role="tab" aria-selected="false" id="tab-home">
             <i class="bi bi-filetype-py file-icon icon-py" aria-hidden="true"></i>
-            <span>home.py</span>
+            <span>home.py <span class="tab-hint">(Overview)</span></span>
             <span class="tab-close" title="Close tab">&times;</span>
           </a>
           <a href="about.html" class="editor-tab" data-file="about.html" role="tab" aria-selected="false" id="tab-about">
             <i class="bi bi-filetype-html file-icon icon-html" aria-hidden="true"></i>
-            <span>about.html</span>
+            <span>about.html <span class="tab-hint">(About)</span></span>
             <span class="tab-close" title="Close tab">&times;</span>
           </a>
           <a href="resume.html" class="editor-tab active" data-file="resume.md" role="tab" aria-selected="true" id="tab-resume">
             <i class="bi bi-filetype-md file-icon icon-md" aria-hidden="true"></i>
-            <span>resume.md</span>
+            <span>resume.md <span class="tab-hint">(Growth)</span></span>
             <span class="tab-close" title="Close tab">&times;</span>
           </a>
           <a href="skills.html" class="editor-tab" data-file="skills.json" role="tab" aria-selected="false" id="tab-skills">
             <i class="bi bi-filetype-json file-icon icon-json" aria-hidden="true"></i>
-            <span>skills.json</span>
+            <span>skills.json <span class="tab-hint">(Learning)</span></span>
             <span class="tab-close" title="Close tab">&times;</span>
           </a>
           <a href="services.html" class="editor-tab" data-file="services.py" role="tab" aria-selected="false" id="tab-services">
             <i class="bi bi-filetype-py file-icon icon-py" aria-hidden="true"></i>
-            <span>services.py</span>
+            <span>services.py <span class="tab-hint">(Focus)</span></span>
             <span class="tab-close" title="Close tab">&times;</span>
           </a>
           <a href="contact.html" class="editor-tab" data-file="contact.html" role="tab" aria-selected="false" id="tab-contact">
             <i class="bi bi-filetype-html file-icon icon-html" aria-hidden="true"></i>
-            <span>contact.html</span>
+            <span>contact.html <span class="tab-hint">(Contact)</span></span>
             <span class="tab-close" title="Close tab">&times;</span>
           </a>
           <a href="socials.html" class="editor-tab" data-file="socials.json" role="tab" aria-selected="false" id="tab-socials">
             <i class="bi bi-filetype-json file-icon icon-json" aria-hidden="true"></i>
-            <span>socials.json</span>
+            <span>socials.json <span class="tab-hint">(Socials)</span></span>
             <span class="tab-close" title="Close tab">&times;</span>
           </a>
         </div>
@@ -286,7 +286,27 @@
             62<br>
             63<br>
             64<br>
-            65
+            65<br>
+            66<br>
+            67<br>
+            68<br>
+            69<br>
+            70<br>
+            71<br>
+            72<br>
+            73<br>
+            74<br>
+            75<br>
+            76<br>
+            77<br>
+            78<br>
+            79<br>
+            80<br>
+            81<br>
+            82<br>
+            83<br>
+            84<br>
+            85
           </div>
 
           <!-- Scrollable Content Views -->
@@ -295,36 +315,100 @@
             <!-- ================= VIEW 3: resume.md ================= -->
             <section id="view-resume" class="tab-view active" role="tabpanel" aria-labelledby="tab-resume">
               <div class="code-banner">
-                <span class="syn-cm"># Habeeb P &mdash; Curriculum Vitae</span><br>
-                <span class="syn-cm">&gt; Full stack developer building scalable web applications with Django, Python, React, PgSQL, Docker, Celery, Redis, and RabbitMQ.</span>
+                <span class="syn-cm"># Resume &amp; Learning Journey &mdash; Habeeb P</span><br>
+                <span class="syn-cm">## Student, Aspiring Backend Engineer &amp; Continuous Builder</span>
               </div>
 
-              <div class="resume-section-card">
-                <h2 class="section-h2">
-                  <i class="bi bi-person-badge" aria-hidden="true"></i>
-                  <span>Summary</span>
-                </h2>
-                <div style="font-size: 1.05rem; line-height: 1.65; margin-bottom: 20px;">
-                  <strong style="color: var(--text-bright); font-size: 1.2rem;">HABEEB P</strong>
-                  <p style="margin-top: 8px; color: var(--text-main);">
-                    <em>Full stack developer with hands-on experience building real-world web applications and distributed architectures using Python, Django, React, PostgreSQL, Docker, Celery, Redis, and RabbitMQ. Currently training at Brototype while developing practical industry solutions.</em>
+              <div class="resume-wrapper">
+                <div class="resume-summary-card">
+                  <div class="resume-header">
+                    <div>
+                      <h1 class="resume-name">Habeeb P</h1>
+                      <div class="resume-contact-inline">
+                        <span><i class="bi bi-geo-alt" aria-hidden="true"></i> Palakkad, Kerala</span>
+                        <span><i class="bi bi-envelope" aria-hidden="true"></i> habeebdeveloper.india@gmail.com</span>
+                        <span><i class="bi bi-code-slash" aria-hidden="true"></i> <a href="https://github.com/habeeiiyy/SmashUp" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none;">github.com/habeeiiyy/SmashUp</a></span>
+                      </div>
+                    </div>
+                  </div>
+                  <p style="font-size: 14px; color: var(--text-main); margin: 12px 0 0; line-height: 1.65;">
+                    Motivated Computer Applications graduate and backend-focused developer with hands-on experience designing REST APIs and web applications using Python, Django, PostgreSQL, and React. Passionate about system internals, Linux environments, and building real-world software.
                   </p>
-                  <div style="display: flex; flex-wrap: wrap; gap: 16px; margin-top: 12px; font-size: 13.5px; color: var(--text-muted);">
-                    <span><i class="bi bi-geo-alt" aria-hidden="true"></i> Palakkad, Kerala</span>
-                    <span><i class="bi bi-envelope" aria-hidden="true"></i> <a href="mailto:habeebdeveloper.india@gmail.com" style="color: var(--accent); text-decoration: none;">habeebdeveloper.india@gmail.com</a></span>
-                    <span><i class="bi bi-github" aria-hidden="true"></i> <a href="https://github.com/habeeiiyy" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none;">github.com/habeeiiyy</a></span>
-                    <span><i class="bi bi-code-slash" aria-hidden="true"></i> <a href="https://github.com/habeeiiyy/SmashUp" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none;">github.com/habeeiiyy/SmashUp</a></span>
+                </div>
+
+                <!-- Growth Timeline (The Learning Journey) -->
+                <h2 class="section-h2" style="margin-top: 36px;">
+                  <i class="bi bi-arrow-up-right-circle" aria-hidden="true"></i>
+                  <span>Growth Timeline &amp; Learning Journey</span>
+                </h2>
+
+                <div class="growth-timeline">
+                  <div class="growth-step">
+                    <span class="growth-marker"></span>
+                    <div class="growth-header">
+                      <span class="growth-year">2023</span>
+                      <h3 class="growth-title">Discovered Python &amp; Programming Fundamentals</h3>
+                    </div>
+                    <p class="growth-desc">
+                      Wrote first terminal scripts, grasped object-oriented programming, algorithmic thinking, and core data structures.
+                    </p>
+                  </div>
+
+                  <div class="growth-step">
+                    <span class="growth-marker"></span>
+                    <div class="growth-header">
+                      <span class="growth-year">2024</span>
+                      <h3 class="growth-title">Web Fundamentals: HTML &amp; CSS</h3>
+                    </div>
+                    <p class="growth-desc">
+                      Learned the building blocks of the web, semantic markup, responsive design principles, and browser mechanics.
+                    </p>
+                  </div>
+
+                  <div class="growth-step">
+                    <span class="growth-marker"></span>
+                    <div class="growth-header">
+                      <span class="growth-year">2024</span>
+                      <h3 class="growth-title">Stepped into Backend Development with Django</h3>
+                    </div>
+                    <p class="growth-desc">
+                      Discovered Django's ORM, MVT pattern, user authentication, model relations, and database migrations.
+                    </p>
+                  </div>
+
+                  <div class="growth-step">
+                    <span class="growth-marker"></span>
+                    <div class="growth-header">
+                      <span class="growth-year">2025</span>
+                      <h3 class="growth-title">Built First REST APIs with Django REST Framework (DRF)</h3>
+                    </div>
+                    <p class="growth-desc">
+                      Decoupled backends from frontends, engineered serializers, viewsets, token authentication, and JSON API endpoints.
+                    </p>
+                  </div>
+
+                  <div class="growth-step">
+                    <span class="growth-marker"></span>
+                    <div class="growth-header">
+                      <span class="growth-year">2025</span>
+                      <h3 class="growth-title">Mastered Modern JavaScript &amp; Started React</h3>
+                    </div>
+                    <p class="growth-desc">
+                      Dove into ES6+ features, asynchronous JavaScript (promises, async/await), and transitioned into React component architecture.
+                    </p>
+                  </div>
+
+                  <div class="growth-step">
+                    <span class="growth-marker active"></span>
+                    <div class="growth-header">
+                      <span class="growth-year">2026 &mdash; Present</span>
+                      <h3 class="growth-title">Engineering SmashUp &amp; Exploring Advanced Systems</h3>
+                    </div>
+                    <p class="growth-desc">
+                      Architecting SmashUp with automated issue triage, diving into PostgreSQL query optimization, Celery/Redis background queues, Linux environments, and open-source systems.
+                    </p>
                   </div>
                 </div>
-
-                <div style="margin: 20px 0;">
-                  <a href="https://wa.me/919497844660" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-animated">
-                    <i class="bi bi-whatsapp wa-icon" aria-hidden="true"></i>
-                    <span>Let's talk on WhatsApp</span>
-                  </a>
-                </div>
-
-                <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 28px 0;">
 
                 <h2 class="section-h2">
                   <i class="bi bi-briefcase" aria-hidden="true"></i>
@@ -359,21 +443,18 @@
                     <div class="timeline-org">iTech4.com, Mannarkkad</div>
                     <span class="timeline-badge">2026 &mdash; Present</span>
                     <ul class="timeline-points">
-                      <li>Working as a part-time web developer while continuing full stack development training.</li>
-                      <li>Built and deployed a complete OLX-style marketplace application from scratch using Python, Django, and React.</li>
-                      <li>Handled end-to-end deployment of the application, from development to live hosting.</li>
-                      <li>Applying full stack concepts learned at Brototype to real, production-style projects.</li>
+                      <li>Working as a part-time web developer contributing to real-world web applications while continuing advanced software training.</li>
+                      <li>Gaining hands-on experience in backend feature delivery, database operations, and frontend integration.</li>
                     </ul>
                   </div>
 
                   <div class="timeline-entry">
-                    <h3 class="timeline-title">FREELANCE FULL STACK DEVELOPER</h3>
-                    <div class="timeline-org">Self-Employed / Remote</div>
-                    <span class="timeline-badge">Present &amp; Available</span>
+                    <h3 class="timeline-title">FREELANCE DEVELOPER</h3>
+                    <div class="timeline-org">Self-Employed / Independent Builder</div>
+                    <span class="timeline-badge">Present</span>
                     <ul class="timeline-points">
-                      <li>Handled full project lifecycle independently &mdash; from requirements gathering to final deployment.</li>
-                      <li>Managed up to 5 projects or tasks at a given time while under pressure.</li>
-                      <li>Managed end-to-end deployment for all freelance projects, ensuring smooth, production-ready delivery.</li>
+                      <li>Building full-stack web applications and custom automation scripts.</li>
+                      <li>Translating problem statements into clean relational database models and functional APIs.</li>
                     </ul>
                   </div>
                 </div>
@@ -386,20 +467,11 @@
                 </h2>
                 <div class="timeline-list">
                   <div class="timeline-entry">
-                    <h3 class="timeline-title">HIGHER SECONDARY (PLUS TWO) - COMPUTER SCIENCE</h3>
-                    <div class="timeline-org">GVHSS Alanallur</div>
-                    <span class="timeline-badge">2024 &mdash; 2026</span>
-                    <p class="timeline-desc">
-                      Completed higher secondary education with a focus on Computer Science, building a strong foundation in programming logic and computing fundamentals.
-                    </p>
-                  </div>
-
-                  <div class="timeline-entry">
-                    <h3 class="timeline-title">FULL STACK DEVELOPMENT TRAINING</h3>
-                    <div class="timeline-org">Brototype</div>
-                    <span class="timeline-badge">2026 &mdash; Present</span>
-                    <p class="timeline-desc">
-                      Currently learning full stack development with a focus on Python, Django, React, PostgreSQL, Docker, Celery, and Redis.
+                    <h3 class="timeline-title">BACHELOR OF COMPUTER APPLICATIONS (BCA)</h3>
+                    <div class="timeline-org">CPA College of Global Studies, Calicut University</div>
+                    <span class="timeline-badge">2022 &mdash; 2025</span>
+                    <p style="font-size: 13.5px; color: var(--text-main); margin-top: 8px; line-height: 1.6;">
+                      Comprehensive academic foundation in Computer Science, Database Management Systems (DBMS), Object-Oriented Programming, Data Structures, Operating Systems, and Software Engineering.
                     </p>
                   </div>
                 </div>
@@ -407,7 +479,6 @@
             </section>
 
           </div>
-        </div></div>
         </div>
 
         <!-- Collapsible Bottom Terminal Panel -->
@@ -449,6 +520,7 @@ Type 'help' to see available commands or type 'about', 'skills', 'smashup', 'exp
           <i class="bi bi-box" aria-hidden="true"></i>
           <span>SmashUp</span>
         </a>
+        <a href="contact.html" class="statusbar-recruiter-pill" title="Recruiter Status: Open for Junior Roles &amp; Internships"><span class="status-dot" style="width:6px;height:6px;background-color:#55ff55;"></span> <span>Open for Roles</span></a>
         <button type="button" class="statusbar-item" title="0 Errors, 0 Warnings" aria-label="Problems">
           <i class="bi bi-x-circle" aria-hidden="true"></i> <span>0</span>
           <i class="bi bi-exclamation-triangle" aria-hidden="true" style="margin-left: 4px;"></i> <span>0</span>
@@ -472,7 +544,7 @@ Type 'help' to see available commands or type 'about', 'skills', 'smashup', 'exp
 
   </div>
 
-  <!-- Floating WhatsApp Action Button (Minecraft style square) -->
+  <!-- Floating WhatsApp Action Button -->
   <div class="fab-whatsapp" aria-label="Chat on WhatsApp">
     <a href="https://wa.me/919497844660" target="_blank" rel="noopener noreferrer" class="fab-btn" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
       <i class="bi bi-whatsapp" aria-hidden="true"></i>

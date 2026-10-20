@@ -789,75 +789,60 @@ select:focus-visible,
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: #383838;
+  background-color: var(--accent);
   color: #ffffff;
-  padding: 10px 18px;
-  border-radius: 0;
+  padding: 8px 16px;
+  border-radius: 4px;
   font-family: var(--font-code);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 13px;
   text-decoration: none;
-  border-top: 2px solid #757575;
-  border-left: 2px solid #757575;
-  border-bottom: 2px solid #1a1a1a;
-  border-right: 2px solid #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.12);
   cursor: pointer;
-  transition: background-color 0.1s ease;
+  transition: background-color 0.15s ease, transform 0.1s ease;
   user-select: none;
 }
 
 .btn-vscode-primary:hover,
 .btn-vscode-primary:focus-visible {
-  background-color: #4a4a4a;
-  border-top-color: #929292;
-  border-left-color: #929292;
+  background-color: #0062a3;
   color: #ffffff;
+  transform: translateY(-1px);
 }
 
 .btn-vscode-primary:active {
-  border-top: 2px solid #1a1a1a;
-  border-left: 2px solid #1a1a1a;
-  border-bottom: 2px solid #757575;
-  border-right: 2px solid #757575;
-  transform: translate(1px, 1px);
-  background-color: #2a2a2a;
+  transform: translateY(0);
+  background-color: #005084;
 }
 
 .btn-vscode-secondary {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: #282828;
-  color: #cccccc;
-  padding: 10px 16px;
-  border-radius: 0;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--text-bright);
+  padding: 8px 16px;
+  border-radius: 4px;
   font-family: var(--font-code);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 13px;
   text-decoration: none;
-  border-top: 2px solid #555555;
-  border-left: 2px solid #555555;
-  border-bottom: 2px solid #141414;
-  border-right: 2px solid #141414;
+  border: 1px solid var(--border-color);
   cursor: pointer;
-  transition: background-color 0.1s ease;
+  transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
   user-select: none;
 }
 
 .btn-vscode-secondary:hover,
 .btn-vscode-secondary:focus-visible {
-  background-color: #363636;
-  border-top-color: #707070;
-  border-left-color: #707070;
+  background-color: rgba(255, 255, 255, 0.14);
+  border-color: var(--text-dim);
   color: #ffffff;
+  transform: translateY(-1px);
 }
 
 .btn-vscode-secondary:active {
-  border-top-color: #141414;
-  border-left-color: #141414;
-  border-bottom-color: #555555;
-  border-right-color: #555555;
-  transform: translate(1px, 1px);
+  transform: translateY(0);
 }
 
 /* Highlights Grid */
@@ -1205,24 +1190,19 @@ select:focus-visible,
 }
 
 .skill-track {
-  height: 14px;
-  background-color: #111111;
-  border-top: 2px solid #000000;
-  border-left: 2px solid #000000;
-  border-bottom: 2px solid #333333;
-  border-right: 2px solid #333333;
-  border-radius: 0;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
   overflow: hidden;
   position: relative;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25);
 }
 
 .skill-bar {
   height: 100%;
-  background-color: #55ff55;
-  border-top: 2px solid #88ff88;
-  border-bottom: 2px solid #22aa22;
-  border-radius: 0;
-  transition: width 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  background: var(--accent);
+  border-radius: 4px;
+  transition: width 0.9s cubic-bezier(0.25, 1, 0.5, 1);
   width: 0%;
 }
 
@@ -1408,23 +1388,20 @@ select:focus-visible,
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background-color: #274b29;
+  background-color: #25d366;
   color: #ffffff !important;
   font-size: 13px;
   font-family: var(--font-code);
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  padding: 11px 22px;
-  border-radius: 0;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 9px 18px;
+  border-radius: 4px;
   text-decoration: none;
-  border-top: 2px solid #4a8e4e;
-  border-left: 2px solid #4a8e4e;
-  border-bottom: 2px solid #142816;
-  border-right: 2px solid #142816;
+  border: 1px solid #20ba5a;
   cursor: pointer;
-  transition: background-color 0.1s ease;
+  transition: background-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
   user-select: none;
+  box-shadow: 0 2px 6px rgba(37, 211, 102, 0.25);
 }
 
 .btn-whatsapp-animated .wa-icon {
@@ -1434,19 +1411,16 @@ select:focus-visible,
 
 .btn-whatsapp-animated:hover,
 .btn-whatsapp-animated:focus-visible {
-  background-color: #315e34;
-  border-top-color: #5bb260;
-  border-left-color: #5bb260;
+  background-color: #20ba5a;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
   color: #ffffff;
 }
 
 .btn-whatsapp-animated:active {
-  border-top: 2px solid #142816;
-  border-left: 2px solid #142816;
-  border-bottom: 2px solid #4a8e4e;
-  border-right: 2px solid #4a8e4e;
-  transform: translate(1px, 1px);
-  background-color: #1e3a20;
+  transform: translateY(0);
+  background-color: #1da851;
+  box-shadow: 0 1px 3px rgba(37, 211, 102, 0.2);
 }
 
 .btn-email-direct {
@@ -1454,42 +1428,36 @@ select:focus-visible,
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background-color: #2b3d52;
+  background-color: var(--accent);
   color: #ffffff !important;
   font-size: 13px;
   font-family: var(--font-code);
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  padding: 11px 22px;
-  border-radius: 0;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 9px 18px;
+  border-radius: 4px;
   text-decoration: none;
-  border-top: 2px solid #4d6d91;
-  border-left: 2px solid #4d6d91;
-  border-bottom: 2px solid #151f2b;
-  border-right: 2px solid #151f2b;
+  border: 1px solid rgba(255, 255, 255, 0.15);
   cursor: pointer;
-  transition: background-color 0.1s ease;
+  transition: background-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
   user-select: none;
+  box-shadow: 0 2px 6px rgba(0, 122, 204, 0.25);
 }
 
 .btn-email-direct:hover,
 .btn-email-direct:focus-visible {
-  background-color: #364e69;
-  border-top-color: #5d83ad;
-  border-left-color: #5d83ad;
+  background-color: #0062a3;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 122, 204, 0.35);
   color: #ffffff;
 }
 
 .btn-email-direct:active {
-  border-top: 2px solid #151f2b;
-  border-left: 2px solid #151f2b;
-  border-bottom: 2px solid #4d6d91;
-  border-right: 2px solid #4d6d91;
-  transform: translate(1px, 1px);
+  transform: translateY(0);
+  background-color: #005084;
 }
 
-/* Floating WhatsApp button at bottom right - Minecraft Square */
+/* Floating WhatsApp button at bottom right */
 .fab-whatsapp {
   position: fixed;
   right: 22px;
@@ -1501,33 +1469,28 @@ select:focus-visible,
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 46px;
-  height: 46px;
-  background-color: #274b29;
+  width: 48px;
+  height: 48px;
+  background-color: #25d366;
   color: #ffffff;
-  border-radius: 0;
-  font-size: 22px;
+  border-radius: 50%;
+  font-size: 24px;
   text-decoration: none;
-  border-top: 2px solid #4a8e4e;
-  border-left: 2px solid #4a8e4e;
-  border-bottom: 2px solid #142816;
-  border-right: 2px solid #142816;
+  border: none;
   cursor: pointer;
-  transition: background-color 0.1s ease;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
 }
 
 .fab-whatsapp .fab-btn:hover {
-  background-color: #315e34;
-  border-top-color: #5bb260;
-  border-left-color: #5bb260;
+  background-color: #20ba5a;
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.55);
 }
 
 .fab-whatsapp .fab-btn:active {
-  border-top: 2px solid #142816;
-  border-left: 2px solid #142816;
-  border-bottom: 2px solid #4a8e4e;
-  border-right: 2px solid #4a8e4e;
-  transform: translate(1px, 1px);
+  transform: scale(0.95);
+  background-color: #1da851;
 }
 
 .fab-whatsapp .fab-label {
@@ -2196,10 +2159,8 @@ select:focus-visible,
   font-weight: 700;
   text-transform: uppercase;
   padding: 3px 8px;
-  border-top: 1px solid #4d6d91;
-  border-left: 1px solid #4d6d91;
-  border-bottom: 1px solid #151f2b;
-  border-right: 1px solid #151f2b;
+  border: 1px solid rgba(0, 122, 204, 0.3);
+  border-radius: 3px;
   margin-bottom: 10px;
 }
 
@@ -2225,15 +2186,263 @@ select:focus-visible,
 }
 
 .project-stack-pill {
-  background-color: #202020;
-  border-top: 1px solid #444;
-  border-left: 1px solid #444;
-  border-bottom: 1px solid #111;
-  border-right: 1px solid #111;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
   padding: 3px 8px;
   font-size: 11.5px;
   font-family: var(--font-code);
-  color: #cccccc;
+  color: var(--text-main);
+}
+
+/* ==========================================================================
+   Recruiter Snapshot, Personal Traits, Learning Grid & Growth Timeline
+   ========================================================================== */
+
+.statusbar-recruiter-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: rgba(37, 211, 102, 0.2);
+  color: #55ff55 !important;
+  font-size: 11px;
+  font-family: var(--font-code);
+  font-weight: 600;
+  padding: 2px 9px;
+  border-radius: 12px;
+  text-decoration: none;
+  border: 1px solid rgba(37, 211, 102, 0.35);
+  transition: background-color 0.15s ease;
+}
+
+.statusbar-recruiter-pill:hover {
+  background-color: rgba(37, 211, 102, 0.35);
+}
+
+.tab-hint {
+  font-size: 10.5px;
+  opacity: 0.6;
+  margin-left: 3px;
+  font-weight: normal;
+}
+
+/* Personal Traits Grid (About view) */
+.traits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+  margin: 20px 0 32px;
+}
+
+.trait-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  transition: border-color 0.15s ease;
+}
+
+.trait-card:hover {
+  border-color: var(--accent);
+}
+
+.trait-icon {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.trait-title {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-bright);
+  margin-bottom: 2px;
+}
+
+.trait-desc {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Currently Learning Focus Cards (Skills view) */
+.learning-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin: 20px 0 36px;
+}
+
+.learning-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 16px 18px;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.learning-card:hover {
+  border-color: var(--accent);
+}
+
+.learning-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.learning-card-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-bright);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.learning-chip {
+  font-size: 10.5px;
+  font-family: var(--font-code);
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.chip-building {
+  background-color: rgba(37, 211, 102, 0.15);
+  color: #55ff55;
+  border: 1px solid rgba(37, 211, 102, 0.35);
+}
+
+.chip-integrating {
+  background-color: rgba(204, 167, 0, 0.15);
+  color: #f1c40f;
+  border: 1px solid rgba(204, 167, 0, 0.35);
+}
+
+.chip-practice {
+  background-color: rgba(0, 122, 204, 0.15);
+  color: #58a6ff;
+  border: 1px solid rgba(0, 122, 204, 0.35);
+}
+
+.learning-topics-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.learning-topic-item {
+  font-size: 12.5px;
+  color: var(--text-main);
+  line-height: 1.5;
+}
+
+.learning-topic-item strong {
+  color: var(--text-bright);
+  font-family: var(--font-code);
+  font-size: 12px;
+}
+
+/* Growth Timeline (Resume view) */
+.growth-timeline {
+  position: relative;
+  border-left: 2px solid var(--border-color);
+  margin: 20px 0 36px 14px;
+  padding-left: 22px;
+}
+
+.growth-step {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.growth-step:last-child {
+  margin-bottom: 0;
+}
+
+.growth-marker {
+  position: absolute;
+  left: -29px;
+  top: 3px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--bg-workbench);
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 6px rgba(0, 122, 204, 0.4);
+}
+
+.growth-marker.active {
+  background-color: #25d366;
+  border-color: #25d366;
+  box-shadow: 0 0 8px rgba(37, 211, 102, 0.6);
+}
+
+.growth-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.growth-year {
+  font-family: var(--font-code);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--accent);
+  background-color: var(--accent-soft);
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.growth-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-bright);
+  margin: 0;
+}
+
+.growth-desc {
+  font-size: 13px;
+  color: var(--text-main);
+  margin: 4px 0 0;
+  line-height: 1.55;
+}
+
+/* Future Project Placeholders */
+.project-placeholder-card {
+  background-color: var(--bg-card);
+  border: 1px dashed var(--border-color);
+  border-radius: 4px;
+  padding: 18px 20px;
+  margin-top: 14px;
+  transition: border-color 0.15s ease;
+}
+
+.project-placeholder-card:hover {
+  border-color: var(--text-muted);
+}
+
+.placeholder-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-family: var(--font-code);
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--text-muted);
 }
 
 

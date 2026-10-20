@@ -42,10 +42,10 @@
         </button>
         <nav class="titlebar-menus" aria-label="Window Menu">
           <button type="button" class="titlebar-menu-item" onclick="window.switchFile('contact.html')">File</button>
-          <button type="button" class="titlebar-menu-item" onclick="window.switchFile('about.html')">Edit</button>
-          <button type="button" class="titlebar-menu-item" onclick="window.switchFile('skills.json')">Selection</button>
-          <button type="button" class="titlebar-menu-item" onclick="window.switchFile('services.py')">View</button>
-          <button type="button" class="titlebar-menu-item" onclick="window.switchFile('resume.md')">Go</button>
+          <button type="button" class="titlebar-menu-item" onclick="window.switchFile('contact.html')">Edit</button>
+          <button type="button" class="titlebar-menu-item" onclick="window.switchFile('contact.html')">Selection</button>
+          <button type="button" class="titlebar-menu-item" onclick="window.switchFile('contact.html')">View</button>
+          <button type="button" class="titlebar-menu-item" onclick="window.switchFile('contact.html')">Go</button>
           <button type="button" class="titlebar-menu-item" onclick="window.toggleTerminal()">Run</button>
           <button type="button" class="titlebar-menu-item" onclick="window.toggleTerminal()">Terminal</button>
           <button type="button" class="titlebar-menu-item" onclick="window.switchFile('contact.html')">Help</button>
@@ -79,14 +79,14 @@
           <button type="button" id="activity-explorer-btn" class="activity-btn active" title="Explorer (Ctrl+B)" aria-label="Explorer">
             <i class="bi bi-files" aria-hidden="true"></i>
           </button>
-          <button type="button" class="activity-btn" title="Search Files" aria-label="Search" onclick="window.switchFile('skills.json')">
+          <button type="button" class="activity-btn" title="Search Files" aria-label="Search" onclick="window.switchFile('contact.html')">
             <i class="bi bi-search" aria-hidden="true"></i>
           </button>
           <button type="button" class="activity-btn" title="Ongoing Project: SmashUp" aria-label="SmashUp Repo" onclick="window.open('https://github.com/habeeiiyy/SmashUp', '_blank', 'noopener,noreferrer')">
             <i class="bi bi-code-slash" style="color: #55ff55;" aria-hidden="true"></i>
             <span class="activity-badge">NEW</span>
           </button>
-          <button type="button" class="activity-btn" title="Services &amp; Scalability" aria-label="Services" onclick="window.switchFile('services.py')">
+          <button type="button" class="activity-btn" title="Services &amp; Scalability" aria-label="Services" onclick="window.switchFile('contact.html')">
             <i class="bi bi-grid-fill" aria-hidden="true"></i>
           </button>
           <button type="button" id="activity-terminal-btn" class="activity-btn" title="Interactive Terminal (Ctrl+`)" aria-label="Terminal">
@@ -124,43 +124,43 @@
             <li role="none">
               <a href="index.html" class="explorer-item" data-file="home.py" role="treeitem">
                 <i class="bi bi-filetype-py file-icon icon-py" aria-hidden="true"></i>
-                <span>home.py</span>
+                <span>home.py <span class="tab-hint">(Overview)</span></span>
               </a>
             </li>
             <li role="none">
               <a href="about.html" class="explorer-item" data-file="about.html" role="treeitem">
                 <i class="bi bi-filetype-html file-icon icon-html" aria-hidden="true"></i>
-                <span>about.html</span>
+                <span>about.html <span class="tab-hint">(About)</span></span>
               </a>
             </li>
             <li role="none">
               <a href="resume.html" class="explorer-item" data-file="resume.md" role="treeitem">
                 <i class="bi bi-filetype-md file-icon icon-md" aria-hidden="true"></i>
-                <span>resume.md</span>
+                <span>resume.md <span class="tab-hint">(Growth)</span></span>
               </a>
             </li>
             <li role="none">
               <a href="skills.html" class="explorer-item" data-file="skills.json" role="treeitem">
                 <i class="bi bi-filetype-json file-icon icon-json" aria-hidden="true"></i>
-                <span>skills.json</span>
+                <span>skills.json <span class="tab-hint">(Learning)</span></span>
               </a>
             </li>
             <li role="none">
               <a href="services.html" class="explorer-item" data-file="services.py" role="treeitem">
                 <i class="bi bi-filetype-py file-icon icon-py" aria-hidden="true"></i>
-                <span>services.py</span>
+                <span>services.py <span class="tab-hint">(Focus)</span></span>
               </a>
             </li>
             <li role="none">
               <a href="contact.html" class="explorer-item active" data-file="contact.html" role="treeitem">
                 <i class="bi bi-filetype-html file-icon icon-html" aria-hidden="true"></i>
-                <span>contact.html</span>
+                <span>contact.html <span class="tab-hint">(Contact)</span></span>
               </a>
             </li>
             <li role="none">
               <a href="socials.html" class="explorer-item" data-file="socials.json" role="treeitem">
                 <i class="bi bi-filetype-json file-icon icon-json" aria-hidden="true"></i>
-                <span>socials.json</span>
+                <span>socials.json <span class="tab-hint">(Socials)</span></span>
               </a>
             </li>
           </ul>
@@ -173,37 +173,37 @@
         <div class="vscode-tabs-bar" role="tablist" aria-label="Editor Tabs">
           <a href="index.html" class="editor-tab" data-file="home.py" role="tab" aria-selected="false" id="tab-home">
             <i class="bi bi-filetype-py file-icon icon-py" aria-hidden="true"></i>
-            <span>home.py</span>
+            <span>home.py <span class="tab-hint">(Overview)</span></span>
             <span class="tab-close" title="Close tab">&times;</span>
           </a>
           <a href="about.html" class="editor-tab" data-file="about.html" role="tab" aria-selected="false" id="tab-about">
             <i class="bi bi-filetype-html file-icon icon-html" aria-hidden="true"></i>
-            <span>about.html</span>
+            <span>about.html <span class="tab-hint">(About)</span></span>
             <span class="tab-close" title="Close tab">&times;</span>
           </a>
           <a href="resume.html" class="editor-tab" data-file="resume.md" role="tab" aria-selected="false" id="tab-resume">
             <i class="bi bi-filetype-md file-icon icon-md" aria-hidden="true"></i>
-            <span>resume.md</span>
+            <span>resume.md <span class="tab-hint">(Growth)</span></span>
             <span class="tab-close" title="Close tab">&times;</span>
           </a>
           <a href="skills.html" class="editor-tab" data-file="skills.json" role="tab" aria-selected="false" id="tab-skills">
             <i class="bi bi-filetype-json file-icon icon-json" aria-hidden="true"></i>
-            <span>skills.json</span>
+            <span>skills.json <span class="tab-hint">(Learning)</span></span>
             <span class="tab-close" title="Close tab">&times;</span>
           </a>
           <a href="services.html" class="editor-tab" data-file="services.py" role="tab" aria-selected="false" id="tab-services">
             <i class="bi bi-filetype-py file-icon icon-py" aria-hidden="true"></i>
-            <span>services.py</span>
+            <span>services.py <span class="tab-hint">(Focus)</span></span>
             <span class="tab-close" title="Close tab">&times;</span>
           </a>
           <a href="contact.html" class="editor-tab active" data-file="contact.html" role="tab" aria-selected="true" id="tab-contact">
             <i class="bi bi-filetype-html file-icon icon-html" aria-hidden="true"></i>
-            <span>contact.html</span>
+            <span>contact.html <span class="tab-hint">(Contact)</span></span>
             <span class="tab-close" title="Close tab">&times;</span>
           </a>
           <a href="socials.html" class="editor-tab" data-file="socials.json" role="tab" aria-selected="false" id="tab-socials">
             <i class="bi bi-filetype-json file-icon icon-json" aria-hidden="true"></i>
-            <span>socials.json</span>
+            <span>socials.json <span class="tab-hint">(Socials)</span></span>
             <span class="tab-close" title="Close tab">&times;</span>
           </a>
         </div>
@@ -256,7 +256,12 @@
             32<br>
             33<br>
             34<br>
-            35
+            35<br>
+            36<br>
+            37<br>
+            38<br>
+            39<br>
+            40
           </div>
 
           <!-- Scrollable Content Views -->
@@ -266,104 +271,73 @@
             <section id="view-contact" class="tab-view active" role="tabpanel" aria-labelledby="tab-contact">
               <div class="code-banner">
                 <span class="syn-cm">&lt;!-- Contact Channels &mdash; Direct WhatsApp &amp; Email --&gt;</span><br>
-                <span class="syn-kw">contact_channels</span> = [<span class="syn-str">"WhatsApp"</span>, <span class="syn-str">"Email"</span>]<br>
-                <span class="syn-kw">status</span> = <span class="syn-str">"Available for freelance &amp; full stack engineering"</span>
+                &lt;<span class="syn-tag">contact</span> <span class="syn-attr">whatsapp</span>=<span class="syn-str">"Direct Link"</span> <span class="syn-attr">email</span>=<span class="syn-str">"habeebdeveloper.india@gmail.com"</span> <span class="syn-attr">location</span>=<span class="syn-str">"Palakkad, Kerala"</span> /&gt;
               </div>
 
               <h2 class="section-h2">
                 <i class="bi bi-chat-dots" aria-hidden="true"></i>
-                <span>Get In Touch</span>
+                <span>Direct Contact Channels</span>
               </h2>
 
               <p style="font-size: 1.05rem; color: var(--text-main); margin-bottom: 24px;">
-                Available for freelance Python, Django, React, PostgreSQL, Celery, Redis, and full-stack web application development. Direct contact via WhatsApp or Email:
+                Whether you're a recruiter looking for an ambitious junior developer, a client with a project, or a fellow builder &mdash; reach out directly through WhatsApp or email:
               </p>
 
-              <div class="contact-layout" style="grid-template-columns: 1fr;">
-                <div class="contact-info-panel" style="max-width: 680px; margin: 0 auto; width: 100%;">
-                  
-                  <!-- Direct WhatsApp Contact Box -->
-                  <div class="whatsapp-contact-card">
-                    <h3 class="whatsapp-card-title">Instant Chat via WhatsApp</h3>
-                    <p class="whatsapp-card-desc">
-                      Fastest channel for project inquiries, technical discussions, and proposals.
-                    </p>
-                    <a href="https://wa.me/919497844660" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-animated">
-                      <i class="bi bi-whatsapp wa-icon" aria-hidden="true"></i>
-                      <span>Let's talk on WhatsApp</span>
+              <div class="contact-channels-grid">
+                <div class="whatsapp-direct-card">
+                  <div class="whatsapp-card-icon">
+                    <i class="bi bi-whatsapp" aria-hidden="true"></i>
+                  </div>
+                  <h3 class="whatsapp-card-title">WhatsApp Direct Chat</h3>
+                  <p class="whatsapp-card-desc">
+                    Fastest way to reach me for project inquiries, freelance work, or hiring discussions.
+                  </p>
+                  <a href="https://wa.me/919497844660" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-animated">
+                    <i class="bi bi-whatsapp wa-icon" aria-hidden="true"></i>
+                    <span>Let's talk on WhatsApp</span>
+                  </a>
+                </div>
+
+                <div class="email-direct-card">
+                  <div class="email-card-icon">
+                    <i class="bi bi-envelope-check" aria-hidden="true"></i>
+                  </div>
+                  <h3 class="email-card-title">Direct Email</h3>
+                  <div class="email-address-display">habeebdeveloper.india@gmail.com</div>
+                  <p class="email-card-desc">
+                    Send job descriptions, project specifications, or collaboration proposals.
+                  </p>
+                  <div class="email-actions">
+                    <a href="mailto:habeebdeveloper.india@gmail.com" class="btn-email-direct">
+                      <i class="bi bi-send" aria-hidden="true"></i>
+                      <span>Send Email</span>
                     </a>
+                    <button type="button" id="copy-email-btn" class="btn-vscode-secondary" onclick="window.copyEmailAddress(event)">
+                      <i class="bi bi-clipboard" aria-hidden="true"></i>
+                      <span>Copy Email</span>
+                    </button>
                   </div>
+                </div>
+              </div>
 
-                  <!-- Direct Email Contact Box -->
-                  <div class="whatsapp-contact-card" style="margin-top: 16px;">
-                    <h3 class="whatsapp-card-title">Send Email Directly</h3>
-                    <p class="whatsapp-card-desc">
-                      Detailed project briefs, architecture requirements, or remote collaboration offers.
-                    </p>
-                    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
-                      <a href="mailto:habeebdeveloper.india@gmail.com" class="btn-email-direct">
-                        <i class="bi bi-envelope-fill" aria-hidden="true"></i>
-                        <span>Email: habeebdeveloper.india@gmail.com</span>
-                      </a>
-                      <button type="button" class="btn-vscode-secondary" onclick="window.copyEmailAddress()">
-                        <i class="bi bi-clipboard" aria-hidden="true"></i>
-                        <span>Copy Email</span>
-                      </button>
-                    </div>
+              <div class="location-card" style="margin-top: 24px;">
+                <div class="location-header">
+                  <i class="bi bi-geo-alt location-icon" aria-hidden="true"></i>
+                  <div>
+                    <h3 class="location-title">Palakkad, Kerala, India</h3>
+                    <p class="location-desc">Available for remote roles worldwide and on-site opportunities in Kerala/India.</p>
                   </div>
-
-                  <div class="contact-info-items" style="margin-top: 24px;">
-                    <div class="contact-item-row">
-                      <div class="contact-item-icon">
-                        <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                      </div>
-                      <div class="contact-item-text">
-                        <h4>Location</h4>
-                        <p>Palakkad, Kerala, India</p>
-                      </div>
-                    </div>
-
-                    <div class="contact-item-row">
-                      <div class="contact-item-icon">
-                        <i class="bi bi-clock-history" aria-hidden="true"></i>
-                      </div>
-                      <div class="contact-item-text">
-                        <h4>Availability</h4>
-                        <p>Freelance &amp; Full Stack Development Opportunities</p>
-                      </div>
-                    </div>
-
-                    <div class="contact-item-row">
-                      <div class="contact-item-icon">
-                        <i class="bi bi-github" aria-hidden="true"></i>
-                      </div>
-                      <div class="contact-item-text">
-                        <h4>GitHub</h4>
-                        <p><a href="https://github.com/habeeiiyy" target="_blank" rel="noopener noreferrer">github.com/habeeiiyy</a></p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Lightweight Location Card -->
-                  <div class="location-card">
-                    <div class="location-icon-box">
-                      <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
-                    </div>
-                    <div>
-                      <div class="location-card-title">Mannarkkad, Palakkad, Kerala</div>
-                      <div class="location-card-sub">Available for remote collaborations worldwide</div>
-                      <a href="https://maps.google.com/?q=Mannarkkad,+Palakkad,+Kerala" target="_blank" rel="noopener noreferrer" class="btn-map-link">
-                        <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
-                        <span>Open Location in Google Maps</span>
-                      </a>
-                    </div>
-                  </div>
+                </div>
+                <div class="location-link-row">
+                  <a href="https://maps.google.com/?q=Palakkad,+Kerala,+India" target="_blank" rel="noopener noreferrer" class="location-maps-link">
+                    <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                    <span>Open in Google Maps</span>
+                  </a>
                 </div>
               </div>
             </section>
 
           </div>
-        </div></div>
         </div>
 
         <!-- Collapsible Bottom Terminal Panel -->
@@ -405,6 +379,7 @@ Type 'help' to see available commands or type 'about', 'skills', 'smashup', 'exp
           <i class="bi bi-box" aria-hidden="true"></i>
           <span>SmashUp</span>
         </a>
+        <a href="contact.html" class="statusbar-recruiter-pill" title="Recruiter Status: Open for Junior Roles &amp; Internships"><span class="status-dot" style="width:6px;height:6px;background-color:#55ff55;"></span> <span>Open for Roles</span></a>
         <button type="button" class="statusbar-item" title="0 Errors, 0 Warnings" aria-label="Problems">
           <i class="bi bi-x-circle" aria-hidden="true"></i> <span>0</span>
           <i class="bi bi-exclamation-triangle" aria-hidden="true" style="margin-left: 4px;"></i> <span>0</span>
@@ -428,7 +403,7 @@ Type 'help' to see available commands or type 'about', 'skills', 'smashup', 'exp
 
   </div>
 
-  <!-- Floating WhatsApp Action Button (Minecraft style square) -->
+  <!-- Floating WhatsApp Action Button -->
   <div class="fab-whatsapp" aria-label="Chat on WhatsApp">
     <a href="https://wa.me/919497844660" target="_blank" rel="noopener noreferrer" class="fab-btn" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
       <i class="bi bi-whatsapp" aria-hidden="true"></i>
