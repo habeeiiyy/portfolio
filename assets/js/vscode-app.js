@@ -265,7 +265,8 @@
           "  about          - Overview of Habeeb P\n" +
           "  skills         - List technical skills (Python, Django, React, PgSQL, Redis, Docker...)\n" +
           "  smashup        - View ongoing project SmashUp details and GitHub repository\n" +
-          "  experience     - Show career and education details\n" +
+          "  experience     - Show career details\n" +
+          "  education      - Show educational qualifications (GVHSS Alanallur)\n" +
           "  services       - List development and scalability services\n" +
           "  contact        - Open contact options (WhatsApp / Email)\n" +
           "  whatsapp       - Open WhatsApp direct chat with Habeeb\n" +
@@ -327,6 +328,16 @@
           "    - Built & deployed OLX-style marketplace application using Python, Django, React\n" +
           "  • Freelance Full Stack Developer (Present & Available)\n" +
           "    - Independent full-lifecycle client projects and deployments"
+        );
+        window.switchFile("resume.md");
+        break;
+
+      case "education":
+        appendTerminalText(
+          "Education:\n" +
+          "  • Higher Secondary Education (Plus Two) — Completed 2025 - 2026\n" +
+          "    GVHSS Alanallur, Palakkad\n" +
+          "    Focus: Self-taught backend engineering, Python, Django & web development"
         );
         window.switchFile("resume.md");
         break;

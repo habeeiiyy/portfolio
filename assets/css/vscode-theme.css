@@ -697,15 +697,17 @@ select:focus-visible,
 .syn-attr { color: var(--syn-attr); }
 
 .code-banner {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.28);
   border: 1px solid var(--border-color);
-  border-radius: 8px;
-  padding: 16px 20px;
+  border-left: 3px solid var(--accent);
+  border-radius: 4px;
+  padding: 12px 18px;
   font-family: var(--font-code);
   font-size: 13.5px;
   line-height: 1.6;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
   overflow-x: auto;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 /* ==========================================================================
@@ -785,64 +787,104 @@ select:focus-visible,
   margin-bottom: 24px;
 }
 
+/* ==========================================================================
+   Minecraft Style Buttons — Classic Authentic Dev Feel
+   ========================================================================== */
+
 .btn-vscode-primary {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  background-color: var(--accent);
-  color: #ffffff;
-  padding: 8px 16px;
-  border-radius: 4px;
+  background: linear-gradient(180deg, #2572ad 0%, #1a5988 100%);
+  color: #ffffff !important;
+  padding: 9px 18px;
+  border-radius: 0;
   font-family: var(--font-code);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 13px;
+  letter-spacing: 0.5px;
   text-decoration: none;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 2px solid #000000;
+  box-shadow: inset 2px 2px 0px 0px rgba(255, 255, 255, 0.4),
+              inset -2px -3px 0px 0px rgba(0, 0, 0, 0.65);
+  text-shadow: 1px 1px 0px #092337, 2px 2px 0px rgba(0, 0, 0, 0.5);
   cursor: pointer;
-  transition: background-color 0.15s ease, transform 0.1s ease;
+  transition: background 0.08s ease, color 0.08s ease, box-shadow 0.08s ease, transform 0.05s ease;
   user-select: none;
+  image-rendering: pixelated;
+}
+
+.btn-vscode-primary i {
+  filter: drop-shadow(1px 1px 0px #092337);
+  transition: transform 0.05s ease;
 }
 
 .btn-vscode-primary:hover,
 .btn-vscode-primary:focus-visible {
-  background-color: #0062a3;
-  color: #ffffff;
+  background: linear-gradient(180deg, #3389cd 0%, #246fa8 100%);
+  color: #ffffa0 !important;
+  text-shadow: 1px 1px 0px #2a2a00, 2px 2px 0px #000000;
+  box-shadow: inset 2px 2px 0px 0px rgba(255, 255, 255, 0.65),
+              inset -2px -3px 0px 0px rgba(0, 0, 0, 0.75);
   transform: translateY(-1px);
 }
 
 .btn-vscode-primary:active {
-  transform: translateY(0);
-  background-color: #005084;
+  background: #14466b;
+  color: #ffffa0 !important;
+  box-shadow: inset 2px 3px 0px 0px rgba(0, 0, 0, 0.85),
+              inset -2px -2px 0px 0px rgba(255, 255, 255, 0.2);
+  transform: translate(1px, 2px);
+  text-shadow: 0px 0px 0px transparent, 1px 1px 0px #000000;
 }
 
 .btn-vscode-secondary {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  background-color: rgba(255, 255, 255, 0.08);
-  color: var(--text-bright);
-  padding: 8px 16px;
-  border-radius: 4px;
+  background: linear-gradient(180deg, #53565d 0%, #43464c 100%);
+  color: #e8e8e8 !important;
+  padding: 9px 18px;
+  border-radius: 0;
   font-family: var(--font-code);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 13px;
+  letter-spacing: 0.5px;
   text-decoration: none;
-  border: 1px solid var(--border-color);
+  border: 2px solid #000000;
+  box-shadow: inset 2px 2px 0px 0px rgba(255, 255, 255, 0.35),
+              inset -2px -3px 0px 0px rgba(0, 0, 0, 0.65);
+  text-shadow: 1px 1px 0px #181818, 2px 2px 0px rgba(0, 0, 0, 0.5);
   cursor: pointer;
-  transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+  transition: background 0.08s ease, color 0.08s ease, box-shadow 0.08s ease, transform 0.05s ease;
   user-select: none;
+  image-rendering: pixelated;
+}
+
+.btn-vscode-secondary i {
+  filter: drop-shadow(1px 1px 0px #181818);
+  transition: transform 0.05s ease;
 }
 
 .btn-vscode-secondary:hover,
 .btn-vscode-secondary:focus-visible {
-  background-color: rgba(255, 255, 255, 0.14);
-  border-color: var(--text-dim);
-  color: #ffffff;
+  background: linear-gradient(180deg, #6c7079 0%, #585c65 100%);
+  color: #ffffa0 !important;
+  text-shadow: 1px 1px 0px #3f3f00, 2px 2px 0px #000000;
+  box-shadow: inset 2px 2px 0px 0px rgba(255, 255, 255, 0.55),
+              inset -2px -3px 0px 0px rgba(0, 0, 0, 0.75);
   transform: translateY(-1px);
 }
 
 .btn-vscode-secondary:active {
-  transform: translateY(0);
+  background: #313338;
+  color: #ffffa0 !important;
+  box-shadow: inset 2px 3px 0px 0px rgba(0, 0, 0, 0.85),
+              inset -2px -2px 0px 0px rgba(255, 255, 255, 0.15);
+  transform: translate(1px, 2px);
+  text-shadow: 0px 0px 0px transparent, 1px 1px 0px #000000;
 }
 
 /* Highlights Grid */
@@ -1388,39 +1430,50 @@ select:focus-visible,
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background-color: #25d366;
+  background: linear-gradient(180deg, #249a50 0%, #1a7a3e 100%);
   color: #ffffff !important;
   font-size: 13px;
   font-family: var(--font-code);
-  font-weight: 600;
-  letter-spacing: 0.02em;
+  font-weight: 700;
+  letter-spacing: 0.5px;
   padding: 9px 18px;
-  border-radius: 4px;
+  border-radius: 0;
   text-decoration: none;
-  border: 1px solid #20ba5a;
+  border: 2px solid #000000;
+  box-shadow: inset 2px 2px 0px 0px rgba(255, 255, 255, 0.45),
+              inset -2px -3px 0px 0px rgba(0, 0, 0, 0.65);
+  text-shadow: 1px 1px 0px #0b3b1c, 2px 2px 0px rgba(0, 0, 0, 0.5);
   cursor: pointer;
-  transition: background-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+  transition: background 0.08s ease, color 0.08s ease, box-shadow 0.08s ease, transform 0.05s ease;
   user-select: none;
-  box-shadow: 0 2px 6px rgba(37, 211, 102, 0.25);
+  image-rendering: pixelated;
 }
 
-.btn-whatsapp-animated .wa-icon {
+.btn-whatsapp-animated .wa-icon,
+.btn-whatsapp-animated i {
   font-size: 18px;
   line-height: 1;
+  filter: drop-shadow(1px 1px 0px #0b3b1c);
+  transition: transform 0.05s ease;
 }
 
 .btn-whatsapp-animated:hover,
 .btn-whatsapp-animated:focus-visible {
-  background-color: #20ba5a;
+  background: linear-gradient(180deg, #2ebd62 0%, #20994d 100%);
+  color: #ffffa0 !important;
+  text-shadow: 1px 1px 0px #304400, 2px 2px 0px #000000;
+  box-shadow: inset 2px 2px 0px 0px rgba(255, 255, 255, 0.65),
+              inset -2px -3px 0px 0px rgba(0, 0, 0, 0.75);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
-  color: #ffffff;
 }
 
 .btn-whatsapp-animated:active {
-  transform: translateY(0);
-  background-color: #1da851;
-  box-shadow: 0 1px 3px rgba(37, 211, 102, 0.2);
+  background: #12552b;
+  color: #ffffa0 !important;
+  box-shadow: inset 2px 3px 0px 0px rgba(0, 0, 0, 0.85),
+              inset -2px -2px 0px 0px rgba(255, 255, 255, 0.2);
+  transform: translate(1px, 2px);
+  text-shadow: 0px 0px 0px transparent, 1px 1px 0px #000000;
 }
 
 .btn-email-direct {
@@ -1428,36 +1481,50 @@ select:focus-visible,
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background-color: var(--accent);
+  background: linear-gradient(180deg, #2572ad 0%, #1a5988 100%);
   color: #ffffff !important;
   font-size: 13px;
   font-family: var(--font-code);
-  font-weight: 600;
-  letter-spacing: 0.02em;
+  font-weight: 700;
+  letter-spacing: 0.5px;
   padding: 9px 18px;
-  border-radius: 4px;
+  border-radius: 0;
   text-decoration: none;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 2px solid #000000;
+  box-shadow: inset 2px 2px 0px 0px rgba(255, 255, 255, 0.45),
+              inset -2px -3px 0px 0px rgba(0, 0, 0, 0.65);
+  text-shadow: 1px 1px 0px #092337, 2px 2px 0px rgba(0, 0, 0, 0.5);
   cursor: pointer;
-  transition: background-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+  transition: background 0.08s ease, color 0.08s ease, box-shadow 0.08s ease, transform 0.05s ease;
   user-select: none;
-  box-shadow: 0 2px 6px rgba(0, 122, 204, 0.25);
+  image-rendering: pixelated;
+}
+
+.btn-email-direct i {
+  filter: drop-shadow(1px 1px 0px #092337);
+  transition: transform 0.05s ease;
 }
 
 .btn-email-direct:hover,
 .btn-email-direct:focus-visible {
-  background-color: #0062a3;
+  background: linear-gradient(180deg, #3389cd 0%, #246fa8 100%);
+  color: #ffffa0 !important;
+  text-shadow: 1px 1px 0px #2a2a00, 2px 2px 0px #000000;
+  box-shadow: inset 2px 2px 0px 0px rgba(255, 255, 255, 0.65),
+              inset -2px -3px 0px 0px rgba(0, 0, 0, 0.75);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 122, 204, 0.35);
-  color: #ffffff;
 }
 
 .btn-email-direct:active {
-  transform: translateY(0);
-  background-color: #005084;
+  background: #14466b;
+  color: #ffffa0 !important;
+  box-shadow: inset 2px 3px 0px 0px rgba(0, 0, 0, 0.85),
+              inset -2px -2px 0px 0px rgba(255, 255, 255, 0.2);
+  transform: translate(1px, 2px);
+  text-shadow: 0px 0px 0px transparent, 1px 1px 0px #000000;
 }
 
-/* Floating WhatsApp button at bottom right */
+/* Floating WhatsApp button at bottom right (Minecraft Emerald Block Style) */
 .fab-whatsapp {
   position: fixed;
   right: 22px;
@@ -1471,26 +1538,35 @@ select:focus-visible,
   justify-content: center;
   width: 48px;
   height: 48px;
-  background-color: #25d366;
+  background: linear-gradient(180deg, #249a50 0%, #1a7a3e 100%);
   color: #ffffff;
-  border-radius: 50%;
+  border-radius: 0;
+  border: 2px solid #000000;
+  box-shadow: inset 2px 2px 0px 0px rgba(255, 255, 255, 0.5),
+              inset -2px -3px 0px 0px rgba(0, 0, 0, 0.65),
+              0 4px 10px rgba(0, 0, 0, 0.5);
   font-size: 24px;
   text-decoration: none;
-  border: none;
   cursor: pointer;
-  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
+  transition: background 0.08s ease, color 0.08s ease, transform 0.05s ease;
+  image-rendering: pixelated;
 }
 
 .fab-whatsapp .fab-btn:hover {
-  background-color: #20ba5a;
-  transform: scale(1.08);
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.55);
+  background: linear-gradient(180deg, #2ebd62 0%, #20994d 100%);
+  color: #ffffa0;
+  transform: translateY(-2px);
+  box-shadow: inset 2px 2px 0px 0px rgba(255, 255, 255, 0.7),
+              inset -2px -3px 0px 0px rgba(0, 0, 0, 0.75),
+              0 6px 14px rgba(0, 0, 0, 0.6);
 }
 
 .fab-whatsapp .fab-btn:active {
-  transform: scale(0.95);
-  background-color: #1da851;
+  background: #12552b;
+  color: #ffffa0;
+  box-shadow: inset 2px 3px 0px 0px rgba(0, 0, 0, 0.85),
+              inset -2px -2px 0px 0px rgba(255, 255, 255, 0.2);
+  transform: translate(1px, 2px);
 }
 
 .fab-whatsapp .fab-label {
@@ -1977,6 +2053,19 @@ select:focus-visible,
   gap: 10px;
 }
 
+.theme-option-btn {
+  width: 100%;
+  margin-bottom: 8px;
+  justify-content: flex-start;
+}
+
+.theme-option-btn.active {
+  background: #2a2d33 !important;
+  color: #ffffa0 !important;
+  box-shadow: inset 2px 3px 0px 0px rgba(0, 0, 0, 0.85),
+              inset -2px -2px 0px 0px rgba(255, 255, 255, 0.15) !important;
+}
+
 /* ==========================================================================
    Responsive Viewport Optimizations
    Tested viewports: 320, 360, 375, 390, 430, 768, 1024, 1366, 1920 CSS pixels
@@ -2059,7 +2148,9 @@ select:focus-visible,
     font-size: 1.05rem;
   }
   .btn-vscode-primary,
-  .btn-vscode-secondary {
+  .btn-vscode-secondary,
+  .btn-whatsapp-animated,
+  .btn-email-direct {
     width: 100%;
     justify-content: center;
   }
