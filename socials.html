@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Social Profiles & Repositories - Habeeb P | VS Code Portfolio</title>
+  <meta name="description" content="Habeeb P is a full stack developer from Palakkad, Kerala specializing in Python, Django, React, PostgreSQL, Docker, Celery, Redis, and RabbitMQ.">
+  <meta name="keywords" content="Habeeb, Habeeb P, full stack developer, Python Django developer, React developer, PostgreSQL, Redis, Celery, SmashUp, web developer Kerala, VS Code portfolio">
+  <link rel="canonical" href="https://habeeiiyy.in/socials.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Habeeb P - Python Django &amp; React Full Stack Developer">
+  <meta property="og:description" content="Scalable web solutions powered by Django, React, PgSQL, Docker, Celery, and Redis.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://habeeiiyy.in/">
+  <meta property="og:image" content="assets/img/pic1.jpg">
+
+  <!-- Favicon -->
+  <link href="assets/img/fav.webp" rel="icon" type="image/webp">
+
+  <!-- Bootstrap Icons & VS Code Theme -->
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/css/vscode-theme.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <a class="visually-hidden" href="#editor-main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
+
+  <!-- Complete Visual Studio Code Window -->
+  <div class="vscode-window">
+
+    <!-- Top Title Bar -->
+    <header class="vscode-titlebar" aria-label="Visual Studio Code Title Bar">
+      <div class="titlebar-left">
+        <button type="button" class="mobile-menu-toggle" onclick="window.toggleMobileSidebar()" aria-label="Toggle Explorer Navigation">
+          <i class="bi bi-list" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="vscode-logo" onclick="window.switchFile('socials.json')" title="Visual Studio Code" style="background:none;border:none;cursor:pointer;" aria-label="Home">
+          <i class="bi bi-code-slash"></i>
+        </button>
+        <nav class="titlebar-menus" aria-label="Window Menu">
+          <button type="button" class="titlebar-menu-item" onclick="window.switchFile('socials.json')">File</button>
+          <button type="button" class="titlebar-menu-item" onclick="window.switchFile('about.html')">Edit</button>
+          <button type="button" class="titlebar-menu-item" onclick="window.switchFile('skills.json')">Selection</button>
+          <button type="button" class="titlebar-menu-item" onclick="window.switchFile('services.py')">View</button>
+          <button type="button" class="titlebar-menu-item" onclick="window.switchFile('resume.md')">Go</button>
+          <button type="button" class="titlebar-menu-item" onclick="window.toggleTerminal()">Run</button>
+          <button type="button" class="titlebar-menu-item" onclick="window.toggleTerminal()">Terminal</button>
+          <button type="button" class="titlebar-menu-item" onclick="window.switchFile('contact.html')">Help</button>
+        </nav>
+      </div>
+
+      <div class="titlebar-center">
+        <div class="titlebar-search-box" onclick="window.switchFile('socials.json')" role="button" tabindex="0" aria-label="Search or jump to file">
+          <i class="bi bi-search" aria-hidden="true"></i>
+          <span>socials.json &mdash; habeeb-portfolio</span>
+        </div>
+      </div>
+
+      <div class="titlebar-right">
+        <div class="titlebar-controls" aria-hidden="true">
+          <span class="window-control-btn min" title="Minimize"></span>
+          <span class="window-control-btn max" title="Maximize"></span>
+          <span class="window-control-btn close" title="Close"></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Workbench Layout -->
+    <div class="vscode-workbench">
+
+      <div class="sidebar-backdrop" aria-hidden="true"></div>
+
+      <!-- Activity Bar (Left vertical strip) -->
+      <aside class="vscode-activitybar" aria-label="Activity Bar">
+        <div class="activitybar-top">
+          <button type="button" id="activity-explorer-btn" class="activity-btn active" title="Explorer (Ctrl+B)" aria-label="Explorer">
+            <i class="bi bi-files" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="activity-btn" title="Search Files" aria-label="Search" onclick="window.switchFile('skills.json')">
+            <i class="bi bi-search" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="activity-btn" title="Ongoing Project: SmashUp" aria-label="SmashUp Repo" onclick="window.open('https://github.com/habeeiiyy/SmashUp', '_blank', 'noopener,noreferrer')">
+            <i class="bi bi-code-slash" style="color: #55ff55;" aria-hidden="true"></i>
+            <span class="activity-badge">NEW</span>
+          </button>
+          <button type="button" class="activity-btn" title="Services &amp; Scalability" aria-label="Services" onclick="window.switchFile('services.py')">
+            <i class="bi bi-grid-fill" aria-hidden="true"></i>
+          </button>
+          <button type="button" id="activity-terminal-btn" class="activity-btn" title="Interactive Terminal (Ctrl+`)" aria-label="Terminal">
+            <i class="bi bi-terminal" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <div class="activitybar-bottom">
+          <a href="https://wa.me/919497844660" target="_blank" rel="noopener noreferrer" class="activity-btn" title="WhatsApp Direct Chat" aria-label="WhatsApp">
+            <i class="bi bi-whatsapp" style="color: #55ff55;" aria-hidden="true"></i>
+          </a>
+          <a href="https://github.com/habeeiiyy" target="_blank" rel="noopener noreferrer" class="activity-btn" title="Habeeb on GitHub" aria-label="GitHub Profile">
+            <i class="bi bi-github" aria-hidden="true"></i>
+          </a>
+          <button type="button" id="activity-settings-btn" class="activity-btn" title="Theme &amp; Settings" aria-label="Settings">
+            <i class="bi bi-gear" aria-hidden="true"></i>
+          </button>
+        </div>
+      </aside>
+
+      <!-- Sidebar (File Explorer) -->
+      <nav class="vscode-sidebar" aria-label="File Explorer">
+        <div class="sidebar-header">
+          <span>Explorer</span>
+          <i class="bi bi-three-dots" aria-hidden="true"></i>
+        </div>
+
+        <div class="sidebar-content">
+          <div class="explorer-section-title" onclick="window.toggleSidebarDesktop()">
+            <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            <span>HABEEB-PORTFOLIO</span>
+          </div>
+
+          <ul class="explorer-list" role="tree">
+            <li role="none">
+              <a href="index.html" class="explorer-item" data-file="home.py" role="treeitem">
+                <i class="bi bi-filetype-py file-icon icon-py" aria-hidden="true"></i>
+                <span>home.py</span>
+              </a>
+            </li>
+            <li role="none">
+              <a href="about.html" class="explorer-item" data-file="about.html" role="treeitem">
+                <i class="bi bi-filetype-html file-icon icon-html" aria-hidden="true"></i>
+                <span>about.html</span>
+              </a>
+            </li>
+            <li role="none">
+              <a href="resume.html" class="explorer-item" data-file="resume.md" role="treeitem">
+                <i class="bi bi-filetype-md file-icon icon-md" aria-hidden="true"></i>
+                <span>resume.md</span>
+              </a>
+            </li>
+            <li role="none">
+              <a href="skills.html" class="explorer-item" data-file="skills.json" role="treeitem">
+                <i class="bi bi-filetype-json file-icon icon-json" aria-hidden="true"></i>
+                <span>skills.json</span>
+              </a>
+            </li>
+            <li role="none">
+              <a href="services.html" class="explorer-item" data-file="services.py" role="treeitem">
+                <i class="bi bi-filetype-py file-icon icon-py" aria-hidden="true"></i>
+                <span>services.py</span>
+              </a>
+            </li>
+            <li role="none">
+              <a href="contact.html" class="explorer-item" data-file="contact.html" role="treeitem">
+                <i class="bi bi-filetype-html file-icon icon-html" aria-hidden="true"></i>
+                <span>contact.html</span>
+              </a>
+            </li>
+            <li role="none">
+              <a href="socials.html" class="explorer-item active" data-file="socials.json" role="treeitem">
+                <i class="bi bi-filetype-json file-icon icon-json" aria-hidden="true"></i>
+                <span>socials.json</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Editor Main Container -->
+      <main id="editor-main-content" class="vscode-editor">
+
+        <div class="vscode-tabs-bar" role="tablist" aria-label="Editor Tabs">
+          <a href="index.html" class="editor-tab" data-file="home.py" role="tab" aria-selected="false" id="tab-home">
+            <i class="bi bi-filetype-py file-icon icon-py" aria-hidden="true"></i>
+            <span>home.py</span>
+            <span class="tab-close" title="Close tab">&times;</span>
+          </a>
+          <a href="about.html" class="editor-tab" data-file="about.html" role="tab" aria-selected="false" id="tab-about">
+            <i class="bi bi-filetype-html file-icon icon-html" aria-hidden="true"></i>
+            <span>about.html</span>
+            <span class="tab-close" title="Close tab">&times;</span>
+          </a>
+          <a href="resume.html" class="editor-tab" data-file="resume.md" role="tab" aria-selected="false" id="tab-resume">
+            <i class="bi bi-filetype-md file-icon icon-md" aria-hidden="true"></i>
+            <span>resume.md</span>
+            <span class="tab-close" title="Close tab">&times;</span>
+          </a>
+          <a href="skills.html" class="editor-tab" data-file="skills.json" role="tab" aria-selected="false" id="tab-skills">
+            <i class="bi bi-filetype-json file-icon icon-json" aria-hidden="true"></i>
+            <span>skills.json</span>
+            <span class="tab-close" title="Close tab">&times;</span>
+          </a>
+          <a href="services.html" class="editor-tab" data-file="services.py" role="tab" aria-selected="false" id="tab-services">
+            <i class="bi bi-filetype-py file-icon icon-py" aria-hidden="true"></i>
+            <span>services.py</span>
+            <span class="tab-close" title="Close tab">&times;</span>
+          </a>
+          <a href="contact.html" class="editor-tab" data-file="contact.html" role="tab" aria-selected="false" id="tab-contact">
+            <i class="bi bi-filetype-html file-icon icon-html" aria-hidden="true"></i>
+            <span>contact.html</span>
+            <span class="tab-close" title="Close tab">&times;</span>
+          </a>
+          <a href="socials.html" class="editor-tab active" data-file="socials.json" role="tab" aria-selected="true" id="tab-socials">
+            <i class="bi bi-filetype-json file-icon icon-json" aria-hidden="true"></i>
+            <span>socials.json</span>
+            <span class="tab-close" title="Close tab">&times;</span>
+          </a>
+        </div>
+
+        <!-- Breadcrumbs Bar -->
+        <div class="vscode-breadcrumbs" aria-label="Breadcrumbs">
+          <span class="breadcrumb-segment">portfolio</span>
+          <i class="bi bi-chevron-right" aria-hidden="true"></i>
+          <span class="breadcrumb-segment">src</span>
+          <i class="bi bi-chevron-right" aria-hidden="true"></i>
+          <span class="breadcrumb-segment breadcrumb-active" id="breadcrumb-current-file">socials.json</span>
+        </div>
+
+        <!-- Editor Body (Gutter + Scrollable Content) -->
+        <div class="vscode-editor-body">
+
+          <!-- Line numbers gutter -->
+          <div class="vscode-gutter" aria-hidden="true">
+            1<br>
+            2<br>
+            3<br>
+            4<br>
+            5<br>
+            6<br>
+            7<br>
+            8<br>
+            9<br>
+            10<br>
+            11<br>
+            12<br>
+            13<br>
+            14<br>
+            15<br>
+            16<br>
+            17<br>
+            18<br>
+            19<br>
+            20<br>
+            21<br>
+            22<br>
+            23<br>
+            24<br>
+            25<br>
+            26<br>
+            27<br>
+            28<br>
+            29<br>
+            30<br>
+            31<br>
+            32<br>
+            33<br>
+            34<br>
+            35
+          </div>
+
+          <!-- Scrollable Content Views -->
+          <div class="vscode-content-scroll">
+
+            <!-- ================= VIEW 7: socials.json ================= -->
+            <section id="view-socials" class="tab-view active" role="tabpanel" aria-labelledby="tab-socials">
+              <div class="code-banner">
+                <span class="syn-cm">// Social Connections &amp; Active Repositories</span><br>
+                {<br>
+                &nbsp;&nbsp;<span class="syn-str">"github"</span>: <span class="syn-str">"https://github.com/habeeiiyy"</span>,<br>
+                &nbsp;&nbsp;<span class="syn-str">"ongoing_repo"</span>: <span class="syn-str">"https://github.com/habeeiiyy/SmashUp"</span>,<br>
+                &nbsp;&nbsp;<span class="syn-str">"linkedin"</span>: <span class="syn-str">"https://www.linkedin.com/in/habeeiiyy"</span>,<br>
+                &nbsp;&nbsp;<span class="syn-str">"twitter"</span>: <span class="syn-str">"https://twitter.com/habeeiiyy"</span><br>
+                }
+              </div>
+
+              <h2 class="section-h2">
+                <i class="bi bi-share" aria-hidden="true"></i>
+                <span>Social Links &amp; Projects</span>
+              </h2>
+
+              <p style="font-size: 1.05rem; color: var(--text-main); margin-bottom: 24px;">
+                Connect with Habeeb across platforms for development services, technical updates, and open-source work:
+              </p>
+
+              <div class="socials-cards-grid">
+                <a href="https://github.com/habeeiiyy/SmashUp" target="_blank" rel="noopener noreferrer" class="social-card">
+                  <i class="bi bi-code-slash social-card-icon" style="color: #55ff55;" aria-hidden="true"></i>
+                  <div class="social-card-name">SmashUp (Project)</div>
+                  <div class="social-card-handle">habeeiiyy/SmashUp</div>
+                </a>
+
+                <a href="https://github.com/habeeiiyy" target="_blank" rel="noopener noreferrer" class="social-card">
+                  <i class="bi bi-github social-card-icon" aria-hidden="true"></i>
+                  <div class="social-card-name">GitHub Profile</div>
+                  <div class="social-card-handle">@habeeiiyy</div>
+                </a>
+
+                <a href="https://www.linkedin.com/in/habeeiiyy" target="_blank" rel="noopener noreferrer" class="social-card">
+                  <i class="bi bi-linkedin social-card-icon" aria-hidden="true"></i>
+                  <div class="social-card-name">LinkedIn</div>
+                  <div class="social-card-handle">habeeiiyy</div>
+                </a>
+
+                <a href="https://twitter.com/habeeiiyy" target="_blank" rel="noopener noreferrer" class="social-card">
+                  <i class="bi bi-twitter-x social-card-icon" aria-hidden="true"></i>
+                  <div class="social-card-name">Twitter / X</div>
+                  <div class="social-card-handle">@habeeiiyy</div>
+                </a>
+              </div>
+
+              <div style="margin-top: 14px; margin-bottom: 30px; display: flex; flex-wrap: wrap; gap: 12px;">
+                <a href="https://wa.me/919497844660" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-animated">
+                  <i class="bi bi-whatsapp wa-icon" aria-hidden="true"></i>
+                  <span>Let's talk on WhatsApp</span>
+                </a>
+                <a href="mailto:habeebdeveloper.india@gmail.com" class="btn-email-direct">
+                  <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+                  <span>Email Directly</span>
+                </a>
+              </div>
+
+              <h2 class="section-h2" style="margin-top: 36px;">
+                <i class="bi bi-diagram-3" aria-hidden="true"></i>
+                <span>Engineering Workflow</span>
+              </h2>
+
+              <div class="process-grid">
+                <div class="process-box">
+                  <div class="process-step">Phase 01</div>
+                  <h3 class="process-title">Architecture &amp; Schema</h3>
+                  <p class="process-desc">
+                    Designing clean database schemas in PostgreSQL, defining REST API contracts, and planning asynchronous task boundaries.
+                  </p>
+                </div>
+
+                <div class="process-box">
+                  <div class="process-step">Phase 02</div>
+                  <h3 class="process-title">Development &amp; Concurrency</h3>
+                  <p class="process-desc">
+                    Building robust Django backends and React frontends, with Celery, Redis, and RabbitMQ handling background worker tasks.
+                  </p>
+                </div>
+
+                <div class="process-box">
+                  <div class="process-step">Phase 03</div>
+                  <h3 class="process-title">Dockerization &amp; Deployment</h3>
+                  <p class="process-desc">
+                    Packaging applications with Docker, tuning query performance and cache hits, and executing production deployment.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+          </div>
+        </div></div>
+        </div>
+
+        <!-- Collapsible Bottom Terminal Panel -->
+        <div class="vscode-panel collapsed" aria-label="Terminal Drawer">
+          <div class="panel-header">
+            <div class="panel-tabs">
+              <button type="button" class="panel-tab active">Terminal</button>
+              <button type="button" class="panel-tab" onclick="window.switchFile('skills.json')">Problems (0)</button>
+              <button type="button" class="panel-tab" onclick="window.switchFile('resume.md')">Output</button>
+              <button type="button" class="panel-tab" onclick="window.switchFile('services.py')">Debug Console</button>
+            </div>
+            <div class="panel-controls">
+              <button type="button" id="panel-close-btn" class="panel-btn" title="Close Panel" aria-label="Close terminal">&times;</button>
+            </div>
+          </div>
+          <div class="panel-body">
+            <div id="terminal-history" class="terminal-history">Habeeb P Developer Environment initialized [Version 2.0].
+Type 'help' to see available commands or type 'about', 'skills', 'smashup', 'experience', 'services', 'contact', 'whatsapp', 'clear'.
+</div>
+            <div class="terminal-input-row">
+              <span class="terminal-prompt">habeeb@portfolio:~$</span>
+              <input type="text" id="terminal-input" class="terminal-input" placeholder="Type a command and press Enter..." autocomplete="off" spellcheck="false" aria-label="Terminal Command Input">
+            </div>
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+
+    <!-- Bottom Status Bar -->
+    <footer class="vscode-statusbar" aria-label="Status Bar">
+      <div class="statusbar-left">
+        <a href="https://github.com/habeeiiyy/portfolio" target="_blank" rel="noopener noreferrer" class="statusbar-item" title="Git Branch: master">
+          <i class="bi bi-git" aria-hidden="true"></i>
+          <span>master*</span>
+        </a>
+        <a href="https://github.com/habeeiiyy/SmashUp" target="_blank" rel="noopener noreferrer" class="statusbar-item" title="Active Repo: SmashUp">
+          <i class="bi bi-box" aria-hidden="true"></i>
+          <span>SmashUp</span>
+        </a>
+        <button type="button" class="statusbar-item" title="0 Errors, 0 Warnings" aria-label="Problems">
+          <i class="bi bi-x-circle" aria-hidden="true"></i> <span>0</span>
+          <i class="bi bi-exclamation-triangle" aria-hidden="true" style="margin-left: 4px;"></i> <span>0</span>
+        </button>
+        <button type="button" id="statusbar-terminal-toggle" class="statusbar-item" title="Toggle Terminal Drawer" aria-label="Toggle Terminal">
+          <i class="bi bi-terminal" aria-hidden="true"></i> <span>Terminal</span>
+        </button>
+      </div>
+
+      <div class="statusbar-right">
+        <span class="statusbar-item hide-on-mobile">Ln 1, Col 1</span>
+        <span class="statusbar-item hide-on-mobile">Spaces: 4</span>
+        <span class="statusbar-item hide-on-mobile">UTF-8</span>
+        <span class="statusbar-item" id="statusbar-lang">JSON</span>
+        <span class="statusbar-item hide-on-mobile"><i class="bi bi-check2" aria-hidden="true"></i> Prettier</span>
+        <button type="button" class="statusbar-item" title="Theme Selector" onclick="window.showThemeModal()">
+          <i class="bi bi-palette" aria-hidden="true"></i>
+        </button>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Floating WhatsApp Action Button (Minecraft style square) -->
+  <div class="fab-whatsapp" aria-label="Chat on WhatsApp">
+    <a href="https://wa.me/919497844660" target="_blank" rel="noopener noreferrer" class="fab-btn" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
+      <i class="bi bi-whatsapp" aria-hidden="true"></i>
+    </a>
+    <span class="fab-label">Chat on WhatsApp</span>
+  </div>
+
+  <!-- Theme Selector Modal -->
+  <div id="theme-selector-modal" class="vscode-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="theme-modal-title">
+    <div class="vscode-modal-dialog">
+      <div class="modal-header">
+        <h3 id="theme-modal-title">
+          <i class="bi bi-palette" aria-hidden="true"></i>
+          <span>Select VS Code Color Theme</span>
+        </h3>
+        <button type="button" class="modal-close-btn" aria-label="Close theme selector">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="margin-top: 0;">Choose your preferred IDE visual theme:</p>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <button type="button" class="btn-vscode-secondary theme-option-btn" data-theme="dark" style="justify-content: flex-start;">
+            <i class="bi bi-circle-fill" style="color: #1e1e1e;" aria-hidden="true"></i>
+            <span style="margin-left: 8px;">VS Code Dark Modern (Default)</span>
+          </button>
+          <button type="button" class="btn-vscode-secondary theme-option-btn" data-theme="github-dark" style="justify-content: flex-start;">
+            <i class="bi bi-circle-fill" style="color: #0d1117;" aria-hidden="true"></i>
+            <span style="margin-left: 8px;">GitHub Dark</span>
+          </button>
+          <button type="button" class="btn-vscode-secondary theme-option-btn" data-theme="dracula" style="justify-content: flex-start;">
+            <i class="bi bi-circle-fill" style="color: #bd93f9;" aria-hidden="true"></i>
+            <span style="margin-left: 8px;">Dracula</span>
+          </button>
+          <button type="button" class="btn-vscode-secondary theme-option-btn" data-theme="one-dark" style="justify-content: flex-start;">
+            <i class="bi bi-circle-fill" style="color: #61afef;" aria-hidden="true"></i>
+            <span style="margin-left: 8px;">One Dark Pro</span>
+          </button>
+          <button type="button" class="btn-vscode-secondary theme-option-btn" data-theme="light" style="justify-content: flex-start;">
+            <i class="bi bi-circle-fill" style="color: #f3f3f3;" aria-hidden="true"></i>
+            <span style="margin-left: 8px;">VS Code Light</span>
+          </button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-vscode-secondary modal-close-btn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/vscode-app.js"></script>
+</body>
+
+</html>

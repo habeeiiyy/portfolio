@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Resume - Habeeb P | Python Django & React Full Stack Developer | VS Code Portfolio</title>
+  <title>Resume & Experience - Habeeb P | VS Code Portfolio</title>
   <meta name="description" content="Habeeb P is a full stack developer from Palakkad, Kerala specializing in Python, Django, React, PostgreSQL, Docker, Celery, Redis, and RabbitMQ.">
   <meta name="keywords" content="Habeeb, Habeeb P, full stack developer, Python Django developer, React developer, PostgreSQL, Redis, Celery, SmashUp, web developer Kerala, VS Code portfolio">
   <link rel="canonical" href="https://habeeiiyy.in/resume.html">
@@ -13,7 +13,7 @@
   <meta property="og:title" content="Habeeb P - Python Django &amp; React Full Stack Developer">
   <meta property="og:description" content="Scalable web solutions powered by Django, React, PgSQL, Docker, Celery, and Redis.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://habeeiiyy.in/resume.html">
+  <meta property="og:url" content="https://habeeiiyy.in/">
   <meta property="og:image" content="assets/img/pic1.jpg">
 
   <!-- Favicon -->
@@ -37,11 +37,11 @@
         <button type="button" class="mobile-menu-toggle" onclick="window.toggleMobileSidebar()" aria-label="Toggle Explorer Navigation">
           <i class="bi bi-list" aria-hidden="true"></i>
         </button>
-        <button type="button" class="vscode-logo" onclick="window.switchFile('home.py')" title="Visual Studio Code" style="background:none;border:none;cursor:pointer;" aria-label="Home">
+        <button type="button" class="vscode-logo" onclick="window.switchFile('resume.md')" title="Visual Studio Code" style="background:none;border:none;cursor:pointer;" aria-label="Home">
           <i class="bi bi-code-slash"></i>
         </button>
         <nav class="titlebar-menus" aria-label="Window Menu">
-          <button type="button" class="titlebar-menu-item" onclick="window.switchFile('home.py')">File</button>
+          <button type="button" class="titlebar-menu-item" onclick="window.switchFile('resume.md')">File</button>
           <button type="button" class="titlebar-menu-item" onclick="window.switchFile('about.html')">Edit</button>
           <button type="button" class="titlebar-menu-item" onclick="window.switchFile('skills.json')">Selection</button>
           <button type="button" class="titlebar-menu-item" onclick="window.switchFile('services.py')">View</button>
@@ -122,43 +122,43 @@
 
           <ul class="explorer-list" role="tree">
             <li role="none">
-              <a href="#home.py" class="explorer-item" data-file="home.py" role="treeitem">
+              <a href="index.html" class="explorer-item" data-file="home.py" role="treeitem">
                 <i class="bi bi-filetype-py file-icon icon-py" aria-hidden="true"></i>
                 <span>home.py</span>
               </a>
             </li>
             <li role="none">
-              <a href="#about.html" class="explorer-item" data-file="about.html" role="treeitem">
+              <a href="about.html" class="explorer-item" data-file="about.html" role="treeitem">
                 <i class="bi bi-filetype-html file-icon icon-html" aria-hidden="true"></i>
                 <span>about.html</span>
               </a>
             </li>
             <li role="none">
-              <a href="#resume.md" class="explorer-item active" data-file="resume.md" role="treeitem">
+              <a href="resume.html" class="explorer-item active" data-file="resume.md" role="treeitem">
                 <i class="bi bi-filetype-md file-icon icon-md" aria-hidden="true"></i>
                 <span>resume.md</span>
               </a>
             </li>
             <li role="none">
-              <a href="#skills.json" class="explorer-item" data-file="skills.json" role="treeitem">
+              <a href="skills.html" class="explorer-item" data-file="skills.json" role="treeitem">
                 <i class="bi bi-filetype-json file-icon icon-json" aria-hidden="true"></i>
                 <span>skills.json</span>
               </a>
             </li>
             <li role="none">
-              <a href="#services.py" class="explorer-item" data-file="services.py" role="treeitem">
+              <a href="services.html" class="explorer-item" data-file="services.py" role="treeitem">
                 <i class="bi bi-filetype-py file-icon icon-py" aria-hidden="true"></i>
                 <span>services.py</span>
               </a>
             </li>
             <li role="none">
-              <a href="#contact.html" class="explorer-item" data-file="contact.html" role="treeitem">
+              <a href="contact.html" class="explorer-item" data-file="contact.html" role="treeitem">
                 <i class="bi bi-filetype-html file-icon icon-html" aria-hidden="true"></i>
                 <span>contact.html</span>
               </a>
             </li>
             <li role="none">
-              <a href="#socials.json" class="explorer-item" data-file="socials.json" role="treeitem">
+              <a href="socials.html" class="explorer-item" data-file="socials.json" role="treeitem">
                 <i class="bi bi-filetype-json file-icon icon-json" aria-hidden="true"></i>
                 <span>socials.json</span>
               </a>
@@ -170,43 +170,42 @@
       <!-- Editor Main Container -->
       <main id="editor-main-content" class="vscode-editor">
 
-        <!-- Tabs Bar -->
         <div class="vscode-tabs-bar" role="tablist" aria-label="Editor Tabs">
-          <button type="button" class="editor-tab" data-file="home.py" role="tab" aria-selected="false">
+          <a href="index.html" class="editor-tab" data-file="home.py" role="tab" aria-selected="false" id="tab-home">
             <i class="bi bi-filetype-py file-icon icon-py" aria-hidden="true"></i>
             <span>home.py</span>
             <span class="tab-close" title="Close tab">&times;</span>
-          </button>
-          <button type="button" class="editor-tab" data-file="about.html" role="tab" aria-selected="false">
+          </a>
+          <a href="about.html" class="editor-tab" data-file="about.html" role="tab" aria-selected="false" id="tab-about">
             <i class="bi bi-filetype-html file-icon icon-html" aria-hidden="true"></i>
             <span>about.html</span>
             <span class="tab-close" title="Close tab">&times;</span>
-          </button>
-          <button type="button" class="editor-tab active" data-file="resume.md" role="tab" aria-selected="true">
+          </a>
+          <a href="resume.html" class="editor-tab active" data-file="resume.md" role="tab" aria-selected="true" id="tab-resume">
             <i class="bi bi-filetype-md file-icon icon-md" aria-hidden="true"></i>
             <span>resume.md</span>
             <span class="tab-close" title="Close tab">&times;</span>
-          </button>
-          <button type="button" class="editor-tab" data-file="skills.json" role="tab" aria-selected="false">
+          </a>
+          <a href="skills.html" class="editor-tab" data-file="skills.json" role="tab" aria-selected="false" id="tab-skills">
             <i class="bi bi-filetype-json file-icon icon-json" aria-hidden="true"></i>
             <span>skills.json</span>
             <span class="tab-close" title="Close tab">&times;</span>
-          </button>
-          <button type="button" class="editor-tab" data-file="services.py" role="tab" aria-selected="false">
+          </a>
+          <a href="services.html" class="editor-tab" data-file="services.py" role="tab" aria-selected="false" id="tab-services">
             <i class="bi bi-filetype-py file-icon icon-py" aria-hidden="true"></i>
             <span>services.py</span>
             <span class="tab-close" title="Close tab">&times;</span>
-          </button>
-          <button type="button" class="editor-tab" data-file="contact.html" role="tab" aria-selected="false">
+          </a>
+          <a href="contact.html" class="editor-tab" data-file="contact.html" role="tab" aria-selected="false" id="tab-contact">
             <i class="bi bi-filetype-html file-icon icon-html" aria-hidden="true"></i>
             <span>contact.html</span>
             <span class="tab-close" title="Close tab">&times;</span>
-          </button>
-          <button type="button" class="editor-tab" data-file="socials.json" role="tab" aria-selected="false">
+          </a>
+          <a href="socials.html" class="editor-tab" data-file="socials.json" role="tab" aria-selected="false" id="tab-socials">
             <i class="bi bi-filetype-json file-icon icon-json" aria-hidden="true"></i>
             <span>socials.json</span>
             <span class="tab-close" title="Close tab">&times;</span>
-          </button>
+          </a>
         </div>
 
         <!-- Breadcrumbs Bar -->
@@ -223,209 +222,75 @@
 
           <!-- Line numbers gutter -->
           <div class="vscode-gutter" aria-hidden="true">
-            1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>
-            11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>
-            21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>
-            31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>
-            41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50
+            1<br>
+            2<br>
+            3<br>
+            4<br>
+            5<br>
+            6<br>
+            7<br>
+            8<br>
+            9<br>
+            10<br>
+            11<br>
+            12<br>
+            13<br>
+            14<br>
+            15<br>
+            16<br>
+            17<br>
+            18<br>
+            19<br>
+            20<br>
+            21<br>
+            22<br>
+            23<br>
+            24<br>
+            25<br>
+            26<br>
+            27<br>
+            28<br>
+            29<br>
+            30<br>
+            31<br>
+            32<br>
+            33<br>
+            34<br>
+            35<br>
+            36<br>
+            37<br>
+            38<br>
+            39<br>
+            40<br>
+            41<br>
+            42<br>
+            43<br>
+            44<br>
+            45<br>
+            46<br>
+            47<br>
+            48<br>
+            49<br>
+            50<br>
+            51<br>
+            52<br>
+            53<br>
+            54<br>
+            55<br>
+            56<br>
+            57<br>
+            58<br>
+            59<br>
+            60<br>
+            61<br>
+            62<br>
+            63<br>
+            64<br>
+            65
           </div>
 
           <!-- Scrollable Content Views -->
           <div class="vscode-content-scroll">
-
-            <!-- ================= VIEW 1: home.py ================= -->
-            <section id="view-home" class="tab-view" role="tabpanel" aria-labelledby="tab-home">
-              <div class="code-banner">
-                <span class="syn-cm"># -*- coding: utf-8 -*-</span><br>
-                <span class="syn-cm"># Habeeb P &mdash; Full Stack Developer Configuration</span><br>
-                <span class="syn-kw">class</span> <span class="syn-cls">Developer</span>:<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;<span class="syn-var">name</span> = <span class="syn-str">"Habeeb P"</span><br>
-                &nbsp;&nbsp;&nbsp;&nbsp;<span class="syn-var">role</span> = <span class="syn-str">"Python Django & React Full Stack Developer"</span><br>
-                &nbsp;&nbsp;&nbsp;&nbsp;<span class="syn-var">location</span> = <span class="syn-str">"Palakkad, Kerala"</span><br>
-                &nbsp;&nbsp;&nbsp;&nbsp;<span class="syn-var">stack</span> = [<span class="syn-str">"Django"</span>, <span class="syn-str">"Python"</span>, <span class="syn-str">"React"</span>, <span class="syn-str">"PgSQL"</span>, <span class="syn-str">"Docker"</span>, <span class="syn-str">"Celery"</span>, <span class="syn-str">"Redis"</span>, <span class="syn-str">"RabbitMQ"</span>]<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;<span class="syn-var">active_project</span> = <span class="syn-str">"SmashUp"</span><br>
-                &nbsp;&nbsp;&nbsp;&nbsp;<span class="syn-var">status</span> = <span class="syn-str">"Available for freelance & full stack projects"</span>
-              </div>
-
-              <div class="hero-editor-card">
-                <div class="hero-badge">
-                  <span class="status-dot"></span>
-                  <span>Available for Full Stack &amp; Backend Engineering</span>
-                </div>
-                <h1 class="hero-title">Habeeb P</h1>
-                <h2 class="hero-subtitle">&lt;Python Django &amp; React Full Stack Developer /&gt;</h2>
-                <p class="hero-description">
-                  High-performance web applications built with Python, Django, React, PostgreSQL, Docker, Celery, Redis, and RabbitMQ. Focused on scalable architectures and robust backend systems.
-                </p>
-
-                <div class="hero-actions">
-                  <button type="button" class="btn-vscode-secondary" onclick="window.switchFile('services.py')">
-                    <i class="bi bi-laptop" aria-hidden="true"></i>
-                    <span>Explore Services</span>
-                  </button>
-                  <a href="https://github.com/habeeiiyy/SmashUp" target="_blank" rel="noopener noreferrer" class="btn-vscode-primary">
-                    <i class="bi bi-github" aria-hidden="true"></i>
-                    <span>Ongoing Project: SmashUp</span>
-                  </a>
-                  <button type="button" class="btn-vscode-secondary" onclick="window.switchFile('contact.html')">
-                    <i class="bi bi-envelope" aria-hidden="true"></i>
-                    <span>Contact Me</span>
-                  </button>
-                  <a href="https://wa.me/919497844660" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-animated">
-                    <i class="bi bi-whatsapp wa-icon" aria-hidden="true"></i>
-                    <span>Let's talk on WhatsApp</span>
-                  </a>
-                </div>
-
-                <!-- Featured Ongoing Project Card: SmashUp -->
-                <div class="project-featured-card">
-                  <span class="project-tag-badge">Current Featured Project</span>
-                  <div>
-                    <a href="https://github.com/habeeiiyy/SmashUp" target="_blank" rel="noopener noreferrer" class="project-title-link">
-                      <span>SmashUp</span>
-                      <i class="bi bi-box-arrow-up-right" style="font-size: 16px;" aria-hidden="true"></i>
-                    </a>
-                  </div>
-                  <p style="font-size: 13.5px; color: var(--text-main); margin: 8px 0 0; line-height: 1.6;">
-                    A backend-focused project management and issue tracking system built with Django, featuring AI-powered issue triage. The system helps teams manage projects, track issues through their lifecycle, and automate the tedious parts of triage &mdash; auto-classifying priority, category, and suggested assignees &mdash; using AI.
-                  </p>
-                  <div class="project-stack-pills">
-                    <span class="project-stack-pill">Django</span>
-                    <span class="project-stack-pill">Python</span>
-                    <span class="project-stack-pill">AI Triage</span>
-                    <span class="project-stack-pill">Issue Tracking</span>
-                    <span class="project-stack-pill">Project Management</span>
-                    <span class="project-stack-pill">PgSQL</span>
-                    <span class="project-stack-pill">Celery &amp; Redis</span>
-                    <span class="project-stack-pill">REST API</span>
-                  </div>
-                  <a href="https://github.com/habeeiiyy/SmashUp" target="_blank" rel="noopener noreferrer" class="btn-vscode-primary" style="margin-top: 10px;">
-                    <i class="bi bi-github" aria-hidden="true"></i>
-                    <span>github.com/habeeiiyy/SmashUp</span>
-                  </a>
-                </div>
-
-                <div class="hero-highlights-grid">
-                  <div class="highlight-box">
-                    <i class="bi bi-database-fill-gear highlight-icon" aria-hidden="true"></i>
-                    <div>
-                      <div class="highlight-title">PgSQL &amp; Django Backend</div>
-                      <p class="highlight-text">Relational database schemas, REST APIs, and authentication.</p>
-                    </div>
-                  </div>
-                  <div class="highlight-box">
-                    <i class="bi bi-cpu highlight-icon" aria-hidden="true"></i>
-                    <div>
-                      <div class="highlight-title">Celery, Redis &amp; RabbitMQ</div>
-                      <p class="highlight-text">Asynchronous background workers, task queues, and caching.</p>
-                    </div>
-                  </div>
-                  <div class="highlight-box">
-                    <i class="bi bi-box-seam highlight-icon" aria-hidden="true"></i>
-                    <div>
-                      <div class="highlight-title">Docker &amp; Deployment</div>
-                      <p class="highlight-text">Containerized environments and seamless production hosting.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <!-- ================= VIEW 2: about.html ================= -->
-            <section id="view-about" class="tab-view" role="tabpanel" aria-labelledby="tab-about">
-              <div class="code-banner">
-                <span class="syn-cm">&lt;!-- Profile &amp; Biography: Habeeb P --&gt;</span><br>
-                <span class="syn-tag">&lt;section</span> <span class="syn-attr">id</span>=<span class="syn-str">"about-developer"</span> <span class="syn-attr">class</span>=<span class="syn-str">"full-stack-profile"</span><span class="syn-tag">&gt;</span>
-              </div>
-
-              <div class="about-grid">
-                <div class="profile-card">
-                  <div class="profile-img-frame">
-                    <img src="assets/img/pic1.jpg" alt="Portrait photo of Habeeb, full stack developer" class="profile-img" width="200" height="200" loading="lazy" decoding="async">
-                  </div>
-                  <h3 class="profile-name">Habeeb P</h3>
-                  <div class="profile-role">Full Stack Developer</div>
-                  <div class="profile-tags">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">Django</span>
-                    <span class="tech-tag">React</span>
-                    <span class="tech-tag">PgSQL</span>
-                    <span class="tech-tag">Docker</span>
-                    <span class="tech-tag">Celery</span>
-                    <span class="tech-tag">Redis</span>
-                    <span class="tech-tag">RabbitMQ</span>
-                  </div>
-                </div>
-
-                <div class="about-details-card">
-                  <h2 class="about-heading">Full Stack Developer</h2>
-                  <p class="about-bio" style="font-style: italic; color: var(--accent);">
-                    Scalable web applications built with Python, Django, React, and PostgreSQL for businesses that value performance and scalability.
-                  </p>
-
-                  <div class="info-meta-grid">
-                    <div class="meta-row">
-                      <strong>Website:</strong>
-                      <span><a href="https://habeeiiyy.in" target="_blank" rel="noopener noreferrer">habeeiiyy.in</a></span>
-                    </div>
-                    <div class="meta-row">
-                      <strong>City:</strong>
-                      <span>Palakkad, Kerala</span>
-                    </div>
-                    <div class="meta-row">
-                      <strong>Higher sec.:</strong>
-                      <span>Computer Science</span>
-                    </div>
-                    <div class="meta-row">
-                      <strong>Email:</strong>
-                      <span><a href="mailto:habeebdeveloper.india@gmail.com">habeebdeveloper.india@gmail.com</a></span>
-                    </div>
-                    <div class="meta-row">
-                      <strong>Freelance:</strong>
-                      <span style="color: #55ff55; font-weight: 700; font-family: var(--font-code);">Available</span>
-                    </div>
-                    <div class="meta-row">
-                      <strong>GitHub:</strong>
-                      <span><a href="https://github.com/habeeiiyy" target="_blank" rel="noopener noreferrer">github.com/habeeiiyy</a></span>
-                    </div>
-                  </div>
-
-                  <p class="about-bio">
-                    Hi, I'm a Full Stack Developer from Kerala specializing in Python, Django, and React, with extensive focus on PostgreSQL (PgSQL), Docker, Celery, Redis, RabbitMQ, and REST APIs. I build production-grade web applications, robust database architectures, and asynchronous worker systems designed for high concurrency and speed. I believe in continuous hands-on learning, clean engineering practices, and building scalable software.
-                  </p>
-
-                  <div style="margin-top: 20px; display: flex; flex-wrap: wrap; gap: 12px;">
-                    <a href="https://wa.me/919497844660" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-animated">
-                      <i class="bi bi-whatsapp wa-icon" aria-hidden="true"></i>
-                      <span>Let's talk on WhatsApp</span>
-                    </a>
-                    <a href="https://github.com/habeeiiyy/SmashUp" target="_blank" rel="noopener noreferrer" class="btn-vscode-primary">
-                      <i class="bi bi-github" aria-hidden="true"></i>
-                      <span>View Ongoing Project (SmashUp)</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <h2 class="section-h2">
-                <i class="bi bi-bar-chart-line" aria-hidden="true"></i>
-                <span>Facts &amp; Milestones</span>
-              </h2>
-              <div class="stats-grid">
-                <div class="stat-item">
-                  <div class="stat-number">15+</div>
-                  <div class="stat-label">Clients</div>
-                </div>
-                <div class="stat-item">
-                  <div class="stat-number">19+</div>
-                  <div class="stat-label">Projects</div>
-                </div>
-                <div class="stat-item">
-                  <div class="stat-number">800+</div>
-                  <div class="stat-label">Hours Of Support</div>
-                </div>
-              </div>
-            </section>
 
             <!-- ================= VIEW 3: resume.md ================= -->
             <section id="view-resume" class="tab-view active" role="tabpanel" aria-labelledby="tab-resume">
@@ -541,409 +406,8 @@
               </div>
             </section>
 
-            <!-- ================= VIEW 4: skills.json ================= -->
-            <section id="view-skills" class="tab-view" role="tabpanel" aria-labelledby="tab-skills">
-              <div class="code-banner">
-                <span class="syn-cm">// Technical Proficiencies &amp; Core Competencies</span><br>
-                {<br>
-                &nbsp;&nbsp;<span class="syn-str">"languages"</span>: [<span class="syn-str">"Python"</span>, <span class="syn-str">"JavaScript"</span>],<br>
-                &nbsp;&nbsp;<span class="syn-str">"backend"</span>: [<span class="syn-str">"Django"</span>, <span class="syn-str">"REST APIs"</span>, <span class="syn-str">"Celery"</span>, <span class="syn-str">"RabbitMQ"</span>],<br>
-                &nbsp;&nbsp;<span class="syn-str">"database_and_cache"</span>: [<span class="syn-str">"PostgreSQL (PgSQL)"</span>, <span class="syn-str">"Redis"</span>],<br>
-                &nbsp;&nbsp;<span class="syn-str">"frontend_and_devops"</span>: [<span class="syn-str">"React"</span>, <span class="syn-str">"Docker"</span>]<br>
-                }
-              </div>
-
-              <h2 class="section-h2">
-                <i class="bi bi-lightning-charge" aria-hidden="true"></i>
-                <span>Skill Proficiencies (Minecraft XP Style)</span>
-              </h2>
-
-              <div class="skills-container">
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-name"><i class="bi bi-filetype-py icon-py" aria-hidden="true"></i> Python</span>
-                    <span class="skill-percent">90%</span>
-                  </div>
-                  <div class="skill-track">
-                    <div class="skill-bar" data-value="90" style="width: 90%;"></div>
-                  </div>
-                </div>
-
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-name"><i class="bi bi-code-slash icon-py" aria-hidden="true"></i> Django</span>
-                    <span class="skill-percent">85%</span>
-                  </div>
-                  <div class="skill-track">
-                    <div class="skill-bar" data-value="85" style="width: 85%;"></div>
-                  </div>
-                </div>
-
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-name"><i class="bi bi-database-fill icon-py" aria-hidden="true"></i> PostgreSQL (PgSQL)</span>
-                    <span class="skill-percent">85%</span>
-                  </div>
-                  <div class="skill-track">
-                    <div class="skill-bar" data-value="85" style="width: 85%;"></div>
-                  </div>
-                </div>
-
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-name"><i class="bi bi-server icon-json" aria-hidden="true"></i> Redis</span>
-                    <span class="skill-percent">80%</span>
-                  </div>
-                  <div class="skill-track">
-                    <div class="skill-bar" data-value="80" style="width: 80%;"></div>
-                  </div>
-                </div>
-
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-name"><i class="bi bi-filetype-jsx icon-md" aria-hidden="true"></i> React</span>
-                    <span class="skill-percent">75%</span>
-                  </div>
-                  <div class="skill-track">
-                    <div class="skill-bar" data-value="75" style="width: 75%;"></div>
-                  </div>
-                </div>
-
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-name"><i class="bi bi-filetype-js icon-json" aria-hidden="true"></i> JavaScript</span>
-                    <span class="skill-percent">75%</span>
-                  </div>
-                  <div class="skill-track">
-                    <div class="skill-bar" data-value="75" style="width: 75%;"></div>
-                  </div>
-                </div>
-
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-name"><i class="bi bi-cpu icon-py" aria-hidden="true"></i> Celery &amp; RabbitMQ</span>
-                    <span class="skill-percent">80%</span>
-                  </div>
-                  <div class="skill-track">
-                    <div class="skill-bar" data-value="80" style="width: 80%;"></div>
-                  </div>
-                </div>
-
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-name"><i class="bi bi-box-seam icon-md" aria-hidden="true"></i> Docker</span>
-                    <span class="skill-percent">75%</span>
-                  </div>
-                  <div class="skill-track">
-                    <div class="skill-bar" data-value="75" style="width: 75%;"></div>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <!-- ================= VIEW 5: services.py ================= -->
-            <section id="view-services" class="tab-view" role="tabpanel" aria-labelledby="tab-services">
-              <div class="code-banner">
-                <span class="syn-cm">&quot;&quot;&quot;</span><br>
-                <span class="syn-cm">Services Module &mdash; Backend architectures, APIs, and scalable web solutions.</span><br>
-                <span class="syn-cm">&quot;&quot;&quot;</span>
-              </div>
-
-              <h2 class="section-h2">
-                <i class="bi bi-grid" aria-hidden="true"></i>
-                <span>Development &amp; Optimization Services</span>
-              </h2>
-
-              <div class="services-grid">
-                <div class="service-card">
-                  <div>
-                    <div class="service-icon-box">
-                      <i class="bi bi-laptop" aria-hidden="true"></i>
-                    </div>
-                    <h3 class="service-title">Full-Stack Web Development</h3>
-                    <p class="service-desc">
-                      Modern, scalable web applications built with Python, Django, React, and PostgreSQL for businesses and startups that value speed and reliability.
-                    </p>
-                  </div>
-                  <a href="#contact.html" class="service-link" onclick="window.switchFile('contact.html')">
-                    <span>Discuss project</span>
-                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
-                  </a>
-                </div>
-
-                <div class="service-card">
-                  <div>
-                    <div class="service-icon-box">
-                      <i class="bi bi-hdd-network" aria-hidden="true"></i>
-                    </div>
-                    <h3 class="service-title">Django Backend &amp; APIs</h3>
-                    <p class="service-desc">
-                      Secure backend systems, PostgreSQL database schemas, token authentication, and REST APIs that power high-traffic products.
-                    </p>
-                  </div>
-                  <a href="#contact.html" class="service-link" onclick="window.switchFile('contact.html')">
-                    <span>Discuss project</span>
-                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
-                  </a>
-                </div>
-
-                <div class="service-card">
-                  <div>
-                    <div class="service-icon-box">
-                      <i class="bi bi-speedometer2" aria-hidden="true"></i>
-                    </div>
-                    <h3 class="service-title">Scalability &amp; Optimization</h3>
-                    <p class="service-desc">
-                      Database query optimization with PostgreSQL indexing, Redis caching layers, Celery &amp; RabbitMQ asynchronous background workers, and performance tuning for high concurrency.
-                    </p>
-                  </div>
-                  <a href="#contact.html" class="service-link" onclick="window.switchFile('contact.html')">
-                    <span>Discuss project</span>
-                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
-                  </a>
-                </div>
-
-                <div class="service-card">
-                  <div>
-                    <div class="service-icon-box">
-                      <i class="bi bi-box-seam" aria-hidden="true"></i>
-                    </div>
-                    <h3 class="service-title">Docker &amp; Containerization</h3>
-                    <p class="service-desc">
-                      Containerized environments for Django, PostgreSQL, Redis, and frontend services for clean local development and reproducible deployments.
-                    </p>
-                  </div>
-                  <a href="#contact.html" class="service-link" onclick="window.switchFile('contact.html')">
-                    <span>Discuss project</span>
-                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
-                  </a>
-                </div>
-
-                <div class="service-card">
-                  <div>
-                    <div class="service-icon-box">
-                      <i class="bi bi-cloud-arrow-up" aria-hidden="true"></i>
-                    </div>
-                    <h3 class="service-title">Deployment &amp; Hosting</h3>
-                    <p class="service-desc">
-                      Smooth production launches with domain configuration, reverse proxies, environment secrets, and reliable cloud platform deployment.
-                    </p>
-                  </div>
-                  <a href="#contact.html" class="service-link" onclick="window.switchFile('contact.html')">
-                    <span>Discuss project</span>
-                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
-                  </a>
-                </div>
-
-                <div class="service-card">
-                  <div>
-                    <div class="service-icon-box">
-                      <i class="bi bi-tools" aria-hidden="true"></i>
-                    </div>
-                    <h3 class="service-title">Maintenance &amp; Bug Fixing</h3>
-                    <p class="service-desc">
-                      Ongoing code maintenance, API updates, performance monitoring, database migrations, and feature additions to keep applications robust.
-                    </p>
-                  </div>
-                  <a href="#contact.html" class="service-link" onclick="window.switchFile('contact.html')">
-                    <span>Discuss project</span>
-                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
-                  </a>
-                </div>
-              </div>
-            </section>
-
-            <!-- ================= VIEW 6: contact.html ================= -->
-            <section id="view-contact" class="tab-view" role="tabpanel" aria-labelledby="tab-contact">
-              <div class="code-banner">
-                <span class="syn-cm">&lt;!-- Contact Channels &mdash; Direct WhatsApp &amp; Email --&gt;</span><br>
-                <span class="syn-kw">contact_channels</span> = [<span class="syn-str">"WhatsApp"</span>, <span class="syn-str">"Email"</span>]<br>
-                <span class="syn-kw">status</span> = <span class="syn-str">"Available for freelance &amp; full stack engineering"</span>
-              </div>
-
-              <h2 class="section-h2">
-                <i class="bi bi-chat-dots" aria-hidden="true"></i>
-                <span>Get In Touch</span>
-              </h2>
-
-              <p style="font-size: 1.05rem; color: var(--text-main); margin-bottom: 24px;">
-                Available for freelance Python, Django, React, PostgreSQL, Celery, Redis, and full-stack web application development. Direct contact via WhatsApp or Email:
-              </p>
-
-              <div class="contact-layout" style="grid-template-columns: 1fr;">
-                <div class="contact-info-panel" style="max-width: 680px; margin: 0 auto; width: 100%;">
-                  
-                  <!-- Direct WhatsApp Contact Box -->
-                  <div class="whatsapp-contact-card">
-                    <h3 class="whatsapp-card-title">Instant Chat via WhatsApp</h3>
-                    <p class="whatsapp-card-desc">
-                      Fastest channel for project inquiries, technical discussions, and proposals.
-                    </p>
-                    <a href="https://wa.me/919497844660" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-animated">
-                      <i class="bi bi-whatsapp wa-icon" aria-hidden="true"></i>
-                      <span>Let's talk on WhatsApp</span>
-                    </a>
-                  </div>
-
-                  <!-- Direct Email Contact Box -->
-                  <div class="whatsapp-contact-card" style="margin-top: 16px;">
-                    <h3 class="whatsapp-card-title">Send Email Directly</h3>
-                    <p class="whatsapp-card-desc">
-                      Detailed project briefs, architecture requirements, or remote collaboration offers.
-                    </p>
-                    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
-                      <a href="mailto:habeebdeveloper.india@gmail.com" class="btn-email-direct">
-                        <i class="bi bi-envelope-fill" aria-hidden="true"></i>
-                        <span>Email: habeebdeveloper.india@gmail.com</span>
-                      </a>
-                      <button type="button" class="btn-vscode-secondary" onclick="window.copyEmailAddress()">
-                        <i class="bi bi-clipboard" aria-hidden="true"></i>
-                        <span>Copy Email</span>
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="contact-info-items" style="margin-top: 24px;">
-                    <div class="contact-item-row">
-                      <div class="contact-item-icon">
-                        <i class="bi bi-geo-alt" aria-hidden="true"></i>
-                      </div>
-                      <div class="contact-item-text">
-                        <h4>Location</h4>
-                        <p>Palakkad, Kerala, India</p>
-                      </div>
-                    </div>
-
-                    <div class="contact-item-row">
-                      <div class="contact-item-icon">
-                        <i class="bi bi-clock-history" aria-hidden="true"></i>
-                      </div>
-                      <div class="contact-item-text">
-                        <h4>Availability</h4>
-                        <p>Freelance &amp; Full Stack Development Opportunities</p>
-                      </div>
-                    </div>
-
-                    <div class="contact-item-row">
-                      <div class="contact-item-icon">
-                        <i class="bi bi-github" aria-hidden="true"></i>
-                      </div>
-                      <div class="contact-item-text">
-                        <h4>GitHub</h4>
-                        <p><a href="https://github.com/habeeiiyy" target="_blank" rel="noopener noreferrer">github.com/habeeiiyy</a></p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Lightweight Location Card -->
-                  <div class="location-card">
-                    <div class="location-icon-box">
-                      <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
-                    </div>
-                    <div>
-                      <div class="location-card-title">Mannarkkad, Palakkad, Kerala</div>
-                      <div class="location-card-sub">Available for remote collaborations worldwide</div>
-                      <a href="https://maps.google.com/?q=Mannarkkad,+Palakkad,+Kerala" target="_blank" rel="noopener noreferrer" class="btn-map-link">
-                        <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
-                        <span>Open Location in Google Maps</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <!-- ================= VIEW 7: socials.json ================= -->
-            <section id="view-socials" class="tab-view" role="tabpanel" aria-labelledby="tab-socials">
-              <div class="code-banner">
-                <span class="syn-cm">// Social Connections &amp; Active Repositories</span><br>
-                {<br>
-                &nbsp;&nbsp;<span class="syn-str">"github"</span>: <span class="syn-str">"https://github.com/habeeiiyy"</span>,<br>
-                &nbsp;&nbsp;<span class="syn-str">"ongoing_repo"</span>: <span class="syn-str">"https://github.com/habeeiiyy/SmashUp"</span>,<br>
-                &nbsp;&nbsp;<span class="syn-str">"linkedin"</span>: <span class="syn-str">"https://www.linkedin.com/in/habeeiiyy"</span>,<br>
-                &nbsp;&nbsp;<span class="syn-str">"twitter"</span>: <span class="syn-str">"https://twitter.com/habeeiiyy"</span><br>
-                }
-              </div>
-
-              <h2 class="section-h2">
-                <i class="bi bi-share" aria-hidden="true"></i>
-                <span>Social Links &amp; Projects</span>
-              </h2>
-
-              <p style="font-size: 1.05rem; color: var(--text-main); margin-bottom: 24px;">
-                Connect with Habeeb across platforms for development services, technical updates, and open-source work:
-              </p>
-
-              <div class="socials-cards-grid">
-                <a href="https://github.com/habeeiiyy/SmashUp" target="_blank" rel="noopener noreferrer" class="social-card">
-                  <i class="bi bi-code-slash social-card-icon" style="color: #55ff55;" aria-hidden="true"></i>
-                  <div class="social-card-name">SmashUp (Project)</div>
-                  <div class="social-card-handle">habeeiiyy/SmashUp</div>
-                </a>
-
-                <a href="https://github.com/habeeiiyy" target="_blank" rel="noopener noreferrer" class="social-card">
-                  <i class="bi bi-github social-card-icon" aria-hidden="true"></i>
-                  <div class="social-card-name">GitHub Profile</div>
-                  <div class="social-card-handle">@habeeiiyy</div>
-                </a>
-
-                <a href="https://www.linkedin.com/in/habeeiiyy" target="_blank" rel="noopener noreferrer" class="social-card">
-                  <i class="bi bi-linkedin social-card-icon" aria-hidden="true"></i>
-                  <div class="social-card-name">LinkedIn</div>
-                  <div class="social-card-handle">habeeiiyy</div>
-                </a>
-
-                <a href="https://twitter.com/habeeiiyy" target="_blank" rel="noopener noreferrer" class="social-card">
-                  <i class="bi bi-twitter-x social-card-icon" aria-hidden="true"></i>
-                  <div class="social-card-name">Twitter / X</div>
-                  <div class="social-card-handle">@habeeiiyy</div>
-                </a>
-              </div>
-
-              <div style="margin-top: 14px; margin-bottom: 30px; display: flex; flex-wrap: wrap; gap: 12px;">
-                <a href="https://wa.me/919497844660" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-animated">
-                  <i class="bi bi-whatsapp wa-icon" aria-hidden="true"></i>
-                  <span>Let's talk on WhatsApp</span>
-                </a>
-                <a href="mailto:habeebdeveloper.india@gmail.com" class="btn-email-direct">
-                  <i class="bi bi-envelope-fill" aria-hidden="true"></i>
-                  <span>Email Directly</span>
-                </a>
-              </div>
-
-              <h2 class="section-h2" style="margin-top: 36px;">
-                <i class="bi bi-diagram-3" aria-hidden="true"></i>
-                <span>Engineering Workflow</span>
-              </h2>
-
-              <div class="process-grid">
-                <div class="process-box">
-                  <div class="process-step">Phase 01</div>
-                  <h3 class="process-title">Architecture &amp; Schema</h3>
-                  <p class="process-desc">
-                    Designing clean database schemas in PostgreSQL, defining REST API contracts, and planning asynchronous task boundaries.
-                  </p>
-                </div>
-
-                <div class="process-box">
-                  <div class="process-step">Phase 02</div>
-                  <h3 class="process-title">Development &amp; Concurrency</h3>
-                  <p class="process-desc">
-                    Building robust Django backends and React frontends, with Celery, Redis, and RabbitMQ handling background worker tasks.
-                  </p>
-                </div>
-
-                <div class="process-box">
-                  <div class="process-step">Phase 03</div>
-                  <h3 class="process-title">Dockerization &amp; Deployment</h3>
-                  <p class="process-desc">
-                    Packaging applications with Docker, tuning query performance and cache hits, and executing production deployment.
-                  </p>
-                </div>
-              </div>
-            </section>
-
           </div>
+        </div></div>
         </div>
 
         <!-- Collapsible Bottom Terminal Panel -->

@@ -1,6 +1,6 @@
 /**
  * VS Code Portfolio Application Controller
- * Optimized for speed, low-bandwidth internet, and responsive UX.
+ * Optimized for speed, modularity, low-bandwidth networks, and seamless PJAX navigation.
  */
 (function () {
   "use strict";
@@ -8,6 +8,7 @@
   const FILE_REGISTRY = {
     "home.py": {
       title: "home.py",
+      url: "index.html",
       lang: "Python",
       path: "src > home.py",
       tabId: "tab-home",
@@ -15,6 +16,7 @@
     },
     "about.html": {
       title: "about.html",
+      url: "about.html",
       lang: "HTML",
       path: "src > about.html",
       tabId: "tab-about",
@@ -22,6 +24,7 @@
     },
     "resume.md": {
       title: "resume.md",
+      url: "resume.html",
       lang: "Markdown",
       path: "src > resume.md",
       tabId: "tab-resume",
@@ -29,6 +32,7 @@
     },
     "skills.json": {
       title: "skills.json",
+      url: "skills.html",
       lang: "JSON",
       path: "src > skills.json",
       tabId: "tab-skills",
@@ -36,6 +40,7 @@
     },
     "services.py": {
       title: "services.py",
+      url: "services.html",
       lang: "Python",
       path: "src > services.py",
       tabId: "tab-services",
@@ -43,6 +48,7 @@
     },
     "contact.html": {
       title: "contact.html",
+      url: "contact.html",
       lang: "HTML",
       path: "src > contact.html",
       tabId: "tab-contact",
@@ -50,6 +56,7 @@
     },
     "socials.json": {
       title: "socials.json",
+      url: "socials.html",
       lang: "JSON",
       path: "src > socials.json",
       tabId: "tab-socials",
@@ -57,65 +64,126 @@
     }
   };
 
+  const URL_TO_FILE = {};
+  Object.keys(FILE_REGISTRY).forEach((filename) => {
+    URL_TO_FILE[FILE_REGISTRY[filename].url] = filename;
+  });
+
+  const pageCache = new Map();
   let currentFile = "home.py";
+
+  function getCurrentUrlFilename() {
+    const raw = window.location.pathname.split("/").pop() || "index.html";
+    return raw.split("#")[0] || "index.html";
+  }
+
+  /**
+   * Seamless in-memory PJAX page loader
+   */
+  async function loadPage(targetUrl, pushState = true) {
+    if (!targetUrl) return;
+    const urlFilename = targetUrl.split("/").pop().split("#")[0] || "index.html";
+    const currentFilename = getCurrentUrlFilename();
+
+    const targetFile = URL_TO_FILE[urlFilename] || "home.py";
+
+    // If already on the page, just scroll editor to top
+    if (urlFilename === currentFilename && !pushState) {
+      const editorScroll = document.querySelector(".vscode-content-scroll");
+      if (editorScroll) editorScroll.scrollTop = 0;
+      if (targetFile === "skills.json") animateSkillBars();
+      return;
+    }
+
+    try {
+      let htmlText = pageCache.get(urlFilename);
+      if (!htmlText) {
+        const response = await fetch(urlFilename);
+        if (!response.ok) {
+          window.location.href = urlFilename;
+          return;
+        }
+        htmlText = await response.text();
+        pageCache.set(urlFilename, htmlText);
+      }
+
+      const parser = new DOMParser();
+      const newDoc = parser.parseFromString(htmlText, "text/html");
+
+      // Replace title
+      document.title = newDoc.title;
+
+      // Replace editor body
+      const currentEditor = document.querySelector(".vscode-editor-body");
+      const newEditor = newDoc.querySelector(".vscode-editor-body");
+      if (currentEditor && newEditor) {
+        currentEditor.innerHTML = newEditor.innerHTML;
+        const scrollElem = currentEditor.querySelector(".vscode-content-scroll");
+        if (scrollElem) scrollElem.scrollTop = 0;
+      }
+
+      // Replace tabs bar
+      const currentTabs = document.querySelector(".vscode-tabs-bar");
+      const newTabs = newDoc.querySelector(".vscode-tabs-bar");
+      if (currentTabs && newTabs) {
+        currentTabs.innerHTML = newTabs.innerHTML;
+      }
+
+      // Replace breadcrumbs
+      const currentBreadcrumbs = document.querySelector(".vscode-breadcrumbs");
+      const newBreadcrumbs = newDoc.querySelector(".vscode-breadcrumbs");
+      if (currentBreadcrumbs && newBreadcrumbs) {
+        currentBreadcrumbs.innerHTML = newBreadcrumbs.innerHTML;
+      }
+
+      // Replace explorer
+      const currentExplorer = document.querySelector(".explorer-list");
+      const newExplorer = newDoc.querySelector(".explorer-list");
+      if (currentExplorer && newExplorer) {
+        currentExplorer.innerHTML = newExplorer.innerHTML;
+      }
+
+      // Replace search box text
+      const currentSearchBox = document.querySelector(".titlebar-search-box span");
+      const newSearchBox = newDoc.querySelector(".titlebar-search-box span");
+      if (currentSearchBox && newSearchBox) {
+        currentSearchBox.innerHTML = newSearchBox.innerHTML;
+      }
+
+      // Replace status bar language
+      const currentLang = document.getElementById("statusbar-lang");
+      const newLang = newDoc.getElementById("statusbar-lang");
+      if (currentLang && newLang) {
+        currentLang.textContent = newLang.textContent;
+      }
+
+      currentFile = targetFile;
+
+      // Animate skills if opening skills page
+      if (targetFile === "skills.json") {
+        animateSkillBars();
+      }
+
+      window.closeMobileSidebar();
+
+      if (pushState) {
+        window.history.pushState({ url: urlFilename, file: targetFile }, "", urlFilename);
+      }
+    } catch (e) {
+      window.location.href = urlFilename;
+    }
+  }
 
   /**
    * Switch the active file / editor view (globally accessible)
    */
   window.switchFile = function (filename, pushState = true) {
-    if (!filename || !FILE_REGISTRY[filename]) return;
-    currentFile = filename;
-    const fileMeta = FILE_REGISTRY[filename];
-
-    // Update Tabs
-    document.querySelectorAll(".editor-tab").forEach((tab) => {
-      const match = (tab.getAttribute("data-file") === filename);
-      tab.classList.toggle("active", match);
-      tab.setAttribute("aria-selected", match ? "true" : "false");
-    });
-
-    // Update Explorer items
-    document.querySelectorAll(".explorer-item").forEach((item) => {
-      item.classList.toggle("active", item.getAttribute("data-file") === filename);
-    });
-
-    // Update Views
-    document.querySelectorAll(".tab-view").forEach((view) => {
-      view.classList.remove("active");
-    });
-
-    const targetView = document.getElementById(fileMeta.viewId);
-    if (targetView) {
-      targetView.classList.add("active");
-    }
-
-    // Update Breadcrumbs & Status Bar
-    const breadcrumbFile = document.getElementById("breadcrumb-current-file");
-    const statusbarLang = document.getElementById("statusbar-lang");
-    if (breadcrumbFile) breadcrumbFile.textContent = fileMeta.title;
-    if (statusbarLang) statusbarLang.textContent = fileMeta.lang;
-
-    // Trigger skills bar animation if opening skills
-    if (filename === "skills.json") {
-      animateSkillBars();
-    }
-
-    // Scroll editor content to top
-    const editorScroll = document.querySelector(".vscode-content-scroll");
-    if (editorScroll) {
-      editorScroll.scrollTop = 0;
-    }
-
-    // Close mobile sidebar if open
-    window.closeMobileSidebar();
-
-    // Update URL hash
-    if (pushState) {
-      try {
-        window.history.replaceState(null, "", "#" + filename);
-      } catch (e) {
-        window.location.hash = filename;
-      }
+    if (!filename) return;
+    const meta = FILE_REGISTRY[filename];
+    if (meta && meta.url) {
+      loadPage(meta.url, pushState);
+    } else {
+      loadPage(filename, pushState);
     }
   };
 
@@ -178,13 +246,14 @@
     const history = document.getElementById("terminal-history");
     if (!history) return;
     history.textContent += text + "\n";
+    history.scrollTop = history.scrollHeight;
   }
 
   function handleTerminalCommand(cmd) {
     const raw = cmd.trim();
     if (!raw) return;
 
-    appendTerminalText(`habeeb@portfolio:~$ ${raw}`);
+    appendTerminalText("habeeb@portfolio:~$ " + raw);
     const args = raw.split(/\s+/);
     const command = args[0].toLowerCase();
 
@@ -199,33 +268,28 @@
           "  experience     - Show career and education details\n" +
           "  services       - List development and scalability services\n" +
           "  contact        - Open contact options (WhatsApp / Email)\n" +
-          "  whatsapp       - Open WhatsApp chat\n" +
-          "  email          - Open mail client\n" +
-          "  theme [name]   - Switch theme (dark, github, dracula, onedark, light)\n" +
-          "  clear          - Clear terminal output\n" +
-          "  exit           - Minimize terminal drawer"
+          "  whatsapp       - Open WhatsApp direct chat with Habeeb\n" +
+          "  theme          - Change editor theme (dark, light, monokai, high-contrast)\n" +
+          "  clear          - Clear terminal output"
         );
         break;
 
       case "about":
         appendTerminalText(
-          "Habeeb P - Full Stack Developer\n" +
-          "Location: Palakkad, Kerala\n" +
-          "Stack: Django, Python, React, JavaScript, HTML, CSS, PgSQL, Docker, Celery, Redis, REST API, RabbitMQ.\n" +
-          "Building scalable, high-performance web applications and backend architectures."
+          "Habeeb P - Full Stack Developer (Palakkad, Kerala)\n" +
+          "Stack: Python, Django, React, PostgreSQL, Docker, Celery, Redis, RabbitMQ"
         );
         window.switchFile("about.html");
         break;
 
       case "skills":
         appendTerminalText(
-          "Core Technical Stack:\n" +
+          "Core Technical Skills:\n" +
           "  • Python (90%)\n" +
-          "  • Django (85%)\n" +
-          "  • React (75%)\n" +
-          "  • JavaScript (75%)\n" +
-          "  • PostgreSQL / PgSQL (85%)\n" +
+          "  • Django & REST APIs (85%)\n" +
+          "  • PostgreSQL (PgSQL) (85%)\n" +
           "  • Redis (80%)\n" +
+          "  • React & JavaScript (75%)\n" +
           "  • Celery & RabbitMQ (80%)\n" +
           "  • Docker (75%)"
         );
@@ -262,150 +326,175 @@
       case "services":
         appendTerminalText(
           "Services:\n" +
-          "  1. Full-Stack Web Development\n" +
-          "  2. Django Backend & REST APIs\n" +
-          "  3. Responsive UI/UX Design\n" +
-          "  4. Deployment & Hosting\n" +
-          "  5. Maintenance & Optimization\n" +
-          "  6. Scalability & Optimization (PgSQL, Redis, Celery, RabbitMQ)"
+          "  1. Backend Architecture & REST APIs (Python, Django)\n" +
+          "  2. Scalability & Optimization (PgSQL, Redis, Celery, RabbitMQ)\n" +
+          "  3. Full Stack Synergy (Django + React)\n" +
+          "  4. Database Performance & Relational Modeling (PostgreSQL)"
         );
         window.switchFile("services.py");
         break;
 
       case "contact":
-        appendTerminalText("Opening contact view: WhatsApp and Email.");
+        appendTerminalText(
+          "Contact Options:\n" +
+          "  • WhatsApp: https://wa.me/919497844660\n" +
+          "  • Email: habeebdeveloper.india@gmail.com"
+        );
         window.switchFile("contact.html");
         break;
 
       case "whatsapp":
-        appendTerminalText("Opening WhatsApp directly...");
-        window.handleWhatsAppContact();
-        break;
-
-      case "email":
-        window.location.href = "mailto:habeebdeveloper.india@gmail.com";
-        break;
-
-      case "clear":
-        const hist = document.getElementById("terminal-history");
-        if (hist) hist.textContent = "";
-        return;
-
-      case "exit":
-        window.closeTerminal();
+        appendTerminalText("Opening WhatsApp direct chat (https://wa.me/919497844660)...");
+        if (window.handleWhatsAppContact) {
+          window.handleWhatsAppContact();
+        } else {
+          window.open("https://wa.me/919497844660", "_blank", "noopener,noreferrer");
+        }
         break;
 
       case "theme":
         if (args[1]) {
-          const themeMap = {
-            dark: "dark",
-            github: "github-dark",
-            dracula: "dracula",
-            onedark: "one-dark",
-            light: "light"
-          };
-          if (themeMap[args[1].toLowerCase()]) {
-            window.setTheme(themeMap[args[1].toLowerCase()]);
-            appendTerminalText(`Theme set to ${args[1]}`);
+          const themeName = args[1].toLowerCase();
+          const validThemes = ["dark", "light", "monokai", "high-contrast"];
+          if (validThemes.includes(themeName)) {
+            window.setTheme(themeName);
+            appendTerminalText("Theme set to: " + themeName);
           } else {
-            appendTerminalText("Available themes: dark, github, dracula, onedark, light");
+            appendTerminalText("Invalid theme. Available: " + validThemes.join(", "));
           }
         } else {
           window.showThemeModal();
         }
         break;
 
-      default:
-        appendTerminalText(`Command not found: '${command}'. Type 'help' for available commands.`);
-    }
+      case "clear":
+      case "cls":
+        const hist = document.getElementById("terminal-history");
+        if (hist) hist.textContent = "";
+        break;
 
-    const panel = document.querySelector(".vscode-panel");
-    if (panel) {
-      const body = panel.querySelector(".panel-body");
-      if (body) body.scrollTop = body.scrollHeight;
+      default:
+        appendTerminalText("Command not recognized: '" + command + "'. Type 'help' for available commands.");
+        break;
     }
   }
 
   /**
    * Theme Management
    */
+  const THEME_KEY = "vscode_portfolio_theme";
+
   window.setTheme = function (themeName) {
+    const validThemes = ["dark", "light", "monokai", "high-contrast"];
+    if (!validThemes.includes(themeName)) return;
+
     if (themeName === "dark") {
-      document.body.removeAttribute("data-theme");
+      document.documentElement.removeAttribute("data-theme");
     } else {
-      document.body.setAttribute("data-theme", themeName);
+      document.documentElement.setAttribute("data-theme", themeName);
     }
+
     try {
-      localStorage.setItem("vscode_portfolio_theme", themeName);
+      localStorage.setItem(THEME_KEY, themeName);
     } catch (e) {}
+
+    document.querySelectorAll(".theme-option-btn").forEach((btn) => {
+      btn.classList.toggle("active", btn.getAttribute("data-theme") === themeName);
+    });
+
+    const statusbarTheme = document.getElementById("statusbar-theme");
+    if (statusbarTheme) {
+      statusbarTheme.textContent = themeName.charAt(0).toUpperCase() + themeName.slice(1);
+    }
+
     window.closeThemeModal();
   };
 
   function loadSavedTheme() {
     try {
-      const saved = localStorage.getItem("vscode_portfolio_theme");
-      if (saved) {
-        window.setTheme(saved);
-      }
+      const saved = localStorage.getItem(THEME_KEY);
+      if (saved) window.setTheme(saved);
     } catch (e) {}
   }
 
   window.showThemeModal = function () {
-    const modal = document.getElementById("theme-selector-modal");
-    if (modal) modal.classList.add("active");
+    const modal = document.getElementById("theme-modal");
+    if (modal) {
+      modal.classList.add("open");
+      modal.setAttribute("aria-hidden", "false");
+    }
   };
 
   window.closeThemeModal = function () {
-    const modal = document.getElementById("theme-selector-modal");
-    if (modal) modal.classList.remove("active");
-  };
-
-  /**
-   * Direct Copy Email helper
-   */
-  window.copyEmailAddress = function () {
-    const email = "habeebdeveloper.india@gmail.com";
-    if (navigator.clipboard) {
-      navigator.clipboard.writeText(email).then(() => {
-        alert("Copied email address: " + email);
-      }).catch(() => {
-        window.location.href = "mailto:" + email;
-      });
-    } else {
-      window.location.href = "mailto:" + email;
+    const modal = document.getElementById("theme-modal");
+    if (modal) {
+      modal.classList.remove("open");
+      modal.setAttribute("aria-hidden", "true");
     }
   };
 
   /**
-   * Event Listeners Setup
+   * 1-Click Copy Email Helper
+   */
+  window.copyEmailAddress = function (event) {
+    if (event) event.preventDefault();
+    const email = (window.PORTFOLIO_CONFIG && window.PORTFOLIO_CONFIG.contactEmail) || "habeebdeveloper.india@gmail.com";
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(email).then(() => {
+        showCopyNotification();
+      }).catch(() => {
+        fallbackCopyText(email);
+      });
+    } else {
+      fallbackCopyText(email);
+    }
+  };
+
+  function fallbackCopyText(text) {
+    const ta = document.createElement("textarea");
+    ta.value = text;
+    ta.style.position = "fixed";
+    ta.style.opacity = "0";
+    document.body.appendChild(ta);
+    ta.select();
+    try {
+      document.execCommand("copy");
+      showCopyNotification();
+    } catch (err) {}
+    document.body.removeChild(ta);
+  }
+
+  function showCopyNotification() {
+    const btn = document.getElementById("copy-email-btn");
+    if (btn) {
+      const orig = btn.innerHTML;
+      btn.innerHTML = '<i class="bi bi-check-lg" aria-hidden="true"></i> <span>Email Copied!</span>';
+      setTimeout(() => {
+        btn.innerHTML = orig;
+      }, 2200);
+    }
+  }
+
+  /**
+   * Event Listeners Initialization
    */
   function initEventListeners() {
-    // Tab Clicks
-    document.querySelectorAll(".editor-tab").forEach((tab) => {
-      tab.addEventListener("click", function (e) {
-        if (e.target.closest(".tab-close")) {
+    // Intercept clicks on tabs, explorer, and menu links for instant PJAX swap
+    document.addEventListener("click", function (e) {
+      const link = e.target.closest("a.editor-tab, a.explorer-item, a.titlebar-menu-item, a.hero-nav-btn");
+      if (link) {
+        const href = link.getAttribute("href");
+        if (href && !href.startsWith("http") && !href.startsWith("mailto:") && !href.startsWith("tel:") && !href.startsWith("#") && !link.getAttribute("target")) {
           e.preventDefault();
-          e.stopPropagation();
-          window.switchFile("home.py");
-          return;
+          loadPage(href, true);
         }
-        const file = this.getAttribute("data-file");
-        if (file) {
-          e.preventDefault();
-          window.switchFile(file);
-        }
-      });
+      }
     });
 
-    // Explorer Item Clicks
-    document.querySelectorAll(".explorer-item").forEach((item) => {
-      item.addEventListener("click", function (e) {
-        const file = this.getAttribute("data-file");
-        if (file) {
-          e.preventDefault();
-          window.switchFile(file);
-        }
-      });
+    // Browser back / forward buttons
+    window.addEventListener("popstate", function (e) {
+      const targetUrl = (e.state && e.state.url) || getCurrentUrlFilename();
+      loadPage(targetUrl, false);
     });
 
     // Mobile Navigation & Sidebar Toggles
@@ -506,38 +595,33 @@
         }
       }
     });
-
-    // Hash change handler for browser back/forward buttons
-    window.addEventListener("hashchange", function () {
-      const hash = window.location.hash.replace("#", "");
-      if (hash && FILE_REGISTRY[hash]) {
-        window.switchFile(hash, false);
-      }
-    });
   }
 
-  /**
-   * Determine initial file based on URL or hash
-   */
-  function determineInitialFile() {
-    const hash = window.location.hash.replace("#", "");
-    if (hash && FILE_REGISTRY[hash]) {
-      return hash;
-    }
-    const path = window.location.pathname;
-    if (path.endsWith("about.html")) return "about.html";
-    if (path.endsWith("resume.html")) return "resume.md";
-    if (path.endsWith("services.html")) return "services.py";
-    if (path.endsWith("contact.html")) return "contact.html";
-    if (path.endsWith("starter-page.html")) return "socials.json";
-    return "home.py";
+  // Background prefetch for instant 0ms switching
+  function prefetchPages() {
+    const cur = getCurrentUrlFilename();
+    Object.values(FILE_REGISTRY).forEach((item) => {
+      if (item.url !== cur && !pageCache.has(item.url)) {
+        fetch(item.url)
+          .then((r) => r.text())
+          .then((html) => pageCache.set(item.url, html))
+          .catch(() => {});
+      }
+    });
   }
 
   function init() {
     loadSavedTheme();
     initEventListeners();
-    const initialFile = determineInitialFile();
-    window.switchFile(initialFile, false);
+    const cur = getCurrentUrlFilename();
+    currentFile = URL_TO_FILE[cur] || "home.py";
+    pageCache.set(cur, document.documentElement.outerHTML);
+
+    if (currentFile === "skills.json") {
+      animateSkillBars();
+    }
+
+    setTimeout(prefetchPages, 300);
   }
 
   if (document.readyState === "loading") {
