@@ -4,209 +4,458 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Contact Habeeb - Python Django & React Developer</title>
-  <meta name="description" content="Get in touch with Habeeb, a full stack developer based in Palakkad, Kerala, available for freelance Python, Django, React and API development projects.">
-  <meta name="keywords" content="Habeeb contact, hire Django developer, hire React developer, freelance web developer Kerala">
-  <link rel="canonical" href="https://example.com/contact.html">
+  <title>Contact Habeeb P | Python Django & React Full Stack Developer | VS Code Portfolio</title>
+  <meta name="description" content="Get in touch with Habeeb P, a full stack developer for freelance web projects, Python, Django, and React development.">
+  <link rel="canonical" href="https://habeeiiyy.in/contact.html">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Contact Habeeb - Full Stack Developer">
-  <meta property="og:description" content="Available for freelance Python, Django, React and API development projects.">
-  <meta property="og:type" content="website">
-
-  <link href="assets/img/fav.webp" rel="icon">
-
-  <!-- Fonts: preconnect + only the weights actually used -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-    <link rel="preconnect" href="https://formsubmit.co" crossorigin>
-  <link rel="preconnect" href="https://www.google.com" crossorigin>
-  <link rel="dns-prefetch" href="https://formsubmit.co">
-  <link rel="dns-prefetch" href="https://www.google.com">
-
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;500;600;700&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-
-  <link href="assets/css/main.css" rel="stylesheet">
-
+  <link href="assets/img/fav.webp" rel="icon" type="image/webp">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/css/vscode-theme.css" rel="stylesheet">
 </head>
 
-<body class="contact-page">
+<body>
 
-  <a class="visually-hidden-focusable" href="#contact">Skip to main content</a>
+  <div class="vscode-window">
 
-  <header id="header" class="header d-flex align-items-center light-background sticky-top">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <h1 class="sitename">Habeeb</h1>
-      </a>
-
-      <nav id="navmenu" class="navmenu" aria-label="Main navigation">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="starter-page.html">Social Links</a></li>
-          <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list" role="button" tabindex="0" aria-label="Toggle navigation menu"></i>
-      </nav>
-
-      <div class="header-social-links">
-        <a href="https://twitter.com/habeeiiyy" target="_blank" rel="noopener noreferrer" class="twitter" aria-label="Twitter" title="Twitter"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
-        <a href="https://github.com/habeeiiyy" target="_blank" rel="noopener noreferrer" class="github" aria-label="GitHub" title="GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
-        <a href="https://www.linkedin.com/in/habeeiiyy" target="_blank" rel="noopener noreferrer" class="linkedin" aria-label="LinkedIn" title="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
-        <a href="https://wa.me/919497844660" target="_blank" rel="noopener noreferrer" class="whatsapp" aria-label="WhatsApp" title="WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
+    <!-- Top Title Bar -->
+    <header class="vscode-titlebar" aria-label="Visual Studio Code Title Bar">
+      <div class="titlebar-left">
+        <button type="button" class="mobile-menu-toggle" aria-label="Toggle Explorer Navigation">
+          <i class="bi bi-list" aria-hidden="true"></i>
+        </button>
+        <a href="index.html" class="vscode-logo" title="Visual Studio Code Home" style="text-decoration:none;" aria-label="Home">
+          <i class="bi bi-code-slash"></i>
+        </a>
+        <nav class="titlebar-menus" aria-label="Window Menu">
+          <a href="index.html#home.py" class="titlebar-menu-item" style="text-decoration:none;">File</a>
+          <a href="about.html" class="titlebar-menu-item" style="text-decoration:none;">Edit</a>
+          <a href="index.html#skills.json" class="titlebar-menu-item" style="text-decoration:none;">Selection</a>
+          <a href="services.html" class="titlebar-menu-item" style="text-decoration:none;">View</a>
+          <a href="resume.html" class="titlebar-menu-item" style="text-decoration:none;">Go</a>
+          <button type="button" class="titlebar-menu-item" onclick="toggleTerminal()">Terminal</button>
+          <a href="contact.html" class="titlebar-menu-item" style="text-decoration:none;">Help</a>
+        </nav>
       </div>
 
-    </div>
-  </header>
-
-  <main class="main">
-    <section id="contact" class="contact section">
-
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Available for freelance Python, Django, React, API development, and web application projects. Get in touch to discuss your next project.</p>
+      <div class="titlebar-center">
+        <div class="titlebar-search-box" onclick="switchFile('contact.html')" role="button" tabindex="0" aria-label="Search or jump to file">
+          <i class="bi bi-search" aria-hidden="true"></i>
+          <span>contact.html &mdash; habeeb-portfolio</span>
+        </div>
       </div>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="titlebar-right">
+        <div class="titlebar-controls" aria-hidden="true">
+          <span class="window-control-btn min" title="Minimize"></span>
+          <span class="window-control-btn max" title="Maximize"></span>
+          <span class="window-control-btn close" title="Close"></span>
+        </div>
+      </div>
+    </header>
 
-        <div class="row gy-4">
+    <!-- Main Workbench Layout -->
+    <div class="vscode-workbench">
 
-          <div class="col-lg-5">
+      <div class="sidebar-backdrop" aria-hidden="true"></div>
 
-            <div class="info-wrap">
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                <i class="bi bi-geo-alt flex-shrink-0" aria-hidden="true"></i>
-                <div>
-                  <h3>Address</h3>
-                  <p>Palakkad, Kerala</p>
-                </div>
-              </div><!-- End Info Item -->
+      <!-- Activity Bar -->
+      <aside class="vscode-activitybar" aria-label="Activity Bar">
+        <div class="activitybar-top">
+          <button type="button" id="activity-explorer-btn" class="activity-btn active" title="Explorer (Ctrl+B)" aria-label="Explorer">
+            <i class="bi bi-files" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="activity-btn" title="Search Files" aria-label="Search" onclick="switchFile('skills.json')">
+            <i class="bi bi-search" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="activity-btn" title="Source Control: master branch" aria-label="Source Control" onclick="switchFile('resume.md')">
+            <i class="bi bi-git" aria-hidden="true"></i>
+            <span class="activity-badge">1</span>
+          </button>
+          <button type="button" class="activity-btn" title="Services" aria-label="Services" onclick="switchFile('services.py')">
+            <i class="bi bi-grid-fill" aria-hidden="true"></i>
+          </button>
+          <button type="button" id="activity-terminal-btn" class="activity-btn" title="Terminal" aria-label="Terminal">
+            <i class="bi bi-terminal" aria-hidden="true"></i>
+          </button>
+        </div>
 
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                <i class="bi bi-telephone flex-shrink-0" aria-hidden="true"></i>
-                <div>
-                  <h3>Call</h3>
-                  <p><a href="tel:+919497844660" data-contact="phone">+91 9497844660</a></p>
-                </div>
-              </div><!-- End Info Item -->
+        <div class="activitybar-bottom">
+          <button type="button" class="activity-btn active" title="Let's talk on WhatsApp" aria-label="WhatsApp" onclick="window.handleWhatsAppContact(event)">
+            <i class="bi bi-whatsapp" style="color: #25d366;" aria-hidden="true"></i>
+          </button>
+          <a href="https://github.com/habeeiiyy" target="_blank" rel="noopener noreferrer" class="activity-btn" title="Habeeb on GitHub" aria-label="GitHub Profile">
+            <i class="bi bi-github" aria-hidden="true"></i>
+          </a>
+          <button type="button" id="activity-settings-btn" class="activity-btn" title="Theme & Settings" aria-label="Settings">
+            <i class="bi bi-gear" aria-hidden="true"></i>
+          </button>
+        </div>
+      </aside>
 
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="350" class="info-item-whatsapp">
-                <i class="bi bi-whatsapp flex-shrink-0" aria-hidden="true"></i>
-                <div>
-                  <h3>WhatsApp</h3>
-                  <p><a href="https://wa.me/919497844660" data-contact="whatsapp" class="btn-whatsapp">Chat on WhatsApp</a></p>
-                </div>
-              </div><!-- End Info Item -->
+      <!-- Sidebar (File Explorer) -->
+      <nav class="vscode-sidebar" aria-label="File Explorer">
+        <div class="sidebar-header">
+          <span>Explorer</span>
+          <i class="bi bi-three-dots" aria-hidden="true"></i>
+        </div>
 
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400" class="info-item-email">
-                <i class="bi bi-envelope flex-shrink-0" aria-hidden="true"></i>
-                <div>
-                  <h3>Email me</h3>
-                  <p><a href="mailto:habeebdeveloper.india@gmail.com" data-contact="email" class="btn-email">habeebdeveloper.india@gmail.com</a></p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <iframe title="Location map showing Mannarkkad, Kerala" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30639.66160593257!2d76.44033879964314!3d10.989431385990951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba87f7f670aa6ad%3A0x3bb7456986f8bc3b!2sMannarkkad%2C%20Kerala!5e1!3m2!1sen!2sin!4v1782661361249!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin" frameborder="0" class="map-frame"></iframe>
-            </div>
+        <div class="sidebar-content">
+          <div class="explorer-section-title">
+            <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            <span>HABEEB-PORTFOLIO</span>
           </div>
 
-          <div class="col-lg-7">
-            <form action="https://formsubmit.co/ajax/habeebdeveloper.india@gmail.com" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <input type="hidden" name="_subject" value="New portfolio contact message">
-              <input type="hidden" name="_captcha" value="false">
-              <input type="hidden" name="_template" value="table">
-              <div class="row gy-4">
+          <ul class="explorer-list" role="tree">
+            <li role="none">
+              <a href="index.html#home.py" class="explorer-item" data-file="home.py" role="treeitem">
+                <i class="bi bi-filetype-py file-icon icon-py" aria-hidden="true"></i>
+                <span>home.py</span>
+              </a>
+            </li>
+            <li role="none">
+              <a href="about.html" class="explorer-item" data-file="about.html" role="treeitem">
+                <i class="bi bi-filetype-html file-icon icon-html" aria-hidden="true"></i>
+                <span>about.html</span>
+              </a>
+            </li>
+            <li role="none">
+              <a href="resume.html" class="explorer-item" data-file="resume.md" role="treeitem">
+                <i class="bi bi-filetype-md file-icon icon-md" aria-hidden="true"></i>
+                <span>resume.md</span>
+              </a>
+            </li>
+            <li role="none">
+              <a href="index.html#skills.json" class="explorer-item" data-file="skills.json" role="treeitem">
+                <i class="bi bi-filetype-json file-icon icon-json" aria-hidden="true"></i>
+                <span>skills.json</span>
+              </a>
+            </li>
+            <li role="none">
+              <a href="services.html" class="explorer-item" data-file="services.py" role="treeitem">
+                <i class="bi bi-filetype-py file-icon icon-py" aria-hidden="true"></i>
+                <span>services.py</span>
+              </a>
+            </li>
+            <li role="none">
+              <a href="contact.html" class="explorer-item active" data-file="contact.html" role="treeitem">
+                <i class="bi bi-filetype-html file-icon icon-html" aria-hidden="true"></i>
+                <span>contact.html</span>
+              </a>
+            </li>
+            <li role="none">
+              <a href="starter-page.html" class="explorer-item" data-file="socials.json" role="treeitem">
+                <i class="bi bi-filetype-json file-icon icon-json" aria-hidden="true"></i>
+                <span>socials.json</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
 
-                <div class="col-md-6">
-                  <label for="name-field" class="pb-2">Your Name</label>
-                  <input type="text" name="name" id="name-field" class="form-control" required maxlength="100" placeholder="Jane Doe" autocomplete="name">
+      <!-- Editor Main Container -->
+      <main id="editor-main-content" class="vscode-editor">
+
+        <!-- Tabs Bar -->
+        <div class="vscode-tabs-bar" role="tablist" aria-label="Editor Tabs">
+          <a href="index.html#home.py" class="editor-tab" data-file="home.py" role="tab" aria-selected="false" id="tab-home">
+            <i class="bi bi-filetype-py file-icon icon-py" aria-hidden="true"></i>
+            <span>home.py</span>
+            <span class="tab-close" title="Close">&times;</span>
+          </a>
+          <a href="about.html" class="editor-tab" data-file="about.html" role="tab" aria-selected="false" id="tab-about">
+            <i class="bi bi-filetype-html file-icon icon-html" aria-hidden="true"></i>
+            <span>about.html</span>
+            <span class="tab-close" title="Close">&times;</span>
+          </a>
+          <a href="resume.html" class="editor-tab" data-file="resume.md" role="tab" aria-selected="false" id="tab-resume">
+            <i class="bi bi-filetype-md file-icon icon-md" aria-hidden="true"></i>
+            <span>resume.md</span>
+            <span class="tab-close" title="Close">&times;</span>
+          </a>
+          <a href="index.html#skills.json" class="editor-tab" data-file="skills.json" role="tab" aria-selected="false" id="tab-skills">
+            <i class="bi bi-filetype-json file-icon icon-json" aria-hidden="true"></i>
+            <span>skills.json</span>
+            <span class="tab-close" title="Close">&times;</span>
+          </a>
+          <a href="services.html" class="editor-tab" data-file="services.py" role="tab" aria-selected="false" id="tab-services">
+            <i class="bi bi-filetype-py file-icon icon-py" aria-hidden="true"></i>
+            <span>services.py</span>
+            <span class="tab-close" title="Close">&times;</span>
+          </a>
+          <a href="contact.html" class="editor-tab active" data-file="contact.html" role="tab" aria-selected="true" id="tab-contact">
+            <i class="bi bi-filetype-html file-icon icon-html" aria-hidden="true"></i>
+            <span>contact.html</span>
+            <span class="tab-close" title="Close">&times;</span>
+          </a>
+          <a href="starter-page.html" class="editor-tab" data-file="socials.json" role="tab" aria-selected="false" id="tab-socials">
+            <i class="bi bi-filetype-json file-icon icon-json" aria-hidden="true"></i>
+            <span>socials.json</span>
+            <span class="tab-close" title="Close">&times;</span>
+          </a>
+        </div>
+
+        <!-- Breadcrumbs Bar -->
+        <div class="vscode-breadcrumbs" aria-label="Breadcrumbs">
+          <span class="breadcrumb-segment">portfolio</span>
+          <i class="bi bi-chevron-right" aria-hidden="true"></i>
+          <span class="breadcrumb-segment">src</span>
+          <i class="bi bi-chevron-right" aria-hidden="true"></i>
+          <span class="breadcrumb-segment breadcrumb-active" id="breadcrumb-current-file">contact.html</span>
+        </div>
+
+        <!-- Editor Body -->
+        <div class="vscode-editor-body">
+          <div class="vscode-gutter" aria-hidden="true">
+            1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>
+            11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>
+            21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>
+            31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40
+          </div>
+
+          <div class="vscode-content-scroll">
+            <section id="view-contact" class="tab-view active" role="tabpanel">
+              <div class="code-banner">
+                <span class="syn-cm">&lt;!-- Contact Channels &amp; Client Inquiries --&gt;</span><br>
+                <span class="syn-tag">&lt;form</span> <span class="syn-attr">action</span>=<span class="syn-str">"https://formsubmit.co/ajax/habeebdeveloper.india@gmail.com"</span> <span class="syn-attr">method</span>=<span class="syn-str">"POST"</span><span class="syn-tag">&gt;</span>
+              </div>
+
+              <h2 class="section-h2">
+                <i class="bi bi-envelope-paper" aria-hidden="true"></i>
+                <span>Get In Touch</span>
+              </h2>
+
+              <p style="font-size: 1.05rem; color: var(--text-main); margin-bottom: 24px;">
+                Available for freelance Python, Django, React, API development, and web application projects. Reach out via WhatsApp or the contact form below.
+              </p>
+
+              <div class="contact-layout">
+
+                <!-- Left Column: Details & WhatsApp Action -->
+                <div class="contact-info-panel">
+                  
+                  <!-- Polished Animated WhatsApp Contact Button Card -->
+                  <div class="whatsapp-contact-card">
+                    <h3 class="whatsapp-card-title">Instant Chat via WhatsApp</h3>
+                    <p class="whatsapp-card-desc">
+                      Direct channel for quick inquiries, project consultations, and timelines.
+                    </p>
+                    <button type="button" class="btn-whatsapp-animated" onclick="window.handleWhatsAppContact(event)">
+                      <i class="bi bi-whatsapp wa-icon" aria-hidden="true"></i>
+                      <span>Let's talk on WhatsApp</span>
+                    </button>
+                  </div>
+
+                  <div class="contact-info-items">
+                    <div class="contact-item-row">
+                      <div class="contact-item-icon">
+                        <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                      </div>
+                      <div class="contact-item-text">
+                        <h4>Location</h4>
+                        <p>Palakkad, Kerala, India</p>
+                      </div>
+                    </div>
+
+                    <div class="contact-item-row">
+                      <div class="contact-item-icon">
+                        <i class="bi bi-envelope" aria-hidden="true"></i>
+                      </div>
+                      <div class="contact-item-text">
+                        <h4>Email</h4>
+                        <p><a href="mailto:habeebdeveloper.india@gmail.com">habeebdeveloper.india@gmail.com</a></p>
+                      </div>
+                    </div>
+
+                    <div class="contact-item-row">
+                      <div class="contact-item-icon">
+                        <i class="bi bi-clock-history" aria-hidden="true"></i>
+                      </div>
+                      <div class="contact-item-text">
+                        <h4>Availability</h4>
+                        <p>Freelance &amp; Part-time Full Stack Opportunities</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Location Map Frame -->
+                  <iframe title="Location map showing Mannarkkad, Kerala" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30639.66160593257!2d76.44033879964314!3d10.989431385990951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba87f7f670aa6ad%3A0x3bb7456986f8bc3b!2sMannarkkad%2C%20Kerala!5e1!3m2!1sen!2sin!4v1782661361249!5m2!1sen!2sin" class="contact-map-frame" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                 </div>
 
-                <div class="col-md-6">
-                  <label for="email-field" class="pb-2">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email-field" required maxlength="100" placeholder="jane@example.com" autocomplete="email">
-                </div>
+                <!-- Right Column: Interactive Contact Form -->
+                <div class="contact-form-panel">
+                  <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-bright); margin: 0 0 16px;">
+                    Send a Message
+                  </h3>
 
-                <div class="col-md-12">
-                  <label for="subject-field" class="pb-2">Subject</label>
-                  <input type="text" class="form-control" name="subject" id="subject-field" required maxlength="150" placeholder="Brief message topic">
-                </div>
+                  <form id="vscode-contact-form" action="https://formsubmit.co/ajax/habeebdeveloper.india@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="New portfolio contact message from habeeiiyy.in">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
 
-                <div class="col-md-12">
-                  <label for="message-field" class="pb-2">Message</label>
-                  <textarea class="form-control" name="message" rows="10" id="message-field" required minlength="10" maxlength="2000" placeholder="Tell us about your project, timeline, and goals."></textarea>
-                </div>
+                    <div class="form-group">
+                      <label for="form-name" class="form-label">Your Name</label>
+                      <input type="text" id="form-name" name="name" class="form-input" required maxlength="100" placeholder="Jane Doe" autocomplete="name">
+                    </div>
 
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                    <div class="form-group">
+                      <label for="form-email" class="form-label">Your Email</label>
+                      <input type="email" id="form-email" name="email" class="form-input" required maxlength="100" placeholder="jane@example.com" autocomplete="email">
+                    </div>
 
-                  <button type="submit">Send Message</button>
+                    <div class="form-group">
+                      <label for="form-subject" class="form-label">Subject</label>
+                      <input type="text" id="form-subject" name="subject" class="form-input" required maxlength="150" placeholder="Project inquiry / collaboration">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="form-message" class="form-label">Message</label>
+                      <textarea id="form-message" name="message" class="form-textarea" required minlength="10" maxlength="2000" placeholder="Tell me about your project, timeline, and goals."></textarea>
+                    </div>
+
+                    <div class="form-status-box form-status-loading">Sending message...</div>
+                    <div class="form-status-box form-status-success">Your message has been sent successfully. Thank you!</div>
+                    <div class="form-status-box form-status-error">There was an issue sending your message.</div>
+
+                    <button type="submit" class="btn-vscode-primary" style="width: 100%; justify-content: center;">
+                      <i class="bi bi-send" aria-hidden="true"></i>
+                      <span>Send Message</span>
+                    </button>
+                  </form>
                 </div>
 
               </div>
-            </form>
-          </div>
 
+            </section>
+          </div>
         </div>
 
-      </div>
+        <!-- Terminal Drawer -->
+        <div class="vscode-panel collapsed" aria-label="Terminal Drawer">
+          <div class="panel-header">
+            <div class="panel-tabs">
+              <button type="button" class="panel-tab active">Terminal</button>
+            </div>
+            <div class="panel-controls">
+              <button type="button" id="panel-close-btn" class="panel-btn" title="Close Panel" aria-label="Close terminal">&times;</button>
+            </div>
+          </div>
+          <div class="panel-body">
+            <div id="terminal-history" class="terminal-history">Habeeb P Developer Environment initialized [Version 2.0].
+Type 'help' to see available commands or type 'about', 'skills', 'experience', 'services', 'contact', 'whatsapp', 'clear'.
+</div>
+            <div class="terminal-input-row">
+              <span class="terminal-prompt">habeeb@portfolio:~$</span>
+              <input type="text" id="terminal-input" class="terminal-input" placeholder="Type a command and press Enter..." autocomplete="off" spellcheck="false" aria-label="Terminal Command Input">
+            </div>
+          </div>
+        </div>
 
-    </section>
+      </main>
 
-  </main>
-
-  <footer id="footer" class="footer light-background">
-
-    <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Habeeb</strong> <span>All Rights Reserved<br></span></p>
-      </div>
-      <div class="social-links d-flex justify-content-center">
-        <a href="https://twitter.com/habeeiiyy" target="_blank" rel="noopener noreferrer" class="twitter" aria-label="Twitter" title="Twitter"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
-        <a href="https://www.linkedin.com/in/habeeiiyy" target="_blank" rel="noopener noreferrer" class="linkedin" aria-label="LinkedIn" title="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
-        <a href="https://github.com/habeeiiyy" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
-        <a href="https://wa.me/919497844660" target="_blank" rel="noopener noreferrer" class="whatsapp" aria-label="WhatsApp" title="WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
-      </div>
     </div>
 
-  </footer>
+    <!-- Status Bar -->
+    <footer class="vscode-statusbar" aria-label="Status Bar">
+      <div class="statusbar-left">
+        <a href="https://github.com/habeeiiyy/portfolio" target="_blank" rel="noopener noreferrer" class="statusbar-item" title="Git Branch: master">
+          <i class="bi bi-git" aria-hidden="true"></i>
+          <span>master*</span>
+        </a>
+        <button type="button" id="statusbar-terminal-toggle" class="statusbar-item" title="Toggle Terminal Drawer" aria-label="Toggle Terminal">
+          <i class="bi bi-terminal" aria-hidden="true"></i> <span>Terminal</span>
+        </button>
+      </div>
 
-  <button type="button" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Scroll to top"><i class="bi bi-arrow-up-short" aria-hidden="true"></i></button>
+      <div class="statusbar-right">
+        <span class="statusbar-item hide-on-mobile">Spaces: 4</span>
+        <span class="statusbar-item hide-on-mobile">UTF-8</span>
+        <span class="statusbar-item" id="statusbar-lang">HTML</span>
+        <button type="button" class="statusbar-item" title="Theme Selector" onclick="document.getElementById('theme-selector-modal').classList.add('active')">
+          <i class="bi bi-palette" aria-hidden="true"></i>
+        </button>
+      </div>
+    </footer>
 
-    <!-- Floating WhatsApp contact button -->
-  <div class="fab-whatsapp" aria-label="Chat on WhatsApp">
-    <a href="https://wa.me/919497844660" target="_blank" rel="noopener noreferrer" class="fab-btn" title="Chat on WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
-    <span class="fab-label">Chat on WhatsApp</span>
   </div>
 
-<div id="preloader"></div>
+  <!-- Floating WhatsApp Action Button -->
+  <div class="fab-whatsapp" aria-label="Chat on WhatsApp">
+    <button type="button" class="fab-btn" title="Let's talk on WhatsApp" aria-label="Let's talk on WhatsApp" onclick="window.handleWhatsAppContact(event)">
+      <i class="bi bi-whatsapp" aria-hidden="true"></i>
+    </button>
+    <span class="fab-label">Let's talk on WhatsApp</span>
+  </div>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
-  <script src="assets/vendor/aos/aos.js" defer></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js" defer></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js" defer></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js" defer></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js" defer></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js" defer></script>
+  <!-- WhatsApp Configuration & Privacy Notice Modal -->
+  <div id="whatsapp-config-modal" class="vscode-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="wa-modal-title">
+    <div class="vscode-modal-dialog">
+      <div class="modal-header">
+        <h3 id="wa-modal-title">
+          <i class="bi bi-whatsapp" style="color: #25d366;" aria-hidden="true"></i>
+          <span>WhatsApp Contact Setup &amp; Privacy Notice</span>
+        </h3>
+        <button type="button" class="modal-close-btn" aria-label="Close dialog">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p><strong>WhatsApp direct messaging is currently in privacy configuration mode.</strong></p>
+        <div class="modal-notice-box">
+          <i class="bi bi-shield-lock" style="color: var(--accent); margin-right: 6px;" aria-hidden="true"></i>
+          <strong>Privacy Security Distinction:</strong> Standard WhatsApp direct-chat links (<code>wa.me/number</code>) expose the recipient's personal phone number in the public link URL. To keep Habeeb's personal phone number confidential from search bots and visitors, personal numbers are not hardcoded.
+        </div>
+        <p>You can reach Habeeb immediately via email or the contact form:</p>
+        <ul style="padding-left: 20px; margin: 8px 0;">
+          <li><strong>Email:</strong> <a href="mailto:habeebdeveloper.india@gmail.com" style="color: var(--accent);">habeebdeveloper.india@gmail.com</a></li>
+          <li><strong>Contact Form:</strong> Available in this tab</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-vscode-secondary modal-close-btn">Dismiss</button>
+      </div>
+    </div>
+  </div>
 
-  <!-- Main JS File -->
-  <script src="assets/js/config.js" defer></script>
-  <script src="assets/js/main.js" defer></script>
+  <!-- Theme Selector Modal -->
+  <div id="theme-selector-modal" class="vscode-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="theme-modal-title">
+    <div class="vscode-modal-dialog">
+      <div class="modal-header">
+        <h3 id="theme-modal-title">
+          <i class="bi bi-palette" aria-hidden="true"></i>
+          <span>Select VS Code Color Theme</span>
+        </h3>
+        <button type="button" class="modal-close-btn" aria-label="Close theme selector">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <button type="button" class="btn-vscode-secondary theme-option-btn" data-theme="dark" style="justify-content: flex-start;">
+            <i class="bi bi-circle-fill" style="color: #1e1e1e;" aria-hidden="true"></i>
+            <span style="margin-left: 8px;">VS Code Dark Modern</span>
+          </button>
+          <button type="button" class="btn-vscode-secondary theme-option-btn" data-theme="github-dark" style="justify-content: flex-start;">
+            <i class="bi bi-circle-fill" style="color: #0d1117;" aria-hidden="true"></i>
+            <span style="margin-left: 8px;">GitHub Dark</span>
+          </button>
+          <button type="button" class="btn-vscode-secondary theme-option-btn" data-theme="dracula" style="justify-content: flex-start;">
+            <i class="bi bi-circle-fill" style="color: #bd93f9;" aria-hidden="true"></i>
+            <span style="margin-left: 8px;">Dracula</span>
+          </button>
+          <button type="button" class="btn-vscode-secondary theme-option-btn" data-theme="one-dark" style="justify-content: flex-start;">
+            <i class="bi bi-circle-fill" style="color: #61afef;" aria-hidden="true"></i>
+            <span style="margin-left: 8px;">One Dark Pro</span>
+          </button>
+          <button type="button" class="btn-vscode-secondary theme-option-btn" data-theme="light" style="justify-content: flex-start;">
+            <i class="bi bi-circle-fill" style="color: #f3f3f3;" aria-hidden="true"></i>
+            <span style="margin-left: 8px;">VS Code Light</span>
+          </button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-vscode-secondary modal-close-btn">Close</button>
+      </div>
+    </div>
+  </div>
 
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/vscode-app.js"></script>
 </body>
 
 </html>

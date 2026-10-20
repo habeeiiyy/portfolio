@@ -4,183 +4,439 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Habeeb - Resume | Python Django & React Developer</title>
-  <meta name="description" content="Resume of Habeeb, a full stack developer from Palakkad, Kerala specializing in Python, Django and React, with hands-on experience building and deploying production web applications.">
-  <meta name="keywords" content="Habeeb resume, Django developer resume, React developer, Python developer Kerala, full stack developer CV">
-  <link rel="canonical" href="https://example.com/resume.html">
+  <title>Resume - Habeeb P | Python Django & React Full Stack Developer | VS Code Portfolio</title>
+  <meta name="description" content="Resume, education, and professional experience of Habeeb P, Python Django and React developer.">
+  <link rel="canonical" href="https://habeeiiyy.in/resume.html">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Habeeb - Resume">
-  <meta property="og:description" content="Full stack developer resume: Python, Django, React, and real-world deployment experience.">
-  <meta property="og:type" content="profile">
-
-  <link href="assets/img/fav.webp" rel="icon">
-
-  <!-- Fonts: preconnect + only the weights actually used -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;500;600;700&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-
-  <link href="assets/css/main.css" rel="stylesheet">
-
+  <link href="assets/img/fav.webp" rel="icon" type="image/webp">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/css/vscode-theme.css" rel="stylesheet">
 </head>
 
-<body class="resume-page">
+<body>
 
-  <a class="visually-hidden-focusable" href="#resume">Skip to main content</a>
+  <div class="vscode-window">
 
-  <header id="header" class="header d-flex align-items-center light-background sticky-top">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <h1 class="sitename">Habeeb</h1>
-      </a>
-
-      <nav id="navmenu" class="navmenu" aria-label="Main navigation">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resume.html" class="active" aria-current="page">Resume</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="starter-page.html">Social Links</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list" role="button" tabindex="0" aria-label="Toggle navigation menu"></i>
-      </nav>
-
-      <div class="header-social-links">
-        <a href="https://twitter.com/habeeiiyy" target="_blank" rel="noopener noreferrer" aria-label="Twitter" title="Twitter"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
-        <a href="https://www.linkedin.com/in/habeeiiyy" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+    <!-- Top Title Bar -->
+    <header class="vscode-titlebar" aria-label="Visual Studio Code Title Bar">
+      <div class="titlebar-left">
+        <button type="button" class="mobile-menu-toggle" aria-label="Toggle Explorer Navigation">
+          <i class="bi bi-list" aria-hidden="true"></i>
+        </button>
+        <a href="index.html" class="vscode-logo" title="Visual Studio Code Home" style="text-decoration:none;" aria-label="Home">
+          <i class="bi bi-code-slash"></i>
+        </a>
+        <nav class="titlebar-menus" aria-label="Window Menu">
+          <a href="index.html#home.py" class="titlebar-menu-item" style="text-decoration:none;">File</a>
+          <a href="about.html" class="titlebar-menu-item" style="text-decoration:none;">Edit</a>
+          <a href="index.html#skills.json" class="titlebar-menu-item" style="text-decoration:none;">Selection</a>
+          <a href="services.html" class="titlebar-menu-item" style="text-decoration:none;">View</a>
+          <a href="resume.html" class="titlebar-menu-item" style="text-decoration:none;">Go</a>
+          <button type="button" class="titlebar-menu-item" onclick="toggleTerminal()">Terminal</button>
+          <a href="contact.html" class="titlebar-menu-item" style="text-decoration:none;">Help</a>
+        </nav>
       </div>
 
-    </div>
-  </header>
+      <div class="titlebar-center">
+        <div class="titlebar-search-box" onclick="switchFile('resume.md')" role="button" tabindex="0" aria-label="Search or jump to file">
+          <i class="bi bi-search" aria-hidden="true"></i>
+          <span>resume.md &mdash; habeeb-portfolio</span>
+        </div>
+      </div>
 
-  <main class="main">
+      <div class="titlebar-right">
+        <div class="titlebar-controls" aria-hidden="true">
+          <span class="window-control-btn min" title="Minimize"></span>
+          <span class="window-control-btn max" title="Maximize"></span>
+          <span class="window-control-btn close" title="Close"></span>
+        </div>
+      </div>
+    </header>
 
-    <section id="resume" class="resume section">
+    <!-- Main Workbench Layout -->
+    <div class="vscode-workbench">
 
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Resume</h2>
-      </div><!-- End Section Title -->
+      <div class="sidebar-backdrop" aria-hidden="true"></div>
 
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Summary</h3>
-
-            <div class="resume-item pb-0">
-              <h4>HABEEB P</h4>
-              <p><em>Self-driven full stack developer with hands-on experience building real-world web applications using Python, Django, and React. Currently expanding skills through structured learning at Brototype while gaining practical industry experience as a part-time developer.</em></p>
-              <ul>
-                <li>Palakkad, Kerala</li>
-                <li><a href="tel:+919497844660">+91 9497844660</a></li>
-                <li><a href="mailto:habeebdeveloper.india@gmail.com">habeebdeveloper.india@gmail.com</a></li>
-              </ul>
-            </div>
-
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>HIGHER SECONDARY (PLUS TWO) - COMPUTER SCIENCE</h4>
-              <h5>2024-2026</h5>
-              <p><em>GVHSS Alanallur</em></p>
-              <p>Completed higher secondary education with a focus on Computer Science, building a strong foundation in programming logic and computing fundamentals.</p>
-            </div>
-
-            <div class="resume-item">
-              <h4>FULL STACK DEVELOPMENT TRAINING</h4>
-              <h5>2026-present</h5>
-              <p><em>Brototype</em></p>
-              <p>Currently learning full stack development with a focus on Python, Django, and React, building practical, project-based skills as a self-driven learner.</p>
-            </div>
-
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>PART-TIME WEB DEVELOPER</h4>
-              <h5>2026 - Present</h5>
-              <p><em>iTech4.com, Mannarkkad</em></p>
-              <ul>
-                <li>Working as a part-time web developer while continuing full stack development training</li>
-                <li>Built and deployed a complete OLX-style marketplace application from scratch using Python, Django, and React</li>
-                <li>Handled end-to-end deployment of the application, from development to live hosting</li>
-                <li>Applying full stack concepts learned at Brototype to real, production-style projects</li>
-              </ul>
-            </div><!-- End Resume Item -->
-
-            <div class="resume-item">
-              <h4>FREELANCE FULL STACK DEVELOPER</h4>
-              <h5>Present &amp; Available</h5>
-              <p><em>Self-Employed / Remote</em></p>
-              <ul>
-                <li>Handled full project lifecycle independently — from requirements gathering to final deployment</li>
-                <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-                <li>Managed end-to-end deployment for all freelance projects, ensuring smooth, production-ready delivery</li>
-              </ul>
-            </div><!-- End Resume Item -->
-
-          </div>
-
+      <!-- Activity Bar -->
+      <aside class="vscode-activitybar" aria-label="Activity Bar">
+        <div class="activitybar-top">
+          <button type="button" id="activity-explorer-btn" class="activity-btn active" title="Explorer (Ctrl+B)" aria-label="Explorer">
+            <i class="bi bi-files" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="activity-btn" title="Search Files" aria-label="Search" onclick="switchFile('skills.json')">
+            <i class="bi bi-search" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="activity-btn" title="Source Control: master branch" aria-label="Source Control" onclick="switchFile('resume.md')">
+            <i class="bi bi-git" aria-hidden="true"></i>
+            <span class="activity-badge">1</span>
+          </button>
+          <button type="button" class="activity-btn" title="Services" aria-label="Services" onclick="switchFile('services.py')">
+            <i class="bi bi-grid-fill" aria-hidden="true"></i>
+          </button>
+          <button type="button" id="activity-terminal-btn" class="activity-btn" title="Terminal" aria-label="Terminal">
+            <i class="bi bi-terminal" aria-hidden="true"></i>
+          </button>
         </div>
 
-      </div>
+        <div class="activitybar-bottom">
+          <button type="button" class="activity-btn" title="Let's talk on WhatsApp" aria-label="WhatsApp" onclick="window.handleWhatsAppContact(event)">
+            <i class="bi bi-whatsapp" style="color: #25d366;" aria-hidden="true"></i>
+          </button>
+          <a href="https://github.com/habeeiiyy" target="_blank" rel="noopener noreferrer" class="activity-btn" title="Habeeb on GitHub" aria-label="GitHub Profile">
+            <i class="bi bi-github" aria-hidden="true"></i>
+          </a>
+          <button type="button" id="activity-settings-btn" class="activity-btn" title="Theme & Settings" aria-label="Settings">
+            <i class="bi bi-gear" aria-hidden="true"></i>
+          </button>
+        </div>
+      </aside>
 
-    </section><!-- /Resume Section -->
+      <!-- Sidebar (File Explorer) -->
+      <nav class="vscode-sidebar" aria-label="File Explorer">
+        <div class="sidebar-header">
+          <span>Explorer</span>
+          <i class="bi bi-three-dots" aria-hidden="true"></i>
+        </div>
 
-  </main>
+        <div class="sidebar-content">
+          <div class="explorer-section-title">
+            <i class="bi bi-chevron-down" aria-hidden="true"></i>
+            <span>HABEEB-PORTFOLIO</span>
+          </div>
 
-  <footer id="footer" class="footer light-background">
+          <ul class="explorer-list" role="tree">
+            <li role="none">
+              <a href="index.html#home.py" class="explorer-item" data-file="home.py" role="treeitem">
+                <i class="bi bi-filetype-py file-icon icon-py" aria-hidden="true"></i>
+                <span>home.py</span>
+              </a>
+            </li>
+            <li role="none">
+              <a href="about.html" class="explorer-item" data-file="about.html" role="treeitem">
+                <i class="bi bi-filetype-html file-icon icon-html" aria-hidden="true"></i>
+                <span>about.html</span>
+              </a>
+            </li>
+            <li role="none">
+              <a href="resume.html" class="explorer-item active" data-file="resume.md" role="treeitem">
+                <i class="bi bi-filetype-md file-icon icon-md" aria-hidden="true"></i>
+                <span>resume.md</span>
+              </a>
+            </li>
+            <li role="none">
+              <a href="index.html#skills.json" class="explorer-item" data-file="skills.json" role="treeitem">
+                <i class="bi bi-filetype-json file-icon icon-json" aria-hidden="true"></i>
+                <span>skills.json</span>
+              </a>
+            </li>
+            <li role="none">
+              <a href="services.html" class="explorer-item" data-file="services.py" role="treeitem">
+                <i class="bi bi-filetype-py file-icon icon-py" aria-hidden="true"></i>
+                <span>services.py</span>
+              </a>
+            </li>
+            <li role="none">
+              <a href="contact.html" class="explorer-item" data-file="contact.html" role="treeitem">
+                <i class="bi bi-filetype-html file-icon icon-html" aria-hidden="true"></i>
+                <span>contact.html</span>
+              </a>
+            </li>
+            <li role="none">
+              <a href="starter-page.html" class="explorer-item" data-file="socials.json" role="treeitem">
+                <i class="bi bi-filetype-json file-icon icon-json" aria-hidden="true"></i>
+                <span>socials.json</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
 
-    <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Habeeb</strong> <span>All Rights Reserved<br></span></p>
-      </div>
-      <div class="social-links d-flex justify-content-center">
-        <a href="https://twitter.com/habeeiiyy" target="_blank" rel="noopener noreferrer" aria-label="Twitter" title="Twitter"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
-        <a href="https://www.linkedin.com/in/habeeiiyy" target="_blank" rel="noopener noreferrer" class="linkedin" aria-label="LinkedIn" title="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
-        <a href="https://wa.me/919497844660" target="_blank" rel="noopener noreferrer" class="whatsapp" aria-label="WhatsApp" title="WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
+      <!-- Editor Main Container -->
+      <main id="editor-main-content" class="vscode-editor">
 
-        <a href="https://wa.me/919497844660" target="_blank" rel="noopener noreferrer" class="whatsapp" aria-label="WhatsApp" title="WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
-      </div>
+        <!-- Tabs Bar -->
+        <div class="vscode-tabs-bar" role="tablist" aria-label="Editor Tabs">
+          <a href="index.html#home.py" class="editor-tab" data-file="home.py" role="tab" aria-selected="false" id="tab-home">
+            <i class="bi bi-filetype-py file-icon icon-py" aria-hidden="true"></i>
+            <span>home.py</span>
+            <span class="tab-close" title="Close">&times;</span>
+          </a>
+          <a href="about.html" class="editor-tab" data-file="about.html" role="tab" aria-selected="false" id="tab-about">
+            <i class="bi bi-filetype-html file-icon icon-html" aria-hidden="true"></i>
+            <span>about.html</span>
+            <span class="tab-close" title="Close">&times;</span>
+          </a>
+          <a href="resume.html" class="editor-tab active" data-file="resume.md" role="tab" aria-selected="true" id="tab-resume">
+            <i class="bi bi-filetype-md file-icon icon-md" aria-hidden="true"></i>
+            <span>resume.md</span>
+            <span class="tab-close" title="Close">&times;</span>
+          </a>
+          <a href="index.html#skills.json" class="editor-tab" data-file="skills.json" role="tab" aria-selected="false" id="tab-skills">
+            <i class="bi bi-filetype-json file-icon icon-json" aria-hidden="true"></i>
+            <span>skills.json</span>
+            <span class="tab-close" title="Close">&times;</span>
+          </a>
+          <a href="services.html" class="editor-tab" data-file="services.py" role="tab" aria-selected="false" id="tab-services">
+            <i class="bi bi-filetype-py file-icon icon-py" aria-hidden="true"></i>
+            <span>services.py</span>
+            <span class="tab-close" title="Close">&times;</span>
+          </a>
+          <a href="contact.html" class="editor-tab" data-file="contact.html" role="tab" aria-selected="false" id="tab-contact">
+            <i class="bi bi-filetype-html file-icon icon-html" aria-hidden="true"></i>
+            <span>contact.html</span>
+            <span class="tab-close" title="Close">&times;</span>
+          </a>
+          <a href="starter-page.html" class="editor-tab" data-file="socials.json" role="tab" aria-selected="false" id="tab-socials">
+            <i class="bi bi-filetype-json file-icon icon-json" aria-hidden="true"></i>
+            <span>socials.json</span>
+            <span class="tab-close" title="Close">&times;</span>
+          </a>
+        </div>
+
+        <!-- Breadcrumbs Bar -->
+        <div class="vscode-breadcrumbs" aria-label="Breadcrumbs">
+          <span class="breadcrumb-segment">portfolio</span>
+          <i class="bi bi-chevron-right" aria-hidden="true"></i>
+          <span class="breadcrumb-segment">src</span>
+          <i class="bi bi-chevron-right" aria-hidden="true"></i>
+          <span class="breadcrumb-segment breadcrumb-active" id="breadcrumb-current-file">resume.md</span>
+        </div>
+
+        <!-- Editor Body -->
+        <div class="vscode-editor-body">
+          <div class="vscode-gutter" aria-hidden="true">
+            1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>
+            11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>
+            21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>
+            31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40
+          </div>
+
+          <div class="vscode-content-scroll">
+            <section id="view-resume" class="tab-view active" role="tabpanel">
+              <div class="code-banner">
+                <span class="syn-cm"># Habeeb P &mdash; Curriculum Vitae</span><br>
+                <span class="syn-cm">&gt; Self-driven full stack developer with hands-on experience building real-world web applications.</span>
+              </div>
+
+              <div class="resume-section-card">
+                <h2 class="section-h2">
+                  <i class="bi bi-person-badge" aria-hidden="true"></i>
+                  <span>Summary</span>
+                </h2>
+                <div style="font-size: 1.05rem; line-height: 1.65; margin-bottom: 20px;">
+                  <strong style="color: var(--text-bright); font-size: 1.2rem;">HABEEB P</strong>
+                  <p style="margin-top: 8px; color: var(--text-main);">
+                    <em>Self-driven full stack developer with hands-on experience building real-world web applications using Python, Django, and React. Currently expanding skills through structured learning at Brototype while gaining practical industry experience as a part-time developer.</em>
+                  </p>
+                  <div style="display: flex; flex-wrap: wrap; gap: 16px; margin-top: 12px; font-size: 13.5px; color: var(--text-muted);">
+                    <span><i class="bi bi-geo-alt" aria-hidden="true"></i> Palakkad, Kerala</span>
+                    <span><i class="bi bi-envelope" aria-hidden="true"></i> <a href="mailto:habeebdeveloper.india@gmail.com" style="color: var(--accent); text-decoration: none;">habeebdeveloper.india@gmail.com</a></span>
+                    <span><i class="bi bi-github" aria-hidden="true"></i> <a href="https://github.com/habeeiiyy" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none;">github.com/habeeiiyy</a></span>
+                  </div>
+                </div>
+
+                <div style="margin: 20px 0;">
+                  <button type="button" class="btn-whatsapp-animated" onclick="window.handleWhatsAppContact(event)">
+                    <i class="bi bi-whatsapp wa-icon" aria-hidden="true"></i>
+                    <span>Let's talk on WhatsApp</span>
+                  </button>
+                </div>
+
+                <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 28px 0;">
+
+                <h2 class="section-h2">
+                  <i class="bi bi-mortarboard" aria-hidden="true"></i>
+                  <span>Education</span>
+                </h2>
+                <div class="timeline-list">
+                  <div class="timeline-entry">
+                    <h3 class="timeline-title">HIGHER SECONDARY (PLUS TWO) - COMPUTER SCIENCE</h3>
+                    <div class="timeline-org">GVHSS Alanallur</div>
+                    <span class="timeline-badge">2024 &mdash; 2026</span>
+                    <p class="timeline-desc">
+                      Completed higher secondary education with a focus on Computer Science, building a strong foundation in programming logic and computing fundamentals.
+                    </p>
+                  </div>
+
+                  <div class="timeline-entry">
+                    <h3 class="timeline-title">FULL STACK DEVELOPMENT TRAINING</h3>
+                    <div class="timeline-org">Brototype</div>
+                    <span class="timeline-badge">2026 &mdash; Present</span>
+                    <p class="timeline-desc">
+                      Currently learning full stack development with a focus on Python, Django, and React, building practical, project-based skills as a self-driven learner.
+                    </p>
+                  </div>
+                </div>
+
+                <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 28px 0;">
+
+                <h2 class="section-h2">
+                  <i class="bi bi-briefcase" aria-hidden="true"></i>
+                  <span>Professional Experience</span>
+                </h2>
+                <div class="timeline-list">
+                  <div class="timeline-entry">
+                    <h3 class="timeline-title">PART-TIME WEB DEVELOPER</h3>
+                    <div class="timeline-org">iTech4.com, Mannarkkad</div>
+                    <span class="timeline-badge">2026 &mdash; Present</span>
+                    <ul class="timeline-points">
+                      <li>Working as a part-time web developer while continuing full stack development training.</li>
+                      <li>Built and deployed a complete OLX-style marketplace application from scratch using Python, Django, and React.</li>
+                      <li>Handled end-to-end deployment of the application, from development to live hosting.</li>
+                      <li>Applying full stack concepts learned at Brototype to real, production-style projects.</li>
+                    </ul>
+                  </div>
+
+                  <div class="timeline-entry">
+                    <h3 class="timeline-title">FREELANCE FULL STACK DEVELOPER</h3>
+                    <div class="timeline-org">Self-Employed / Remote</div>
+                    <span class="timeline-badge">Present &amp; Available</span>
+                    <ul class="timeline-points">
+                      <li>Handled full project lifecycle independently &mdash; from requirements gathering to final deployment.</li>
+                      <li>Managed up to 5 projects or tasks at a given time while under pressure.</li>
+                      <li>Managed end-to-end deployment for all freelance projects, ensuring smooth, production-ready delivery.</li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+
+            </section>
+          </div>
+        </div>
+
+        <!-- Terminal Drawer -->
+        <div class="vscode-panel collapsed" aria-label="Terminal Drawer">
+          <div class="panel-header">
+            <div class="panel-tabs">
+              <button type="button" class="panel-tab active">Terminal</button>
+            </div>
+            <div class="panel-controls">
+              <button type="button" id="panel-close-btn" class="panel-btn" title="Close Panel" aria-label="Close terminal">&times;</button>
+            </div>
+          </div>
+          <div class="panel-body">
+            <div id="terminal-history" class="terminal-history">Habeeb P Developer Environment initialized [Version 2.0].
+Type 'help' to see available commands or type 'about', 'skills', 'experience', 'services', 'contact', 'whatsapp', 'clear'.
+</div>
+            <div class="terminal-input-row">
+              <span class="terminal-prompt">habeeb@portfolio:~$</span>
+              <input type="text" id="terminal-input" class="terminal-input" placeholder="Type a command and press Enter..." autocomplete="off" spellcheck="false" aria-label="Terminal Command Input">
+            </div>
+          </div>
+        </div>
+
+      </main>
 
     </div>
 
-  </footer>
+    <!-- Status Bar -->
+    <footer class="vscode-statusbar" aria-label="Status Bar">
+      <div class="statusbar-left">
+        <a href="https://github.com/habeeiiyy/portfolio" target="_blank" rel="noopener noreferrer" class="statusbar-item" title="Git Branch: master">
+          <i class="bi bi-git" aria-hidden="true"></i>
+          <span>master*</span>
+        </a>
+        <button type="button" id="statusbar-terminal-toggle" class="statusbar-item" title="Toggle Terminal Drawer" aria-label="Toggle Terminal">
+          <i class="bi bi-terminal" aria-hidden="true"></i> <span>Terminal</span>
+        </button>
+      </div>
 
-  <button type="button" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Scroll to top"><i class="bi bi-arrow-up-short" aria-hidden="true"></i></button>
+      <div class="statusbar-right">
+        <span class="statusbar-item hide-on-mobile">Spaces: 4</span>
+        <span class="statusbar-item hide-on-mobile">UTF-8</span>
+        <span class="statusbar-item" id="statusbar-lang">Markdown</span>
+        <button type="button" class="statusbar-item" title="Theme Selector" onclick="document.getElementById('theme-selector-modal').classList.add('active')">
+          <i class="bi bi-palette" aria-hidden="true"></i>
+        </button>
+      </div>
+    </footer>
 
-    <!-- Floating WhatsApp contact button -->
-  <div class="fab-whatsapp" aria-label="Chat on WhatsApp">
-    <a href="https://wa.me/919497844660" target="_blank" rel="noopener noreferrer" class="fab-btn" title="Chat on WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
-    <span class="fab-label">Chat on WhatsApp</span>
   </div>
 
-<div id="preloader"></div>
+  <!-- Floating WhatsApp Action Button -->
+  <div class="fab-whatsapp" aria-label="Chat on WhatsApp">
+    <button type="button" class="fab-btn" title="Let's talk on WhatsApp" aria-label="Let's talk on WhatsApp" onclick="window.handleWhatsAppContact(event)">
+      <i class="bi bi-whatsapp" aria-hidden="true"></i>
+    </button>
+    <span class="fab-label">Let's talk on WhatsApp</span>
+  </div>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
-  <script src="assets/vendor/php-email-form/validate.js" defer></script>
-  <script src="assets/vendor/aos/aos.js" defer></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js" defer></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js" defer></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js" defer></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js" defer></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js" defer></script>
+  <!-- WhatsApp Configuration & Privacy Notice Modal -->
+  <div id="whatsapp-config-modal" class="vscode-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="wa-modal-title">
+    <div class="vscode-modal-dialog">
+      <div class="modal-header">
+        <h3 id="wa-modal-title">
+          <i class="bi bi-whatsapp" style="color: #25d366;" aria-hidden="true"></i>
+          <span>WhatsApp Contact Setup &amp; Privacy Notice</span>
+        </h3>
+        <button type="button" class="modal-close-btn" aria-label="Close dialog">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p><strong>WhatsApp direct messaging is currently in privacy configuration mode.</strong></p>
+        <div class="modal-notice-box">
+          <i class="bi bi-shield-lock" style="color: var(--accent); margin-right: 6px;" aria-hidden="true"></i>
+          <strong>Privacy Security Distinction:</strong> Standard WhatsApp direct-chat links (<code>wa.me/number</code>) expose the recipient's personal phone number in the public link URL. To keep Habeeb's personal phone number confidential from search bots and visitors, personal numbers are not hardcoded.
+        </div>
+        <p>You can reach Habeeb immediately via email or the contact form:</p>
+        <ul style="padding-left: 20px; margin: 8px 0;">
+          <li><strong>Email:</strong> <a href="mailto:habeebdeveloper.india@gmail.com" style="color: var(--accent);">habeebdeveloper.india@gmail.com</a></li>
+          <li><strong>Contact Form:</strong> Available in the contact page</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-vscode-secondary modal-close-btn">Dismiss</button>
+        <a href="contact.html" class="btn-vscode-primary" style="text-decoration:none;">
+          <i class="bi bi-envelope" aria-hidden="true"></i>
+          <span>Open Contact Form</span>
+        </a>
+      </div>
+    </div>
+  </div>
 
-  <script src="assets/js/config.js" defer></script>
-  <script src="assets/js/main.js" defer></script>
+  <!-- Theme Selector Modal -->
+  <div id="theme-selector-modal" class="vscode-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="theme-modal-title">
+    <div class="vscode-modal-dialog">
+      <div class="modal-header">
+        <h3 id="theme-modal-title">
+          <i class="bi bi-palette" aria-hidden="true"></i>
+          <span>Select VS Code Color Theme</span>
+        </h3>
+        <button type="button" class="modal-close-btn" aria-label="Close theme selector">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <button type="button" class="btn-vscode-secondary theme-option-btn" data-theme="dark" style="justify-content: flex-start;">
+            <i class="bi bi-circle-fill" style="color: #1e1e1e;" aria-hidden="true"></i>
+            <span style="margin-left: 8px;">VS Code Dark Modern</span>
+          </button>
+          <button type="button" class="btn-vscode-secondary theme-option-btn" data-theme="github-dark" style="justify-content: flex-start;">
+            <i class="bi bi-circle-fill" style="color: #0d1117;" aria-hidden="true"></i>
+            <span style="margin-left: 8px;">GitHub Dark</span>
+          </button>
+          <button type="button" class="btn-vscode-secondary theme-option-btn" data-theme="dracula" style="justify-content: flex-start;">
+            <i class="bi bi-circle-fill" style="color: #bd93f9;" aria-hidden="true"></i>
+            <span style="margin-left: 8px;">Dracula</span>
+          </button>
+          <button type="button" class="btn-vscode-secondary theme-option-btn" data-theme="one-dark" style="justify-content: flex-start;">
+            <i class="bi bi-circle-fill" style="color: #61afef;" aria-hidden="true"></i>
+            <span style="margin-left: 8px;">One Dark Pro</span>
+          </button>
+          <button type="button" class="btn-vscode-secondary theme-option-btn" data-theme="light" style="justify-content: flex-start;">
+            <i class="bi bi-circle-fill" style="color: #f3f3f3;" aria-hidden="true"></i>
+            <span style="margin-left: 8px;">VS Code Light</span>
+          </button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-vscode-secondary modal-close-btn">Close</button>
+      </div>
+    </div>
+  </div>
 
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/vscode-app.js"></script>
 </body>
 
 </html>
