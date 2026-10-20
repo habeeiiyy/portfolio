@@ -12,6 +12,7 @@
     siteUrl: "https://habeeiiyy.in",
     githubUrl: "https://github.com/habeeiiyy",
     smashUpRepo: "https://github.com/habeeiiyy/SmashUp",
+    smashUpOverview: "A backend-focused project management and issue tracking system built with Django, featuring AI-powered issue triage.",
     linkedinUrl: "https://www.linkedin.com/in/habeeiiyy",
     twitterUrl: "https://twitter.com/habeeiiyy",
     location: "Palakkad, Kerala"

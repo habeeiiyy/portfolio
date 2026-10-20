@@ -238,8 +238,12 @@
         appendTerminalText(
           "SmashUp (Ongoing Project):\n" +
           "  Repository: https://github.com/habeeiiyy/SmashUp\n" +
-          "  Stack: Python, Django, React, PostgreSQL, Celery, Redis, Docker, RabbitMQ\n" +
-          "  Details: Scalable full-stack application featuring asynchronous task workers and optimized relational database architecture."
+          "  Stack: Django, Python, PostgreSQL, REST APIs, Celery, Redis, Docker, AI Triage\n" +
+          "  Overview: A backend-focused project management and issue tracking system built with Django, featuring AI-powered issue triage.\n" +
+          "  Key Features:\n" +
+          "    • Full project management and issue lifecycle tracking\n" +
+          "    • AI-powered triage: auto-classifying priority, category, and suggested assignees\n" +
+          "    • Background task workers with Celery and caching via Redis"
         );
         window.open("https://github.com/habeeiiyy/SmashUp", "_blank", "noopener,noreferrer");
         break;
