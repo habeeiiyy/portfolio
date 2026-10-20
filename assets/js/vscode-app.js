@@ -1,6 +1,6 @@
 /**
  * VS Code Portfolio Application Controller
- * Optimized for lightning-fast performance, low-bandwidth internet, and responsive UX.
+ * Optimized for speed, low-bandwidth internet, and responsive UX.
  */
 (function () {
   "use strict";
@@ -69,8 +69,9 @@
 
     // Update Tabs
     document.querySelectorAll(".editor-tab").forEach((tab) => {
-      tab.classList.toggle("active", tab.getAttribute("data-file") === filename);
-      tab.setAttribute("aria-selected", tab.getAttribute("data-file") === filename ? "true" : "false");
+      const match = (tab.getAttribute("data-file") === filename);
+      tab.classList.toggle("active", match);
+      tab.setAttribute("aria-selected", match ? "true" : "false");
     });
 
     // Update Explorer items
@@ -79,8 +80,7 @@
     });
 
     // Update Views
-    const allViews = document.querySelectorAll(".tab-view");
-    allViews.forEach((view) => {
+    document.querySelectorAll(".tab-view").forEach((view) => {
       view.classList.remove("active");
     });
 
@@ -114,7 +114,6 @@
       try {
         window.history.replaceState(null, "", "#" + filename);
       } catch (e) {
-        // Fallback
         window.location.hash = filename;
       }
     }
@@ -195,13 +194,14 @@
           "Available commands:\n" +
           "  help           - Show this help menu\n" +
           "  about          - Overview of Habeeb P\n" +
-          "  skills         - List technical skills\n" +
+          "  skills         - List technical skills (Python, Django, React, PgSQL, Redis, Docker...)\n" +
+          "  smashup        - View ongoing project SmashUp details and GitHub repository\n" +
           "  experience     - Show career and education details\n" +
-          "  services       - List professional development services\n" +
-          "  contact        - Open contact form and details\n" +
-          "  whatsapp       - Trigger WhatsApp contact action\n" +
+          "  services       - List development and scalability services\n" +
+          "  contact        - Open contact options (WhatsApp / Email)\n" +
+          "  whatsapp       - Open WhatsApp chat\n" +
+          "  email          - Open mail client\n" +
           "  theme [name]   - Switch theme (dark, github, dracula, onedark, light)\n" +
-          "  repo           - Visit GitHub portfolio repository\n" +
           "  clear          - Clear terminal output\n" +
           "  exit           - Minimize terminal drawer"
         );
@@ -209,10 +209,10 @@
 
       case "about":
         appendTerminalText(
-          "Habeeb P - Python Django & React Full Stack Developer\n" +
+          "Habeeb P - Full Stack Developer\n" +
           "Location: Palakkad, Kerala\n" +
-          "Education: Higher Secondary in Computer Science; Brototype Full Stack Training\n" +
-          "Building scalable, high-performance web applications with Python, Django, and React."
+          "Stack: Django, Python, React, JavaScript, HTML, CSS, PgSQL, Docker, Celery, Redis, REST API, RabbitMQ.\n" +
+          "Building scalable, high-performance web applications and backend architectures."
         );
         window.switchFile("about.html");
         break;
@@ -222,12 +222,26 @@
           "Core Technical Stack:\n" +
           "  • Python (90%)\n" +
           "  • Django (85%)\n" +
-          "  • React (70%)\n" +
+          "  • React (75%)\n" +
           "  • JavaScript (75%)\n" +
-          "  • HTML5 (100%)\n" +
-          "  • CSS3 (90%)"
+          "  • PostgreSQL / PgSQL (85%)\n" +
+          "  • Redis (80%)\n" +
+          "  • Celery & RabbitMQ (80%)\n" +
+          "  • Docker (75%)"
         );
         window.switchFile("skills.json");
+        break;
+
+      case "smashup":
+      case "project":
+      case "projects":
+        appendTerminalText(
+          "SmashUp (Ongoing Project):\n" +
+          "  Repository: https://github.com/habeeiiyy/SmashUp\n" +
+          "  Stack: Python, Django, React, PostgreSQL, Celery, Redis, Docker, RabbitMQ\n" +
+          "  Details: Scalable full-stack application featuring asynchronous task workers and optimized relational database architecture."
+        );
+        window.open("https://github.com/habeeiiyy/SmashUp", "_blank", "noopener,noreferrer");
         break;
 
       case "experience":
@@ -249,21 +263,23 @@
           "  3. Responsive UI/UX Design\n" +
           "  4. Deployment & Hosting\n" +
           "  5. Maintenance & Optimization\n" +
-          "  6. Project Planning & Support"
+          "  6. Scalability & Optimization (PgSQL, Redis, Celery, RabbitMQ)"
         );
         window.switchFile("services.py");
         break;
 
       case "contact":
-        appendTerminalText("Opening contact view.");
+        appendTerminalText("Opening contact view: WhatsApp and Email.");
         window.switchFile("contact.html");
         break;
 
       case "whatsapp":
-        appendTerminalText("Triggering WhatsApp action...");
-        if (typeof window.handleWhatsAppContact === "function") {
-          window.handleWhatsAppContact();
-        }
+        appendTerminalText("Opening WhatsApp directly...");
+        window.handleWhatsAppContact();
+        break;
+
+      case "email":
+        window.location.href = "mailto:habeebdeveloper.india@gmail.com";
         break;
 
       case "clear":
@@ -273,11 +289,6 @@
 
       case "exit":
         window.closeTerminal();
-        break;
-
-      case "repo":
-        appendTerminalText("Opening repository: https://github.com/habeeiiyy/portfolio");
-        window.open("https://github.com/habeeiiyy/portfolio", "_blank", "noopener,noreferrer");
         break;
 
       case "theme":
@@ -346,65 +357,20 @@
   };
 
   /**
-   * WhatsApp Configuration Modal
+   * Direct Copy Email helper
    */
-  window.showWhatsAppConfigModal = function () {
-    const modal = document.getElementById("whatsapp-config-modal");
-    if (modal) modal.classList.add("active");
+  window.copyEmailAddress = function () {
+    const email = "habeebdeveloper.india@gmail.com";
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(email).then(() => {
+        alert("Copied email address: " + email);
+      }).catch(() => {
+        window.location.href = "mailto:" + email;
+      });
+    } else {
+      window.location.href = "mailto:" + email;
+    }
   };
-
-  window.closeWhatsAppModal = function () {
-    const modal = document.getElementById("whatsapp-config-modal");
-    if (modal) modal.classList.remove("active");
-  };
-
-  /**
-   * Contact Form AJAX Handling
-   */
-  function setupContactForm() {
-    const form = document.getElementById("vscode-contact-form");
-    if (!form) return;
-
-    form.addEventListener("submit", async function (e) {
-      e.preventDefault();
-      const statusLoading = form.querySelector(".form-status-loading");
-      const statusSuccess = form.querySelector(".form-status-success");
-      const statusError = form.querySelector(".form-status-error");
-      const submitBtn = form.querySelector("button[type='submit']");
-
-      if (statusLoading) statusLoading.style.display = "block";
-      if (statusSuccess) statusSuccess.style.display = "none";
-      if (statusError) statusError.style.display = "none";
-      if (submitBtn) submitBtn.disabled = true;
-
-      const formData = new FormData(form);
-      const action = form.getAttribute("action") || (window.PORTFOLIO_CONFIG && window.PORTFOLIO_CONFIG.formAction);
-
-      try {
-        const response = await fetch(action, {
-          method: "POST",
-          body: formData,
-          headers: { "Accept": "application/json" }
-        });
-
-        if (response.ok) {
-          if (statusLoading) statusLoading.style.display = "none";
-          if (statusSuccess) statusSuccess.style.display = "block";
-          form.reset();
-        } else {
-          throw new Error("HTTP " + response.status);
-        }
-      } catch (err) {
-        if (statusLoading) statusLoading.style.display = "none";
-        if (statusError) {
-          statusError.textContent = "Unable to send right now. Please email directly to: habeebdeveloper.india@gmail.com";
-          statusError.style.display = "block";
-        }
-      } finally {
-        if (submitBtn) submitBtn.disabled = false;
-      }
-    });
-  }
 
   /**
    * Event Listeners Setup
@@ -505,7 +471,6 @@
     // Modal Close Handlers
     document.querySelectorAll(".modal-close-btn").forEach((btn) => {
       btn.addEventListener("click", function () {
-        window.closeWhatsAppModal();
         window.closeThemeModal();
       });
     });
@@ -521,7 +486,6 @@
     // Keyboard Shortcuts
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape") {
-        window.closeWhatsAppModal();
         window.closeThemeModal();
         window.closeMobileSidebar();
       }
@@ -565,10 +529,8 @@
     return "home.py";
   }
 
-  // Initialize immediately or on DOM ready
   function init() {
     loadSavedTheme();
-    setupContactForm();
     initEventListeners();
     const initialFile = determineInitialFile();
     window.switchFile(initialFile, false);

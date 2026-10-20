@@ -5,13 +5,13 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Services - Habeeb P | Python Django & React Full Stack Developer | VS Code Portfolio</title>
-  <meta name="description" content="Habeeb P is a full stack developer from Palakkad, Kerala specializing in Python, Django, and React, building scalable web applications with an interactive VS Code interface.">
-  <meta name="keywords" content="Habeeb, Habeeb P, full stack developer, Python Django developer, React developer, web developer Kerala, VS Code portfolio">
+  <meta name="description" content="Habeeb P is a full stack developer from Palakkad, Kerala specializing in Python, Django, React, PostgreSQL, Docker, Celery, Redis, and RabbitMQ.">
+  <meta name="keywords" content="Habeeb, Habeeb P, full stack developer, Python Django developer, React developer, PostgreSQL, Redis, Celery, SmashUp, web developer Kerala, VS Code portfolio">
   <link rel="canonical" href="https://habeeiiyy.in/services.html">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Habeeb P - Python Django &amp; React Full Stack Developer">
-  <meta property="og:description" content="Scalable web solutions powered by Django and React, built for speed and growth.">
+  <meta property="og:description" content="Scalable web solutions powered by Django, React, PgSQL, Docker, Celery, and Redis.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://habeeiiyy.in/services.html">
   <meta property="og:image" content="assets/img/pic1.jpg">
@@ -19,7 +19,7 @@
   <!-- Favicon -->
   <link href="assets/img/fav.webp" rel="icon" type="image/webp">
 
-  <!-- Bootstrap Icons & VS Code Theme (Ultra-fast, minimal payload) -->
+  <!-- Bootstrap Icons & VS Code Theme -->
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
   <link href="assets/css/vscode-theme.css" rel="stylesheet">
 </head>
@@ -71,7 +71,6 @@
     <!-- Main Workbench Layout -->
     <div class="vscode-workbench">
 
-      <!-- Backdrop for mobile sidebar drawer -->
       <div class="sidebar-backdrop" aria-hidden="true"></div>
 
       <!-- Activity Bar (Left vertical strip) -->
@@ -83,11 +82,11 @@
           <button type="button" class="activity-btn" title="Search Files" aria-label="Search" onclick="window.switchFile('skills.json')">
             <i class="bi bi-search" aria-hidden="true"></i>
           </button>
-          <button type="button" class="activity-btn" title="Source Control: master branch" aria-label="Source Control" onclick="window.switchFile('resume.md')">
-            <i class="bi bi-git" aria-hidden="true"></i>
-            <span class="activity-badge">1</span>
+          <button type="button" class="activity-btn" title="Ongoing Project: SmashUp" aria-label="SmashUp Repo" onclick="window.open('https://github.com/habeeiiyy/SmashUp', '_blank', 'noopener,noreferrer')">
+            <i class="bi bi-code-slash" style="color: #55ff55;" aria-hidden="true"></i>
+            <span class="activity-badge">NEW</span>
           </button>
-          <button type="button" class="activity-btn" title="Services &amp; Extensions" aria-label="Services" onclick="window.switchFile('services.py')">
+          <button type="button" class="activity-btn" title="Services &amp; Scalability" aria-label="Services" onclick="window.switchFile('services.py')">
             <i class="bi bi-grid-fill" aria-hidden="true"></i>
           </button>
           <button type="button" id="activity-terminal-btn" class="activity-btn" title="Interactive Terminal (Ctrl+`)" aria-label="Terminal">
@@ -96,9 +95,9 @@
         </div>
 
         <div class="activitybar-bottom">
-          <button type="button" class="activity-btn" title="Let's talk on WhatsApp" aria-label="WhatsApp" onclick="window.handleWhatsAppContact(event)">
-            <i class="bi bi-whatsapp" style="color: #25d366;" aria-hidden="true"></i>
-          </button>
+          <a href="https://wa.me/919497844660" target="_blank" rel="noopener noreferrer" class="activity-btn" title="WhatsApp Direct Chat" aria-label="WhatsApp">
+            <i class="bi bi-whatsapp" style="color: #55ff55;" aria-hidden="true"></i>
+          </a>
           <a href="https://github.com/habeeiiyy" target="_blank" rel="noopener noreferrer" class="activity-btn" title="Habeeb on GitHub" aria-label="GitHub Profile">
             <i class="bi bi-github" aria-hidden="true"></i>
           </a>
@@ -238,65 +237,95 @@
             <section id="view-home" class="tab-view" role="tabpanel" aria-labelledby="tab-home">
               <div class="code-banner">
                 <span class="syn-cm"># -*- coding: utf-8 -*-</span><br>
-                <span class="syn-cm"># Habeeb P &mdash; Developer Environment Configuration</span><br>
+                <span class="syn-cm"># Habeeb P &mdash; Full Stack Developer Configuration</span><br>
                 <span class="syn-kw">class</span> <span class="syn-cls">Developer</span>:<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;<span class="syn-var">name</span> = <span class="syn-str">"Habeeb P"</span><br>
                 &nbsp;&nbsp;&nbsp;&nbsp;<span class="syn-var">role</span> = <span class="syn-str">"Python Django & React Full Stack Developer"</span><br>
                 &nbsp;&nbsp;&nbsp;&nbsp;<span class="syn-var">location</span> = <span class="syn-str">"Palakkad, Kerala"</span><br>
-                &nbsp;&nbsp;&nbsp;&nbsp;<span class="syn-var">stack</span> = [<span class="syn-str">"Python"</span>, <span class="syn-str">"Django"</span>, <span class="syn-str">"React"</span>, <span class="syn-str">"JavaScript"</span>, <span class="syn-str">"REST APIs"</span>]<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;<span class="syn-var">status</span> = <span class="syn-str">"Available for freelance & full stack web projects"</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="syn-var">stack</span> = [<span class="syn-str">"Django"</span>, <span class="syn-str">"Python"</span>, <span class="syn-str">"React"</span>, <span class="syn-str">"PgSQL"</span>, <span class="syn-str">"Docker"</span>, <span class="syn-str">"Celery"</span>, <span class="syn-str">"Redis"</span>, <span class="syn-str">"RabbitMQ"</span>]<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="syn-var">active_project</span> = <span class="syn-str">"SmashUp"</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="syn-var">status</span> = <span class="syn-str">"Available for freelance & full stack projects"</span>
               </div>
 
               <div class="hero-editor-card">
                 <div class="hero-badge">
                   <span class="status-dot"></span>
-                  <span>Available for Projects &amp; Collaboration</span>
+                  <span>Available for Full Stack &amp; Backend Engineering</span>
                 </div>
                 <h1 class="hero-title">Habeeb P</h1>
                 <h2 class="hero-subtitle">&lt;Python Django &amp; React Full Stack Developer /&gt;</h2>
                 <p class="hero-description">
-                  Scalable web solutions powered by Django and React, built for speed, clean architecture, and long-term business growth.
+                  High-performance web applications built with Python, Django, React, PostgreSQL, Docker, Celery, Redis, and RabbitMQ. Focused on scalable architectures and robust backend systems.
                 </p>
 
                 <div class="hero-actions">
-                  <button type="button" class="btn-vscode-primary" onclick="window.switchFile('resume.md')">
-                    <i class="bi bi-file-earmark-person" aria-hidden="true"></i>
-                    <span>View Resume (resume.md)</span>
-                  </button>
                   <button type="button" class="btn-vscode-secondary" onclick="window.switchFile('services.py')">
                     <i class="bi bi-laptop" aria-hidden="true"></i>
                     <span>Explore Services</span>
                   </button>
+                  <a href="https://github.com/habeeiiyy/SmashUp" target="_blank" rel="noopener noreferrer" class="btn-vscode-primary">
+                    <i class="bi bi-github" aria-hidden="true"></i>
+                    <span>Ongoing Project: SmashUp</span>
+                  </a>
                   <button type="button" class="btn-vscode-secondary" onclick="window.switchFile('contact.html')">
                     <i class="bi bi-envelope" aria-hidden="true"></i>
                     <span>Contact Me</span>
                   </button>
-                  <button type="button" class="btn-whatsapp-animated" onclick="window.handleWhatsAppContact(event)">
+                  <a href="https://wa.me/919497844660" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-animated">
                     <i class="bi bi-whatsapp wa-icon" aria-hidden="true"></i>
                     <span>Let's talk on WhatsApp</span>
-                  </button>
+                  </a>
+                </div>
+
+                <!-- Featured Ongoing Project Card: SmashUp -->
+                <div class="project-featured-card">
+                  <span class="project-tag-badge">Current Featured Project</span>
+                  <div>
+                    <a href="https://github.com/habeeiiyy/SmashUp" target="_blank" rel="noopener noreferrer" class="project-title-link">
+                      <span>SmashUp</span>
+                      <i class="bi bi-box-arrow-up-right" style="font-size: 16px;" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                  <p style="font-size: 13.5px; color: var(--text-main); margin: 8px 0 0; line-height: 1.6;">
+                    Active full-stack web application architected with Python, Django REST framework, React, PostgreSQL, Celery, Redis, Docker, and RabbitMQ. Features asynchronous worker queues, high-concurrency database modeling, and real-time frontend integration.
+                  </p>
+                  <div class="project-stack-pills">
+                    <span class="project-stack-pill">Django</span>
+                    <span class="project-stack-pill">Python</span>
+                    <span class="project-stack-pill">React</span>
+                    <span class="project-stack-pill">PgSQL</span>
+                    <span class="project-stack-pill">Docker</span>
+                    <span class="project-stack-pill">Celery</span>
+                    <span class="project-stack-pill">Redis</span>
+                    <span class="project-stack-pill">RabbitMQ</span>
+                    <span class="project-stack-pill">REST API</span>
+                  </div>
+                  <a href="https://github.com/habeeiiyy/SmashUp" target="_blank" rel="noopener noreferrer" class="btn-vscode-primary" style="margin-top: 10px;">
+                    <i class="bi bi-github" aria-hidden="true"></i>
+                    <span>github.com/habeeiiyy/SmashUp</span>
+                  </a>
                 </div>
 
                 <div class="hero-highlights-grid">
                   <div class="highlight-box">
-                    <i class="bi bi-code-square highlight-icon" aria-hidden="true"></i>
+                    <i class="bi bi-database-fill-gear highlight-icon" aria-hidden="true"></i>
                     <div>
-                      <div class="highlight-title">Backend Architecture</div>
-                      <p class="highlight-text">Robust Python &amp; Django REST APIs and data models.</p>
+                      <div class="highlight-title">PgSQL &amp; Django Backend</div>
+                      <p class="highlight-text">Relational database schemas, REST APIs, and authentication.</p>
                     </div>
                   </div>
                   <div class="highlight-box">
-                    <i class="bi bi-layers highlight-icon" aria-hidden="true"></i>
+                    <i class="bi bi-cpu highlight-icon" aria-hidden="true"></i>
                     <div>
-                      <div class="highlight-title">Full Stack Synergy</div>
-                      <p class="highlight-text">React modern frontends backed by rock-solid backends.</p>
+                      <div class="highlight-title">Celery, Redis &amp; RabbitMQ</div>
+                      <p class="highlight-text">Asynchronous background workers, task queues, and caching.</p>
                     </div>
                   </div>
                   <div class="highlight-box">
-                    <i class="bi bi-shield-check highlight-icon" aria-hidden="true"></i>
+                    <i class="bi bi-box-seam highlight-icon" aria-hidden="true"></i>
                     <div>
-                      <div class="highlight-title">Security &amp; Performance</div>
-                      <p class="highlight-text">Keen focus on security foundations and fast loading.</p>
+                      <div class="highlight-title">Docker &amp; Deployment</div>
+                      <p class="highlight-text">Containerized environments and seamless production hosting.</p>
                     </div>
                   </div>
                 </div>
@@ -321,15 +350,18 @@
                     <span class="tech-tag">Python</span>
                     <span class="tech-tag">Django</span>
                     <span class="tech-tag">React</span>
-                    <span class="tech-tag">JavaScript</span>
-                    <span class="tech-tag">Cybersecurity</span>
+                    <span class="tech-tag">PgSQL</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">Celery</span>
+                    <span class="tech-tag">Redis</span>
+                    <span class="tech-tag">RabbitMQ</span>
                   </div>
                 </div>
 
                 <div class="about-details-card">
                   <h2 class="about-heading">Full Stack Developer</h2>
                   <p class="about-bio" style="font-style: italic; color: var(--accent);">
-                    Web applications built with Python, Django, and React for businesses that value performance and scalability.
+                    Scalable web applications built with Python, Django, React, and PostgreSQL for businesses that value performance and scalability.
                   </p>
 
                   <div class="info-meta-grid">
@@ -351,7 +383,7 @@
                     </div>
                     <div class="meta-row">
                       <strong>Freelance:</strong>
-                      <span style="color: #25d366; font-weight: 600;">Available</span>
+                      <span style="color: #55ff55; font-weight: 700; font-family: var(--font-code);">Available</span>
                     </div>
                     <div class="meta-row">
                       <strong>GitHub:</strong>
@@ -360,14 +392,18 @@
                   </div>
 
                   <p class="about-bio">
-                    Hi, I'm a Computer Science student from Kerala with a strong interest in backend and full-stack web development. My primary focus is Python and Django, and I'm actively expanding my skills in React to become a well-rounded full-stack developer. I'm also deeply interested in cybersecurity and enjoy exploring how systems work under the hood. I believe in continuous learning, building practical projects, and improving my problem-solving skills every day. My goal is to become a skilled Python Django + React developer while developing a solid foundation in modern web technologies and security.
+                    Hi, I'm a Full Stack Developer from Kerala specializing in Python, Django, and React, with extensive focus on PostgreSQL (PgSQL), Docker, Celery, Redis, RabbitMQ, and REST APIs. I build production-grade web applications, robust database architectures, and asynchronous worker systems designed for high concurrency and speed. I believe in continuous hands-on learning, clean engineering practices, and building scalable software.
                   </p>
 
-                  <div style="margin-top: 20px;">
-                    <button type="button" class="btn-whatsapp-animated" onclick="window.handleWhatsAppContact(event)">
+                  <div style="margin-top: 20px; display: flex; flex-wrap: wrap; gap: 12px;">
+                    <a href="https://wa.me/919497844660" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-animated">
                       <i class="bi bi-whatsapp wa-icon" aria-hidden="true"></i>
                       <span>Let's talk on WhatsApp</span>
-                    </button>
+                    </a>
+                    <a href="https://github.com/habeeiiyy/SmashUp" target="_blank" rel="noopener noreferrer" class="btn-vscode-primary">
+                      <i class="bi bi-github" aria-hidden="true"></i>
+                      <span>View Ongoing Project (SmashUp)</span>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -396,7 +432,7 @@
             <section id="view-resume" class="tab-view" role="tabpanel" aria-labelledby="tab-resume">
               <div class="code-banner">
                 <span class="syn-cm"># Habeeb P &mdash; Curriculum Vitae</span><br>
-                <span class="syn-cm">&gt; Self-driven full stack developer with hands-on experience building real-world web applications.</span>
+                <span class="syn-cm">&gt; Full stack developer building scalable web applications with Django, Python, React, PgSQL, Docker, Celery, Redis, and RabbitMQ.</span>
               </div>
 
               <div class="resume-section-card">
@@ -407,45 +443,40 @@
                 <div style="font-size: 1.05rem; line-height: 1.65; margin-bottom: 20px;">
                   <strong style="color: var(--text-bright); font-size: 1.2rem;">HABEEB P</strong>
                   <p style="margin-top: 8px; color: var(--text-main);">
-                    <em>Self-driven full stack developer with hands-on experience building real-world web applications using Python, Django, and React. Currently expanding skills through structured learning at Brototype while gaining practical industry experience as a part-time developer.</em>
+                    <em>Full stack developer with hands-on experience building real-world web applications and distributed architectures using Python, Django, React, PostgreSQL, Docker, Celery, Redis, and RabbitMQ. Currently training at Brototype while developing practical industry solutions.</em>
                   </p>
                   <div style="display: flex; flex-wrap: wrap; gap: 16px; margin-top: 12px; font-size: 13.5px; color: var(--text-muted);">
                     <span><i class="bi bi-geo-alt" aria-hidden="true"></i> Palakkad, Kerala</span>
                     <span><i class="bi bi-envelope" aria-hidden="true"></i> <a href="mailto:habeebdeveloper.india@gmail.com" style="color: var(--accent); text-decoration: none;">habeebdeveloper.india@gmail.com</a></span>
                     <span><i class="bi bi-github" aria-hidden="true"></i> <a href="https://github.com/habeeiiyy" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none;">github.com/habeeiiyy</a></span>
+                    <span><i class="bi bi-code-slash" aria-hidden="true"></i> <a href="https://github.com/habeeiiyy/SmashUp" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none;">github.com/habeeiiyy/SmashUp</a></span>
                   </div>
                 </div>
 
                 <div style="margin: 20px 0;">
-                  <button type="button" class="btn-whatsapp-animated" onclick="window.handleWhatsAppContact(event)">
+                  <a href="https://wa.me/919497844660" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-animated">
                     <i class="bi bi-whatsapp wa-icon" aria-hidden="true"></i>
                     <span>Let's talk on WhatsApp</span>
-                  </button>
+                  </a>
                 </div>
 
                 <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 28px 0;">
 
                 <h2 class="section-h2">
-                  <i class="bi bi-mortarboard" aria-hidden="true"></i>
-                  <span>Education</span>
+                  <i class="bi bi-briefcase" aria-hidden="true"></i>
+                  <span>Key Projects</span>
                 </h2>
                 <div class="timeline-list">
                   <div class="timeline-entry">
-                    <h3 class="timeline-title">HIGHER SECONDARY (PLUS TWO) - COMPUTER SCIENCE</h3>
-                    <div class="timeline-org">GVHSS Alanallur</div>
-                    <span class="timeline-badge">2024 &mdash; 2026</span>
-                    <p class="timeline-desc">
-                      Completed higher secondary education with a focus on Computer Science, building a strong foundation in programming logic and computing fundamentals.
-                    </p>
-                  </div>
-
-                  <div class="timeline-entry">
-                    <h3 class="timeline-title">FULL STACK DEVELOPMENT TRAINING</h3>
-                    <div class="timeline-org">Brototype</div>
-                    <span class="timeline-badge">2026 &mdash; Present</span>
-                    <p class="timeline-desc">
-                      Currently learning full stack development with a focus on Python, Django, and React, building practical, project-based skills as a self-driven learner.
-                    </p>
+                    <h3 class="timeline-title">SMASHUP (CURRENT ONGOING PROJECT)</h3>
+                    <div class="timeline-org"><a href="https://github.com/habeeiiyy/SmashUp" target="_blank" rel="noopener noreferrer" style="color:var(--accent);">https://github.com/habeeiiyy/SmashUp</a></div>
+                    <span class="timeline-badge">Active Development</span>
+                    <ul class="timeline-points">
+                      <li>Architected a scalable full-stack application using Python, Django, React, PostgreSQL, Docker, Celery, Redis, and RabbitMQ.</li>
+                      <li>Implemented asynchronous task queues with Celery and RabbitMQ for distributed background jobs.</li>
+                      <li>Designed high-performance relational schemas and query optimizations in PostgreSQL (PgSQL).</li>
+                      <li>Utilized Redis for caching layers and session state optimization.</li>
+                    </ul>
                   </div>
                 </div>
 
@@ -479,6 +510,32 @@
                     </ul>
                   </div>
                 </div>
+
+                <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 28px 0;">
+
+                <h2 class="section-h2">
+                  <i class="bi bi-mortarboard" aria-hidden="true"></i>
+                  <span>Education</span>
+                </h2>
+                <div class="timeline-list">
+                  <div class="timeline-entry">
+                    <h3 class="timeline-title">HIGHER SECONDARY (PLUS TWO) - COMPUTER SCIENCE</h3>
+                    <div class="timeline-org">GVHSS Alanallur</div>
+                    <span class="timeline-badge">2024 &mdash; 2026</span>
+                    <p class="timeline-desc">
+                      Completed higher secondary education with a focus on Computer Science, building a strong foundation in programming logic and computing fundamentals.
+                    </p>
+                  </div>
+
+                  <div class="timeline-entry">
+                    <h3 class="timeline-title">FULL STACK DEVELOPMENT TRAINING</h3>
+                    <div class="timeline-org">Brototype</div>
+                    <span class="timeline-badge">2026 &mdash; Present</span>
+                    <p class="timeline-desc">
+                      Currently learning full stack development with a focus on Python, Django, React, PostgreSQL, Docker, Celery, and Redis.
+                    </p>
+                  </div>
+                </div>
               </div>
             </section>
 
@@ -487,58 +544,19 @@
               <div class="code-banner">
                 <span class="syn-cm">// Technical Proficiencies &amp; Core Competencies</span><br>
                 {<br>
-                &nbsp;&nbsp;<span class="syn-str">"primary"</span>: [<span class="syn-str">"Python"</span>, <span class="syn-str">"Django"</span>, <span class="syn-str">"React"</span>],<br>
-                &nbsp;&nbsp;<span class="syn-str">"frontend"</span>: [<span class="syn-str">"HTML5"</span>, <span class="syn-str">"CSS3"</span>, <span class="syn-str">"JavaScript"</span>, <span class="syn-str">"React"</span>],<br>
-                &nbsp;&nbsp;<span class="syn-str">"backend"</span>: [<span class="syn-str">"Python"</span>, <span class="syn-str">"Django"</span>, <span class="syn-str">"REST APIs"</span>]<br>
+                &nbsp;&nbsp;<span class="syn-str">"languages"</span>: [<span class="syn-str">"Python"</span>, <span class="syn-str">"JavaScript"</span>],<br>
+                &nbsp;&nbsp;<span class="syn-str">"backend"</span>: [<span class="syn-str">"Django"</span>, <span class="syn-str">"REST APIs"</span>, <span class="syn-str">"Celery"</span>, <span class="syn-str">"RabbitMQ"</span>],<br>
+                &nbsp;&nbsp;<span class="syn-str">"database_and_cache"</span>: [<span class="syn-str">"PostgreSQL (PgSQL)"</span>, <span class="syn-str">"Redis"</span>],<br>
+                &nbsp;&nbsp;<span class="syn-str">"frontend_and_devops"</span>: [<span class="syn-str">"React"</span>, <span class="syn-str">"Docker"</span>]<br>
                 }
               </div>
 
               <h2 class="section-h2">
                 <i class="bi bi-lightning-charge" aria-hidden="true"></i>
-                <span>Skill Proficiencies</span>
+                <span>Skill Proficiencies (Minecraft XP Style)</span>
               </h2>
 
               <div class="skills-container">
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-name"><i class="bi bi-filetype-html icon-html" aria-hidden="true"></i> HTML</span>
-                    <span class="skill-percent">100%</span>
-                  </div>
-                  <div class="skill-track">
-                    <div class="skill-bar" data-value="100" style="width: 100%;"></div>
-                  </div>
-                </div>
-
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-name"><i class="bi bi-filetype-css icon-css" aria-hidden="true"></i> CSS</span>
-                    <span class="skill-percent">90%</span>
-                  </div>
-                  <div class="skill-track">
-                    <div class="skill-bar" data-value="90" style="width: 90%;"></div>
-                  </div>
-                </div>
-
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-name"><i class="bi bi-filetype-js icon-json" aria-hidden="true"></i> JavaScript</span>
-                    <span class="skill-percent">75%</span>
-                  </div>
-                  <div class="skill-track">
-                    <div class="skill-bar" data-value="75" style="width: 75%;"></div>
-                  </div>
-                </div>
-
-                <div class="skill-card">
-                  <div class="skill-header">
-                    <span class="skill-name"><i class="bi bi-filetype-jsx icon-md" aria-hidden="true"></i> React</span>
-                    <span class="skill-percent">70%</span>
-                  </div>
-                  <div class="skill-track">
-                    <div class="skill-bar" data-value="70" style="width: 70%;"></div>
-                  </div>
-                </div>
-
                 <div class="skill-card">
                   <div class="skill-header">
                     <span class="skill-name"><i class="bi bi-filetype-py icon-py" aria-hidden="true"></i> Python</span>
@@ -558,6 +576,66 @@
                     <div class="skill-bar" data-value="85" style="width: 85%;"></div>
                   </div>
                 </div>
+
+                <div class="skill-card">
+                  <div class="skill-header">
+                    <span class="skill-name"><i class="bi bi-database-fill icon-py" aria-hidden="true"></i> PostgreSQL (PgSQL)</span>
+                    <span class="skill-percent">85%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-bar" data-value="85" style="width: 85%;"></div>
+                  </div>
+                </div>
+
+                <div class="skill-card">
+                  <div class="skill-header">
+                    <span class="skill-name"><i class="bi bi-server icon-json" aria-hidden="true"></i> Redis</span>
+                    <span class="skill-percent">80%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-bar" data-value="80" style="width: 80%;"></div>
+                  </div>
+                </div>
+
+                <div class="skill-card">
+                  <div class="skill-header">
+                    <span class="skill-name"><i class="bi bi-filetype-jsx icon-md" aria-hidden="true"></i> React</span>
+                    <span class="skill-percent">75%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-bar" data-value="75" style="width: 75%;"></div>
+                  </div>
+                </div>
+
+                <div class="skill-card">
+                  <div class="skill-header">
+                    <span class="skill-name"><i class="bi bi-filetype-js icon-json" aria-hidden="true"></i> JavaScript</span>
+                    <span class="skill-percent">75%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-bar" data-value="75" style="width: 75%;"></div>
+                  </div>
+                </div>
+
+                <div class="skill-card">
+                  <div class="skill-header">
+                    <span class="skill-name"><i class="bi bi-cpu icon-py" aria-hidden="true"></i> Celery &amp; RabbitMQ</span>
+                    <span class="skill-percent">80%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-bar" data-value="80" style="width: 80%;"></div>
+                  </div>
+                </div>
+
+                <div class="skill-card">
+                  <div class="skill-header">
+                    <span class="skill-name"><i class="bi bi-box-seam icon-md" aria-hidden="true"></i> Docker</span>
+                    <span class="skill-percent">75%</span>
+                  </div>
+                  <div class="skill-track">
+                    <div class="skill-bar" data-value="75" style="width: 75%;"></div>
+                  </div>
+                </div>
               </div>
             </section>
 
@@ -565,14 +643,13 @@
             <section id="view-services" class="tab-view active" role="tabpanel" aria-labelledby="tab-services">
               <div class="code-banner">
                 <span class="syn-cm">&quot;&quot;&quot;</span><br>
-                <span class="syn-cm">Services Module &mdash; Practical web development services for startups,</span><br>
-                <span class="syn-cm">students, and growing brands who want modern digital products.</span><br>
+                <span class="syn-cm">Services Module &mdash; Backend architectures, APIs, and scalable web solutions.</span><br>
                 <span class="syn-cm">&quot;&quot;&quot;</span>
               </div>
 
               <h2 class="section-h2">
                 <i class="bi bi-grid" aria-hidden="true"></i>
-                <span>Development Services</span>
+                <span>Development &amp; Optimization Services</span>
               </h2>
 
               <div class="services-grid">
@@ -583,7 +660,7 @@
                     </div>
                     <h3 class="service-title">Full-Stack Web Development</h3>
                     <p class="service-desc">
-                      I build modern websites and web applications using Python, Django, React, and Tailwind CSS for businesses, creators, and personal brands.
+                      Modern, scalable web applications built with Python, Django, React, and PostgreSQL for businesses and startups that value speed and reliability.
                     </p>
                   </div>
                   <a href="#contact.html" class="service-link" onclick="window.switchFile('contact.html')">
@@ -599,7 +676,7 @@
                     </div>
                     <h3 class="service-title">Django Backend &amp; APIs</h3>
                     <p class="service-desc">
-                      I create secure backend systems, database-driven features, authentication, and REST APIs that power reliable web products.
+                      Secure backend systems, PostgreSQL database schemas, token authentication, and REST APIs that power high-traffic products.
                     </p>
                   </div>
                   <a href="#contact.html" class="service-link" onclick="window.switchFile('contact.html')">
@@ -611,11 +688,27 @@
                 <div class="service-card">
                   <div>
                     <div class="service-icon-box">
-                      <i class="bi bi-easel" aria-hidden="true"></i>
+                      <i class="bi bi-speedometer2" aria-hidden="true"></i>
                     </div>
-                    <h3 class="service-title">Responsive UI/UX Design</h3>
+                    <h3 class="service-title">Scalability &amp; Optimization</h3>
                     <p class="service-desc">
-                      I design clean, mobile-first interfaces that are fast, readable, and built to guide users smoothly from one action to the next.
+                      Database query optimization with PostgreSQL indexing, Redis caching layers, Celery &amp; RabbitMQ asynchronous background workers, and performance tuning for high concurrency.
+                    </p>
+                  </div>
+                  <a href="#contact.html" class="service-link" onclick="window.switchFile('contact.html')">
+                    <span>Discuss project</span>
+                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                  </a>
+                </div>
+
+                <div class="service-card">
+                  <div>
+                    <div class="service-icon-box">
+                      <i class="bi bi-box-seam" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="service-title">Docker &amp; Containerization</h3>
+                    <p class="service-desc">
+                      Containerized environments for Django, PostgreSQL, Redis, and frontend services for clean local development and reproducible deployments.
                     </p>
                   </div>
                   <a href="#contact.html" class="service-link" onclick="window.switchFile('contact.html')">
@@ -631,7 +724,7 @@
                     </div>
                     <h3 class="service-title">Deployment &amp; Hosting</h3>
                     <p class="service-desc">
-                      I help launch projects smoothly with hosting, domain setup, environment configuration, and deployment support on modern platforms.
+                      Smooth production launches with domain configuration, reverse proxies, environment secrets, and reliable cloud platform deployment.
                     </p>
                   </div>
                   <a href="#contact.html" class="service-link" onclick="window.switchFile('contact.html')">
@@ -645,25 +738,9 @@
                     <div class="service-icon-box">
                       <i class="bi bi-tools" aria-hidden="true"></i>
                     </div>
-                    <h3 class="service-title">Maintenance &amp; Optimization</h3>
+                    <h3 class="service-title">Maintenance &amp; Bug Fixing</h3>
                     <p class="service-desc">
-                      I provide ongoing updates, bug fixes, performance improvements, and content changes to keep your website healthy after launch.
-                    </p>
-                  </div>
-                  <a href="#contact.html" class="service-link" onclick="window.switchFile('contact.html')">
-                    <span>Discuss project</span>
-                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
-                  </a>
-                </div>
-
-                <div class="service-card">
-                  <div>
-                    <div class="service-icon-box">
-                      <i class="bi bi-chat-square-text" aria-hidden="true"></i>
-                    </div>
-                    <h3 class="service-title">Project Planning &amp; Support</h3>
-                    <p class="service-desc">
-                      I help turn ideas into clear plans, practical features, and launch-ready solutions with ongoing guidance from concept to delivery.
+                      Ongoing code maintenance, API updates, performance monitoring, database migrations, and feature additions to keep applications robust.
                     </p>
                   </div>
                   <a href="#contact.html" class="service-link" onclick="window.switchFile('contact.html')">
@@ -677,33 +754,54 @@
             <!-- ================= VIEW 6: contact.html ================= -->
             <section id="view-contact" class="tab-view" role="tabpanel" aria-labelledby="tab-contact">
               <div class="code-banner">
-                <span class="syn-cm">&lt;!-- Contact Channels &amp; Client Inquiries --&gt;</span><br>
-                <span class="syn-tag">&lt;form</span> <span class="syn-attr">action</span>=<span class="syn-str">"https://formsubmit.co/ajax/habeebdeveloper.india@gmail.com"</span> <span class="syn-attr">method</span>=<span class="syn-str">"POST"</span><span class="syn-tag">&gt;</span>
+                <span class="syn-cm">&lt;!-- Contact Channels &mdash; Direct WhatsApp &amp; Email --&gt;</span><br>
+                <span class="syn-kw">contact_channels</span> = [<span class="syn-str">"WhatsApp"</span>, <span class="syn-str">"Email"</span>]<br>
+                <span class="syn-kw">status</span> = <span class="syn-str">"Available for freelance &amp; full stack engineering"</span>
               </div>
 
               <h2 class="section-h2">
-                <i class="bi bi-envelope-paper" aria-hidden="true"></i>
+                <i class="bi bi-chat-dots" aria-hidden="true"></i>
                 <span>Get In Touch</span>
               </h2>
 
               <p style="font-size: 1.05rem; color: var(--text-main); margin-bottom: 24px;">
-                Available for freelance Python, Django, React, API development, and web application projects. Reach out via WhatsApp or the contact form below.
+                Available for freelance Python, Django, React, PostgreSQL, Celery, Redis, and full-stack web application development. Direct contact via WhatsApp or Email:
               </p>
 
-              <div class="contact-layout">
-                <div class="contact-info-panel">
+              <div class="contact-layout" style="grid-template-columns: 1fr;">
+                <div class="contact-info-panel" style="max-width: 680px; margin: 0 auto; width: 100%;">
+                  
+                  <!-- Direct WhatsApp Contact Box -->
                   <div class="whatsapp-contact-card">
                     <h3 class="whatsapp-card-title">Instant Chat via WhatsApp</h3>
                     <p class="whatsapp-card-desc">
-                      Direct channel for quick inquiries, project consultations, and timelines.
+                      Fastest channel for project inquiries, technical discussions, and proposals.
                     </p>
-                    <button type="button" class="btn-whatsapp-animated" onclick="window.handleWhatsAppContact(event)">
+                    <a href="https://wa.me/919497844660" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-animated">
                       <i class="bi bi-whatsapp wa-icon" aria-hidden="true"></i>
                       <span>Let's talk on WhatsApp</span>
-                    </button>
+                    </a>
                   </div>
 
-                  <div class="contact-info-items">
+                  <!-- Direct Email Contact Box -->
+                  <div class="whatsapp-contact-card" style="margin-top: 16px;">
+                    <h3 class="whatsapp-card-title">Send Email Directly</h3>
+                    <p class="whatsapp-card-desc">
+                      Detailed project briefs, architecture requirements, or remote collaboration offers.
+                    </p>
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+                      <a href="mailto:habeebdeveloper.india@gmail.com" class="btn-email-direct">
+                        <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+                        <span>Email: habeebdeveloper.india@gmail.com</span>
+                      </a>
+                      <button type="button" class="btn-vscode-secondary" onclick="window.copyEmailAddress()">
+                        <i class="bi bi-clipboard" aria-hidden="true"></i>
+                        <span>Copy Email</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="contact-info-items" style="margin-top: 24px;">
                     <div class="contact-item-row">
                       <div class="contact-item-icon">
                         <i class="bi bi-geo-alt" aria-hidden="true"></i>
@@ -716,33 +814,33 @@
 
                     <div class="contact-item-row">
                       <div class="contact-item-icon">
-                        <i class="bi bi-envelope" aria-hidden="true"></i>
+                        <i class="bi bi-clock-history" aria-hidden="true"></i>
                       </div>
                       <div class="contact-item-text">
-                        <h4>Email</h4>
-                        <p><a href="mailto:habeebdeveloper.india@gmail.com">habeebdeveloper.india@gmail.com</a></p>
+                        <h4>Availability</h4>
+                        <p>Freelance &amp; Full Stack Development Opportunities</p>
                       </div>
                     </div>
 
                     <div class="contact-item-row">
                       <div class="contact-item-icon">
-                        <i class="bi bi-clock-history" aria-hidden="true"></i>
+                        <i class="bi bi-github" aria-hidden="true"></i>
                       </div>
                       <div class="contact-item-text">
-                        <h4>Availability</h4>
-                        <p>Freelance &amp; Part-time Full Stack Opportunities</p>
+                        <h4>GitHub</h4>
+                        <p><a href="https://github.com/habeeiiyy" target="_blank" rel="noopener noreferrer">github.com/habeeiiyy</a></p>
                       </div>
                     </div>
                   </div>
 
-                  <!-- Lightweight Location Card (Fast loading on low-bandwidth internet) -->
+                  <!-- Lightweight Location Card -->
                   <div class="location-card">
                     <div class="location-icon-box">
                       <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
                     </div>
                     <div>
                       <div class="location-card-title">Mannarkkad, Palakkad, Kerala</div>
-                      <div class="location-card-sub">Available for remote collaborations worldwide and local client meetings</div>
+                      <div class="location-card-sub">Available for remote collaborations worldwide</div>
                       <a href="https://maps.google.com/?q=Mannarkkad,+Palakkad,+Kerala" target="_blank" rel="noopener noreferrer" class="btn-map-link">
                         <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
                         <span>Open Location in Google Maps</span>
@@ -750,56 +848,16 @@
                     </div>
                   </div>
                 </div>
-
-                <div class="contact-form-panel">
-                  <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-bright); margin: 0 0 16px;">
-                    Send a Message
-                  </h3>
-
-                  <form id="vscode-contact-form" action="https://formsubmit.co/ajax/habeebdeveloper.india@gmail.com" method="POST">
-                    <input type="hidden" name="_subject" value="New portfolio contact message from habeeiiyy.in">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_template" value="table">
-
-                    <div class="form-group">
-                      <label for="form-name" class="form-label">Your Name</label>
-                      <input type="text" id="form-name" name="name" class="form-input" required maxlength="100" placeholder="Jane Doe" autocomplete="name">
-                    </div>
-
-                    <div class="form-group">
-                      <label for="form-email" class="form-label">Your Email</label>
-                      <input type="email" id="form-email" name="email" class="form-input" required maxlength="100" placeholder="jane@example.com" autocomplete="email">
-                    </div>
-
-                    <div class="form-group">
-                      <label for="form-subject" class="form-label">Subject</label>
-                      <input type="text" id="form-subject" name="subject" class="form-input" required maxlength="150" placeholder="Project inquiry / collaboration">
-                    </div>
-
-                    <div class="form-group">
-                      <label for="form-message" class="form-label">Message</label>
-                      <textarea id="form-message" name="message" class="form-textarea" required minlength="10" maxlength="2000" placeholder="Tell me about your project, timeline, and goals."></textarea>
-                    </div>
-
-                    <div class="form-status-box form-status-loading">Sending message...</div>
-                    <div class="form-status-box form-status-success">Your message has been sent successfully. Thank you!</div>
-                    <div class="form-status-box form-status-error">There was an issue sending your message.</div>
-
-                    <button type="submit" class="btn-vscode-primary" style="width: 100%; justify-content: center;">
-                      <i class="bi bi-send" aria-hidden="true"></i>
-                      <span>Send Message</span>
-                    </button>
-                  </form>
-                </div>
               </div>
             </section>
 
             <!-- ================= VIEW 7: socials.json ================= -->
             <section id="view-socials" class="tab-view" role="tabpanel" aria-labelledby="tab-socials">
               <div class="code-banner">
-                <span class="syn-cm">// Social Connections &amp; Creative Process</span><br>
+                <span class="syn-cm">// Social Connections &amp; Active Repositories</span><br>
                 {<br>
                 &nbsp;&nbsp;<span class="syn-str">"github"</span>: <span class="syn-str">"https://github.com/habeeiiyy"</span>,<br>
+                &nbsp;&nbsp;<span class="syn-str">"ongoing_repo"</span>: <span class="syn-str">"https://github.com/habeeiiyy/SmashUp"</span>,<br>
                 &nbsp;&nbsp;<span class="syn-str">"linkedin"</span>: <span class="syn-str">"https://www.linkedin.com/in/habeeiiyy"</span>,<br>
                 &nbsp;&nbsp;<span class="syn-str">"twitter"</span>: <span class="syn-str">"https://twitter.com/habeeiiyy"</span><br>
                 }
@@ -807,17 +865,23 @@
 
               <h2 class="section-h2">
                 <i class="bi bi-share" aria-hidden="true"></i>
-                <span>Social Links</span>
+                <span>Social Links &amp; Projects</span>
               </h2>
 
               <p style="font-size: 1.05rem; color: var(--text-main); margin-bottom: 24px;">
-                Connect with Habeeb across social platforms for development services, freelance opportunities, and professional updates.
+                Connect with Habeeb across platforms for development services, technical updates, and open-source work:
               </p>
 
               <div class="socials-cards-grid">
-                <a href="https://twitter.com/habeeiiyy" target="_blank" rel="noopener noreferrer" class="social-card">
-                  <i class="bi bi-twitter-x social-card-icon" aria-hidden="true"></i>
-                  <div class="social-card-name">Twitter / X</div>
+                <a href="https://github.com/habeeiiyy/SmashUp" target="_blank" rel="noopener noreferrer" class="social-card">
+                  <i class="bi bi-code-slash social-card-icon" style="color: #55ff55;" aria-hidden="true"></i>
+                  <div class="social-card-name">SmashUp (Project)</div>
+                  <div class="social-card-handle">habeeiiyy/SmashUp</div>
+                </a>
+
+                <a href="https://github.com/habeeiiyy" target="_blank" rel="noopener noreferrer" class="social-card">
+                  <i class="bi bi-github social-card-icon" aria-hidden="true"></i>
+                  <div class="social-card-name">GitHub Profile</div>
                   <div class="social-card-handle">@habeeiiyy</div>
                 </a>
 
@@ -827,53 +891,51 @@
                   <div class="social-card-handle">habeeiiyy</div>
                 </a>
 
-                <a href="https://github.com/habeeiiyy" target="_blank" rel="noopener noreferrer" class="social-card">
-                  <i class="bi bi-github social-card-icon" aria-hidden="true"></i>
-                  <div class="social-card-name">GitHub</div>
+                <a href="https://twitter.com/habeeiiyy" target="_blank" rel="noopener noreferrer" class="social-card">
+                  <i class="bi bi-twitter-x social-card-icon" aria-hidden="true"></i>
+                  <div class="social-card-name">Twitter / X</div>
                   <div class="social-card-handle">@habeeiiyy</div>
-                </a>
-
-                <a href="mailto:habeebdeveloper.india@gmail.com" class="social-card">
-                  <i class="bi bi-envelope-at social-card-icon" aria-hidden="true"></i>
-                  <div class="social-card-name">Email</div>
-                  <div class="social-card-handle">habeebdeveloper.india</div>
                 </a>
               </div>
 
-              <div style="margin-top: 10px; margin-bottom: 30px;">
-                <button type="button" class="btn-whatsapp-animated" onclick="window.handleWhatsAppContact(event)">
+              <div style="margin-top: 14px; margin-bottom: 30px; display: flex; flex-wrap: wrap; gap: 12px;">
+                <a href="https://wa.me/919497844660" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-animated">
                   <i class="bi bi-whatsapp wa-icon" aria-hidden="true"></i>
                   <span>Let's talk on WhatsApp</span>
-                </button>
+                </a>
+                <a href="mailto:habeebdeveloper.india@gmail.com" class="btn-email-direct">
+                  <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+                  <span>Email Directly</span>
+                </a>
               </div>
 
               <h2 class="section-h2" style="margin-top: 36px;">
                 <i class="bi bi-diagram-3" aria-hidden="true"></i>
-                <span>Creative Workflow</span>
+                <span>Engineering Workflow</span>
               </h2>
 
               <div class="process-grid">
                 <div class="process-box">
-                  <div class="process-step">Step 01</div>
-                  <h3 class="process-title">Discovery</h3>
+                  <div class="process-step">Phase 01</div>
+                  <h3 class="process-title">Architecture &amp; Schema</h3>
                   <p class="process-desc">
-                    We begin by understanding your goals, audience, and the story you want to tell.
+                    Designing clean database schemas in PostgreSQL, defining REST API contracts, and planning asynchronous task boundaries.
                   </p>
                 </div>
 
                 <div class="process-box">
-                  <div class="process-step">Step 02</div>
-                  <h3 class="process-title">Concept</h3>
+                  <div class="process-step">Phase 02</div>
+                  <h3 class="process-title">Development &amp; Concurrency</h3>
                   <p class="process-desc">
-                    Visual direction is shaped with clear messaging, meaningful layouts, and strong brand alignment.
+                    Building robust Django backends and React frontends, with Celery, Redis, and RabbitMQ handling background worker tasks.
                   </p>
                 </div>
 
                 <div class="process-box">
-                  <div class="process-step">Step 03</div>
-                  <h3 class="process-title">Delivery</h3>
+                  <div class="process-step">Phase 03</div>
+                  <h3 class="process-title">Dockerization &amp; Deployment</h3>
                   <p class="process-desc">
-                    Final assets are polished for launch, with support for digital, print, and ongoing creative campaigns.
+                    Packaging applications with Docker, tuning query performance and cache hits, and executing production deployment.
                   </p>
                 </div>
               </div>
@@ -897,7 +959,7 @@
           </div>
           <div class="panel-body">
             <div id="terminal-history" class="terminal-history">Habeeb P Developer Environment initialized [Version 2.0].
-Type 'help' to see available commands or type 'about', 'skills', 'experience', 'services', 'contact', 'whatsapp', 'clear'.
+Type 'help' to see available commands or type 'about', 'skills', 'smashup', 'experience', 'services', 'contact', 'whatsapp', 'clear'.
 </div>
             <div class="terminal-input-row">
               <span class="terminal-prompt">habeeb@portfolio:~$</span>
@@ -917,9 +979,10 @@ Type 'help' to see available commands or type 'about', 'skills', 'experience', '
           <i class="bi bi-git" aria-hidden="true"></i>
           <span>master*</span>
         </a>
-        <button type="button" class="statusbar-item" title="Synchronize Changes" aria-label="Sync Changes" onclick="location.reload()">
-          <i class="bi bi-arrow-repeat" aria-hidden="true"></i>
-        </button>
+        <a href="https://github.com/habeeiiyy/SmashUp" target="_blank" rel="noopener noreferrer" class="statusbar-item" title="Active Repo: SmashUp">
+          <i class="bi bi-box" aria-hidden="true"></i>
+          <span>SmashUp</span>
+        </a>
         <button type="button" class="statusbar-item" title="0 Errors, 0 Warnings" aria-label="Problems">
           <i class="bi bi-x-circle" aria-hidden="true"></i> <span>0</span>
           <i class="bi bi-exclamation-triangle" aria-hidden="true" style="margin-left: 4px;"></i> <span>0</span>
@@ -943,51 +1006,12 @@ Type 'help' to see available commands or type 'about', 'skills', 'experience', '
 
   </div>
 
-  <!-- Floating WhatsApp Action Button (Polished animation & entrance) -->
+  <!-- Floating WhatsApp Action Button (Minecraft style square) -->
   <div class="fab-whatsapp" aria-label="Chat on WhatsApp">
-    <button type="button" class="fab-btn" title="Let's talk on WhatsApp" aria-label="Let's talk on WhatsApp" onclick="window.handleWhatsAppContact(event)">
+    <a href="https://wa.me/919497844660" target="_blank" rel="noopener noreferrer" class="fab-btn" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
       <i class="bi bi-whatsapp" aria-hidden="true"></i>
-    </button>
-    <span class="fab-label">Let's talk on WhatsApp</span>
-  </div>
-
-  <!-- WhatsApp Configuration & Privacy Notice Modal -->
-  <div id="whatsapp-config-modal" class="vscode-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="wa-modal-title">
-    <div class="vscode-modal-dialog">
-      <div class="modal-header">
-        <h3 id="wa-modal-title">
-          <i class="bi bi-whatsapp" style="color: #25d366;" aria-hidden="true"></i>
-          <span>WhatsApp Contact Setup &amp; Privacy Notice</span>
-        </h3>
-        <button type="button" class="modal-close-btn" aria-label="Close dialog">&times;</button>
-      </div>
-      <div class="modal-body">
-        <p>
-          <strong>WhatsApp direct messaging is currently in privacy configuration mode.</strong>
-        </p>
-        <div class="modal-notice-box">
-          <i class="bi bi-shield-lock" style="color: var(--accent); margin-right: 6px;" aria-hidden="true"></i>
-          <strong>Privacy Security Distinction:</strong> Standard WhatsApp direct-chat links (<code>wa.me/number</code>) expose the recipient's personal phone number in the public link URL. To keep Habeeb's personal phone number confidential from search bots and visitors, personal numbers are not hardcoded.
-        </div>
-        <p>
-          You can reach Habeeb immediately via the direct email address or through the contact form:
-        </p>
-        <ul style="padding-left: 20px; margin: 8px 0;">
-          <li><strong>Email:</strong> <a href="mailto:habeebdeveloper.india@gmail.com" style="color: var(--accent);">habeebdeveloper.india@gmail.com</a></li>
-          <li><strong>Contact Form:</strong> Available in the <code>contact.html</code> tab</li>
-        </ul>
-        <p style="font-size: 12px; color: var(--text-muted); margin-top: 14px;">
-          <em>For the site owner:</em> To enable direct WhatsApp messaging with your business number or shortlink, simply set <code>whatsappLink</code> in <code>assets/js/config.js</code>.
-        </p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn-vscode-secondary modal-close-btn">Dismiss</button>
-        <button type="button" class="btn-vscode-primary" onclick="window.closeWhatsAppModal(); window.switchFile('contact.html');">
-          <i class="bi bi-envelope" aria-hidden="true"></i>
-          <span>Open Contact Form</span>
-        </button>
-      </div>
-    </div>
+    </a>
+    <span class="fab-label">Chat on WhatsApp</span>
   </div>
 
   <!-- Theme Selector Modal -->
@@ -1031,7 +1055,7 @@ Type 'help' to see available commands or type 'about', 'skills', 'experience', '
     </div>
   </div>
 
-  <!-- Scripts (Minimal, zero-dependency, ultra-fast) -->
+  <!-- Scripts -->
   <script src="assets/js/config.js"></script>
   <script src="assets/js/vscode-app.js"></script>
 </body>
