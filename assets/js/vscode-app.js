@@ -299,15 +299,25 @@
       case "projects":
         appendTerminalText(
           "SmashUp (Ongoing Project):\n" +
-          "  Repository: https://github.com/habeeiiyy/SmashUp\n" +
-          "  Stack: Django, Python, PostgreSQL, REST APIs, Celery, Redis, Docker, AI Triage\n" +
-          "  Overview: A backend-focused project management and issue tracking system built with Django, featuring AI-powered issue triage.\n" +
-          "  Key Features:\n" +
-          "    • Full project management and issue lifecycle tracking\n" +
-          "    • AI-powered triage: auto-classifying priority, category, and suggested assignees\n" +
-          "    • Background task workers with Celery and caching via Redis"
+          "  Repository:  https://github.com/habeeiiyy/SmashUp\n" +
+          "  Stack:       Django, Python, PostgreSQL, REST APIs, Celery, Redis, Docker, AI Triage\n" +
+          "  Overview:    A backend-focused project management and issue tracking system built with Django, featuring AI-powered issue triage.\n" +
+          "  Recognition: Selected for XERJ Public Corpus Hub (github.com/xerj-org/xerj) as a verified code reference.\n" +
+          "  Proof:       assets/img/email_smashup.png\n" +
+          "  Honors:      Won 2nd Prize at National Level Nehru IT Fair 2026."
         );
         window.open("https://github.com/habeeiiyy/SmashUp", "_blank", "noopener,noreferrer");
+        break;
+
+      case "achievements":
+      case "awards":
+        appendTerminalText(
+          "Honors & Recognition:\n" +
+          "  🏆 2nd Prize Winner — National Level Nehru IT Fair 2026\n" +
+          "  ⭐ Selected for XERJ Public Corpus Hub (github.com/xerj-org/xerj) for SmashUp\n" +
+          "  📊 Facts: 20+ Projects Completed • 17+ Clients • 800+ Hours Active Support"
+        );
+        window.switchFile("about.html");
         break;
 
       case "experience":
