@@ -2039,3 +2039,58 @@ select:focus-visible,
     font-size: 24px;
   }
 }
+
+/* Lightweight Location Card (Fast loading on low-bandwidth connections) */
+.location-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 18px;
+}
+
+.location-icon-box {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  background-color: var(--accent-soft);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.location-card-title {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--text-bright);
+  margin-bottom: 2px;
+}
+
+.location-card-sub {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.btn-map-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--accent);
+  font-size: 12.5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.btn-map-link:hover {
+  text-decoration: underline;
+  color: var(--accent-hover);
+}
+

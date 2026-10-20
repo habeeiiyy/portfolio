@@ -10,7 +10,7 @@
   <link rel="canonical" href="https://habeeiiyy.in/">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Habeeb P - Python Django & React Full Stack Developer">
+  <meta property="og:title" content="Habeeb P - Python Django &amp; React Full Stack Developer">
   <meta property="og:description" content="Scalable web solutions powered by Django and React, built for speed and growth.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://habeeiiyy.in/">
@@ -19,10 +19,8 @@
   <!-- Favicon -->
   <link href="assets/img/fav.webp" rel="icon" type="image/webp">
 
-  <!-- Bootstrap Icons -->
+  <!-- Bootstrap Icons & VS Code Theme (Ultra-fast, minimal payload) -->
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
-
-  <!-- VS Code Theme Stylesheet -->
   <link href="assets/css/vscode-theme.css" rel="stylesheet">
 </head>
 
@@ -36,28 +34,28 @@
     <!-- Top Title Bar -->
     <header class="vscode-titlebar" aria-label="Visual Studio Code Title Bar">
       <div class="titlebar-left">
-        <button type="button" class="mobile-menu-toggle" aria-label="Toggle Explorer Navigation">
+        <button type="button" class="mobile-menu-toggle" onclick="window.toggleMobileSidebar()" aria-label="Toggle Explorer Navigation">
           <i class="bi bi-list" aria-hidden="true"></i>
         </button>
-        <span class="vscode-logo" title="Visual Studio Code" aria-hidden="true">
+        <button type="button" class="vscode-logo" onclick="window.switchFile('home.py')" title="Visual Studio Code" style="background:none;border:none;cursor:pointer;" aria-label="Home">
           <i class="bi bi-code-slash"></i>
-        </span>
+        </button>
         <nav class="titlebar-menus" aria-label="Window Menu">
-          <button type="button" class="titlebar-menu-item" onclick="switchFile('home.py')">File</button>
-          <button type="button" class="titlebar-menu-item" onclick="switchFile('about.html')">Edit</button>
-          <button type="button" class="titlebar-menu-item" onclick="switchFile('skills.json')">Selection</button>
-          <button type="button" class="titlebar-menu-item" onclick="switchFile('services.py')">View</button>
-          <button type="button" class="titlebar-menu-item" onclick="switchFile('resume.md')">Go</button>
-          <button type="button" class="titlebar-menu-item" onclick="toggleTerminal()">Run</button>
-          <button type="button" class="titlebar-menu-item" onclick="toggleTerminal()">Terminal</button>
-          <button type="button" class="titlebar-menu-item" onclick="switchFile('contact.html')">Help</button>
+          <button type="button" class="titlebar-menu-item" onclick="window.switchFile('home.py')">File</button>
+          <button type="button" class="titlebar-menu-item" onclick="window.switchFile('about.html')">Edit</button>
+          <button type="button" class="titlebar-menu-item" onclick="window.switchFile('skills.json')">Selection</button>
+          <button type="button" class="titlebar-menu-item" onclick="window.switchFile('services.py')">View</button>
+          <button type="button" class="titlebar-menu-item" onclick="window.switchFile('resume.md')">Go</button>
+          <button type="button" class="titlebar-menu-item" onclick="window.toggleTerminal()">Run</button>
+          <button type="button" class="titlebar-menu-item" onclick="window.toggleTerminal()">Terminal</button>
+          <button type="button" class="titlebar-menu-item" onclick="window.switchFile('contact.html')">Help</button>
         </nav>
       </div>
 
       <div class="titlebar-center">
-        <div class="titlebar-search-box" onclick="switchFile('home.py')" role="button" tabindex="0" aria-label="Search or jump to file">
+        <div class="titlebar-search-box" onclick="window.switchFile('home.py')" role="button" tabindex="0" aria-label="Search or jump to file">
           <i class="bi bi-search" aria-hidden="true"></i>
-          <span>habeeb-portfolio &mdash; Visual Studio Code</span>
+          <span>home.py &mdash; habeeb-portfolio</span>
         </div>
       </div>
 
@@ -82,14 +80,14 @@
           <button type="button" id="activity-explorer-btn" class="activity-btn active" title="Explorer (Ctrl+B)" aria-label="Explorer">
             <i class="bi bi-files" aria-hidden="true"></i>
           </button>
-          <button type="button" class="activity-btn" title="Search Files" aria-label="Search" onclick="switchFile('skills.json')">
+          <button type="button" class="activity-btn" title="Search Files" aria-label="Search" onclick="window.switchFile('skills.json')">
             <i class="bi bi-search" aria-hidden="true"></i>
           </button>
-          <button type="button" class="activity-btn" title="Source Control: master branch" aria-label="Source Control" onclick="switchFile('resume.md')">
+          <button type="button" class="activity-btn" title="Source Control: master branch" aria-label="Source Control" onclick="window.switchFile('resume.md')">
             <i class="bi bi-git" aria-hidden="true"></i>
             <span class="activity-badge">1</span>
           </button>
-          <button type="button" class="activity-btn" title="Services & Extensions" aria-label="Services" onclick="switchFile('services.py')">
+          <button type="button" class="activity-btn" title="Services &amp; Extensions" aria-label="Services" onclick="window.switchFile('services.py')">
             <i class="bi bi-grid-fill" aria-hidden="true"></i>
           </button>
           <button type="button" id="activity-terminal-btn" class="activity-btn" title="Interactive Terminal (Ctrl+`)" aria-label="Terminal">
@@ -104,7 +102,7 @@
           <a href="https://github.com/habeeiiyy" target="_blank" rel="noopener noreferrer" class="activity-btn" title="Habeeb on GitHub" aria-label="GitHub Profile">
             <i class="bi bi-github" aria-hidden="true"></i>
           </a>
-          <button type="button" id="activity-settings-btn" class="activity-btn" title="Theme & Settings" aria-label="Settings">
+          <button type="button" id="activity-settings-btn" class="activity-btn" title="Theme &amp; Settings" aria-label="Settings">
             <i class="bi bi-gear" aria-hidden="true"></i>
           </button>
         </div>
@@ -118,7 +116,7 @@
         </div>
 
         <div class="sidebar-content">
-          <div class="explorer-section-title">
+          <div class="explorer-section-title" onclick="window.toggleSidebarDesktop()">
             <i class="bi bi-chevron-down" aria-hidden="true"></i>
             <span>HABEEB-PORTFOLIO</span>
           </div>
@@ -175,40 +173,40 @@
 
         <!-- Tabs Bar -->
         <div class="vscode-tabs-bar" role="tablist" aria-label="Editor Tabs">
-          <button type="button" class="editor-tab active" data-file="home.py" role="tab" aria-selected="true" id="tab-home">
+          <button type="button" class="editor-tab active" data-file="home.py" role="tab" aria-selected="true">
             <i class="bi bi-filetype-py file-icon icon-py" aria-hidden="true"></i>
             <span>home.py</span>
-            <span class="tab-close" title="Close" aria-label="Close tab">&times;</span>
+            <span class="tab-close" title="Close tab">&times;</span>
           </button>
-          <button type="button" class="editor-tab" data-file="about.html" role="tab" aria-selected="false" id="tab-about">
+          <button type="button" class="editor-tab" data-file="about.html" role="tab" aria-selected="false">
             <i class="bi bi-filetype-html file-icon icon-html" aria-hidden="true"></i>
             <span>about.html</span>
-            <span class="tab-close" title="Close" aria-label="Close tab">&times;</span>
+            <span class="tab-close" title="Close tab">&times;</span>
           </button>
-          <button type="button" class="editor-tab" data-file="resume.md" role="tab" aria-selected="false" id="tab-resume">
+          <button type="button" class="editor-tab" data-file="resume.md" role="tab" aria-selected="false">
             <i class="bi bi-filetype-md file-icon icon-md" aria-hidden="true"></i>
             <span>resume.md</span>
-            <span class="tab-close" title="Close" aria-label="Close tab">&times;</span>
+            <span class="tab-close" title="Close tab">&times;</span>
           </button>
-          <button type="button" class="editor-tab" data-file="skills.json" role="tab" aria-selected="false" id="tab-skills">
+          <button type="button" class="editor-tab" data-file="skills.json" role="tab" aria-selected="false">
             <i class="bi bi-filetype-json file-icon icon-json" aria-hidden="true"></i>
             <span>skills.json</span>
-            <span class="tab-close" title="Close" aria-label="Close tab">&times;</span>
+            <span class="tab-close" title="Close tab">&times;</span>
           </button>
-          <button type="button" class="editor-tab" data-file="services.py" role="tab" aria-selected="false" id="tab-services">
+          <button type="button" class="editor-tab" data-file="services.py" role="tab" aria-selected="false">
             <i class="bi bi-filetype-py file-icon icon-py" aria-hidden="true"></i>
             <span>services.py</span>
-            <span class="tab-close" title="Close" aria-label="Close tab">&times;</span>
+            <span class="tab-close" title="Close tab">&times;</span>
           </button>
-          <button type="button" class="editor-tab" data-file="contact.html" role="tab" aria-selected="false" id="tab-contact">
+          <button type="button" class="editor-tab" data-file="contact.html" role="tab" aria-selected="false">
             <i class="bi bi-filetype-html file-icon icon-html" aria-hidden="true"></i>
             <span>contact.html</span>
-            <span class="tab-close" title="Close" aria-label="Close tab">&times;</span>
+            <span class="tab-close" title="Close tab">&times;</span>
           </button>
-          <button type="button" class="editor-tab" data-file="socials.json" role="tab" aria-selected="false" id="tab-socials">
+          <button type="button" class="editor-tab" data-file="socials.json" role="tab" aria-selected="false">
             <i class="bi bi-filetype-json file-icon icon-json" aria-hidden="true"></i>
             <span>socials.json</span>
-            <span class="tab-close" title="Close" aria-label="Close tab">&times;</span>
+            <span class="tab-close" title="Close tab">&times;</span>
           </button>
         </div>
 
@@ -238,7 +236,6 @@
 
             <!-- ================= VIEW 1: home.py ================= -->
             <section id="view-home" class="tab-view active" role="tabpanel" aria-labelledby="tab-home">
-              
               <div class="code-banner">
                 <span class="syn-cm"># -*- coding: utf-8 -*-</span><br>
                 <span class="syn-cm"># Habeeb P &mdash; Developer Environment Configuration</span><br>
@@ -253,7 +250,7 @@
               <div class="hero-editor-card">
                 <div class="hero-badge">
                   <span class="status-dot"></span>
-                  <span>Available for Projects & Collaboration</span>
+                  <span>Available for Projects &amp; Collaboration</span>
                 </div>
                 <h1 class="hero-title">Habeeb P</h1>
                 <h2 class="hero-subtitle">&lt;Python Django &amp; React Full Stack Developer /&gt;</h2>
@@ -262,19 +259,18 @@
                 </p>
 
                 <div class="hero-actions">
-                  <button type="button" class="btn-vscode-primary" onclick="switchFile('resume.md')">
+                  <button type="button" class="btn-vscode-primary" onclick="window.switchFile('resume.md')">
                     <i class="bi bi-file-earmark-person" aria-hidden="true"></i>
                     <span>View Resume (resume.md)</span>
                   </button>
-                  <button type="button" class="btn-vscode-secondary" onclick="switchFile('services.py')">
+                  <button type="button" class="btn-vscode-secondary" onclick="window.switchFile('services.py')">
                     <i class="bi bi-laptop" aria-hidden="true"></i>
                     <span>Explore Services</span>
                   </button>
-                  <button type="button" class="btn-vscode-secondary" onclick="switchFile('contact.html')">
+                  <button type="button" class="btn-vscode-secondary" onclick="window.switchFile('contact.html')">
                     <i class="bi bi-envelope" aria-hidden="true"></i>
                     <span>Contact Me</span>
                   </button>
-                  <!-- Quick WhatsApp Action -->
                   <button type="button" class="btn-whatsapp-animated" onclick="window.handleWhatsAppContact(event)">
                     <i class="bi bi-whatsapp wa-icon" aria-hidden="true"></i>
                     <span>Let's talk on WhatsApp</span>
@@ -300,27 +296,24 @@
                     <i class="bi bi-shield-check highlight-icon" aria-hidden="true"></i>
                     <div>
                       <div class="highlight-title">Security &amp; Performance</div>
-                      <p class="highlight-text">Keen focus on security foundations and system integrity.</p>
+                      <p class="highlight-text">Keen focus on security foundations and fast loading.</p>
                     </div>
                   </div>
                 </div>
               </div>
-
             </section>
 
             <!-- ================= VIEW 2: about.html ================= -->
             <section id="view-about" class="tab-view" role="tabpanel" aria-labelledby="tab-about">
-              
               <div class="code-banner">
                 <span class="syn-cm">&lt;!-- Profile &amp; Biography: Habeeb P --&gt;</span><br>
                 <span class="syn-tag">&lt;section</span> <span class="syn-attr">id</span>=<span class="syn-str">"about-developer"</span> <span class="syn-attr">class</span>=<span class="syn-str">"full-stack-profile"</span><span class="syn-tag">&gt;</span>
               </div>
 
               <div class="about-grid">
-                <!-- Portrait Card -->
                 <div class="profile-card">
                   <div class="profile-img-frame">
-                    <img src="assets/img/pic1.jpg" alt="Portrait photo of Habeeb, full stack developer" class="profile-img" width="200" height="200" loading="eager">
+                    <img src="assets/img/pic1.jpg" alt="Portrait photo of Habeeb, full stack developer" class="profile-img" width="200" height="200" loading="lazy" decoding="async">
                   </div>
                   <h3 class="profile-name">Habeeb P</h3>
                   <div class="profile-role">Full Stack Developer</div>
@@ -333,7 +326,6 @@
                   </div>
                 </div>
 
-                <!-- Bio & Details Card -->
                 <div class="about-details-card">
                   <h2 class="about-heading">Full Stack Developer</h2>
                   <p class="about-bio" style="font-style: italic; color: var(--accent);">
@@ -370,10 +362,16 @@
                   <p class="about-bio">
                     Hi, I'm a Computer Science student from Kerala with a strong interest in backend and full-stack web development. My primary focus is Python and Django, and I'm actively expanding my skills in React to become a well-rounded full-stack developer. I'm also deeply interested in cybersecurity and enjoy exploring how systems work under the hood. I believe in continuous learning, building practical projects, and improving my problem-solving skills every day. My goal is to become a skilled Python Django + React developer while developing a solid foundation in modern web technologies and security.
                   </p>
+
+                  <div style="margin-top: 20px;">
+                    <button type="button" class="btn-whatsapp-animated" onclick="window.handleWhatsAppContact(event)">
+                      <i class="bi bi-whatsapp wa-icon" aria-hidden="true"></i>
+                      <span>Let's talk on WhatsApp</span>
+                    </button>
+                  </div>
                 </div>
               </div>
 
-              <!-- Facts & Stats Counters -->
               <h2 class="section-h2">
                 <i class="bi bi-bar-chart-line" aria-hidden="true"></i>
                 <span>Facts &amp; Milestones</span>
@@ -392,12 +390,10 @@
                   <div class="stat-label">Hours Of Support</div>
                 </div>
               </div>
-
             </section>
 
             <!-- ================= VIEW 3: resume.md ================= -->
             <section id="view-resume" class="tab-view" role="tabpanel" aria-labelledby="tab-resume">
-              
               <div class="code-banner">
                 <span class="syn-cm"># Habeeb P &mdash; Curriculum Vitae</span><br>
                 <span class="syn-cm">&gt; Self-driven full stack developer with hands-on experience building real-world web applications.</span>
@@ -418,6 +414,13 @@
                     <span><i class="bi bi-envelope" aria-hidden="true"></i> <a href="mailto:habeebdeveloper.india@gmail.com" style="color: var(--accent); text-decoration: none;">habeebdeveloper.india@gmail.com</a></span>
                     <span><i class="bi bi-github" aria-hidden="true"></i> <a href="https://github.com/habeeiiyy" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none;">github.com/habeeiiyy</a></span>
                   </div>
+                </div>
+
+                <div style="margin: 20px 0;">
+                  <button type="button" class="btn-whatsapp-animated" onclick="window.handleWhatsAppContact(event)">
+                    <i class="bi bi-whatsapp wa-icon" aria-hidden="true"></i>
+                    <span>Let's talk on WhatsApp</span>
+                  </button>
                 </div>
 
                 <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 28px 0;">
@@ -476,14 +479,11 @@
                     </ul>
                   </div>
                 </div>
-
               </div>
-
             </section>
 
             <!-- ================= VIEW 4: skills.json ================= -->
             <section id="view-skills" class="tab-view" role="tabpanel" aria-labelledby="tab-skills">
-              
               <div class="code-banner">
                 <span class="syn-cm">// Technical Proficiencies &amp; Core Competencies</span><br>
                 {<br>
@@ -559,17 +559,15 @@
                   </div>
                 </div>
               </div>
-
             </section>
 
             <!-- ================= VIEW 5: services.py ================= -->
             <section id="view-services" class="tab-view" role="tabpanel" aria-labelledby="tab-services">
-              
               <div class="code-banner">
-                <span class="syn-cm">"""</span><br>
+                <span class="syn-cm">&quot;&quot;&quot;</span><br>
                 <span class="syn-cm">Services Module &mdash; Practical web development services for startups,</span><br>
                 <span class="syn-cm">students, and growing brands who want modern digital products.</span><br>
-                <span class="syn-cm">"""</span>
+                <span class="syn-cm">&quot;&quot;&quot;</span>
               </div>
 
               <h2 class="section-h2">
@@ -588,7 +586,7 @@
                       I build modern websites and web applications using Python, Django, React, and Tailwind CSS for businesses, creators, and personal brands.
                     </p>
                   </div>
-                  <a href="#contact.html" class="service-link" onclick="switchFile('contact.html')">
+                  <a href="#contact.html" class="service-link" onclick="window.switchFile('contact.html')">
                     <span>Discuss project</span>
                     <i class="bi bi-arrow-right" aria-hidden="true"></i>
                   </a>
@@ -604,7 +602,7 @@
                       I create secure backend systems, database-driven features, authentication, and REST APIs that power reliable web products.
                     </p>
                   </div>
-                  <a href="#contact.html" class="service-link" onclick="switchFile('contact.html')">
+                  <a href="#contact.html" class="service-link" onclick="window.switchFile('contact.html')">
                     <span>Discuss project</span>
                     <i class="bi bi-arrow-right" aria-hidden="true"></i>
                   </a>
@@ -620,7 +618,7 @@
                       I design clean, mobile-first interfaces that are fast, readable, and built to guide users smoothly from one action to the next.
                     </p>
                   </div>
-                  <a href="#contact.html" class="service-link" onclick="switchFile('contact.html')">
+                  <a href="#contact.html" class="service-link" onclick="window.switchFile('contact.html')">
                     <span>Discuss project</span>
                     <i class="bi bi-arrow-right" aria-hidden="true"></i>
                   </a>
@@ -636,7 +634,7 @@
                       I help launch projects smoothly with hosting, domain setup, environment configuration, and deployment support on modern platforms.
                     </p>
                   </div>
-                  <a href="#contact.html" class="service-link" onclick="switchFile('contact.html')">
+                  <a href="#contact.html" class="service-link" onclick="window.switchFile('contact.html')">
                     <span>Discuss project</span>
                     <i class="bi bi-arrow-right" aria-hidden="true"></i>
                   </a>
@@ -652,7 +650,7 @@
                       I provide ongoing updates, bug fixes, performance improvements, and content changes to keep your website healthy after launch.
                     </p>
                   </div>
-                  <a href="#contact.html" class="service-link" onclick="switchFile('contact.html')">
+                  <a href="#contact.html" class="service-link" onclick="window.switchFile('contact.html')">
                     <span>Discuss project</span>
                     <i class="bi bi-arrow-right" aria-hidden="true"></i>
                   </a>
@@ -668,18 +666,16 @@
                       I help turn ideas into clear plans, practical features, and launch-ready solutions with ongoing guidance from concept to delivery.
                     </p>
                   </div>
-                  <a href="#contact.html" class="service-link" onclick="switchFile('contact.html')">
+                  <a href="#contact.html" class="service-link" onclick="window.switchFile('contact.html')">
                     <span>Discuss project</span>
                     <i class="bi bi-arrow-right" aria-hidden="true"></i>
                   </a>
                 </div>
               </div>
-
             </section>
 
             <!-- ================= VIEW 6: contact.html ================= -->
             <section id="view-contact" class="tab-view" role="tabpanel" aria-labelledby="tab-contact">
-              
               <div class="code-banner">
                 <span class="syn-cm">&lt;!-- Contact Channels &amp; Client Inquiries --&gt;</span><br>
                 <span class="syn-tag">&lt;form</span> <span class="syn-attr">action</span>=<span class="syn-str">"https://formsubmit.co/ajax/habeebdeveloper.india@gmail.com"</span> <span class="syn-attr">method</span>=<span class="syn-str">"POST"</span><span class="syn-tag">&gt;</span>
@@ -695,11 +691,7 @@
               </p>
 
               <div class="contact-layout">
-
-                <!-- Left Column: Details & WhatsApp Action -->
                 <div class="contact-info-panel">
-                  
-                  <!-- Polished Animated WhatsApp Contact Button Card -->
                   <div class="whatsapp-contact-card">
                     <h3 class="whatsapp-card-title">Instant Chat via WhatsApp</h3>
                     <p class="whatsapp-card-desc">
@@ -743,11 +735,22 @@
                     </div>
                   </div>
 
-                  <!-- Location Map Frame -->
-                  <iframe title="Location map showing Mannarkkad, Kerala" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30639.66160593257!2d76.44033879964314!3d10.989431385990951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba87f7f670aa6ad%3A0x3bb7456986f8bc3b!2sMannarkkad%2C%20Kerala!5e1!3m2!1sen!2sin!4v1782661361249!5m2!1sen!2sin" class="contact-map-frame" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                  <!-- Lightweight Location Card (Fast loading on low-bandwidth internet) -->
+                  <div class="location-card">
+                    <div class="location-icon-box">
+                      <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+                    </div>
+                    <div>
+                      <div class="location-card-title">Mannarkkad, Palakkad, Kerala</div>
+                      <div class="location-card-sub">Available for remote collaborations worldwide and local client meetings</div>
+                      <a href="https://maps.google.com/?q=Mannarkkad,+Palakkad,+Kerala" target="_blank" rel="noopener noreferrer" class="btn-map-link">
+                        <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                        <span>Open Location in Google Maps</span>
+                      </a>
+                    </div>
+                  </div>
                 </div>
 
-                <!-- Right Column: Interactive Contact Form -->
                 <div class="contact-form-panel">
                   <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-bright); margin: 0 0 16px;">
                     Send a Message
@@ -788,14 +791,11 @@
                     </button>
                   </form>
                 </div>
-
               </div>
-
             </section>
 
             <!-- ================= VIEW 7: socials.json ================= -->
             <section id="view-socials" class="tab-view" role="tabpanel" aria-labelledby="tab-socials">
-              
               <div class="code-banner">
                 <span class="syn-cm">// Social Connections &amp; Creative Process</span><br>
                 {<br>
@@ -840,6 +840,13 @@
                 </a>
               </div>
 
+              <div style="margin-top: 10px; margin-bottom: 30px;">
+                <button type="button" class="btn-whatsapp-animated" onclick="window.handleWhatsAppContact(event)">
+                  <i class="bi bi-whatsapp wa-icon" aria-hidden="true"></i>
+                  <span>Let's talk on WhatsApp</span>
+                </button>
+              </div>
+
               <h2 class="section-h2" style="margin-top: 36px;">
                 <i class="bi bi-diagram-3" aria-hidden="true"></i>
                 <span>Creative Workflow</span>
@@ -870,7 +877,6 @@
                   </p>
                 </div>
               </div>
-
             </section>
 
           </div>
@@ -881,9 +887,9 @@
           <div class="panel-header">
             <div class="panel-tabs">
               <button type="button" class="panel-tab active">Terminal</button>
-              <button type="button" class="panel-tab" onclick="switchFile('skills.json')">Problems (0)</button>
-              <button type="button" class="panel-tab" onclick="switchFile('resume.md')">Output</button>
-              <button type="button" class="panel-tab" onclick="switchFile('services.py')">Debug Console</button>
+              <button type="button" class="panel-tab" onclick="window.switchFile('skills.json')">Problems (0)</button>
+              <button type="button" class="panel-tab" onclick="window.switchFile('resume.md')">Output</button>
+              <button type="button" class="panel-tab" onclick="window.switchFile('services.py')">Debug Console</button>
             </div>
             <div class="panel-controls">
               <button type="button" id="panel-close-btn" class="panel-btn" title="Close Panel" aria-label="Close terminal">&times;</button>
@@ -924,12 +930,12 @@ Type 'help' to see available commands or type 'about', 'skills', 'experience', '
       </div>
 
       <div class="statusbar-right">
-        <span class="statusbar-item hide-on-mobile">Ln 12, Col 24</span>
+        <span class="statusbar-item hide-on-mobile">Ln 1, Col 1</span>
         <span class="statusbar-item hide-on-mobile">Spaces: 4</span>
         <span class="statusbar-item hide-on-mobile">UTF-8</span>
         <span class="statusbar-item" id="statusbar-lang">Python</span>
         <span class="statusbar-item hide-on-mobile"><i class="bi bi-check2" aria-hidden="true"></i> Prettier</span>
-        <button type="button" class="statusbar-item" title="Theme Selector" onclick="document.getElementById('theme-selector-modal').classList.add('active')">
+        <button type="button" class="statusbar-item" title="Theme Selector" onclick="window.showThemeModal()">
           <i class="bi bi-palette" aria-hidden="true"></i>
         </button>
       </div>
@@ -976,7 +982,7 @@ Type 'help' to see available commands or type 'about', 'skills', 'experience', '
       </div>
       <div class="modal-footer">
         <button type="button" class="btn-vscode-secondary modal-close-btn">Dismiss</button>
-        <button type="button" class="btn-vscode-primary" onclick="document.getElementById('whatsapp-config-modal').classList.remove('active'); switchFile('contact.html');">
+        <button type="button" class="btn-vscode-primary" onclick="window.closeWhatsAppModal(); window.switchFile('contact.html');">
           <i class="bi bi-envelope" aria-hidden="true"></i>
           <span>Open Contact Form</span>
         </button>
@@ -1025,7 +1031,7 @@ Type 'help' to see available commands or type 'about', 'skills', 'experience', '
     </div>
   </div>
 
-  <!-- Scripts -->
+  <!-- Scripts (Minimal, zero-dependency, ultra-fast) -->
   <script src="assets/js/config.js"></script>
   <script src="assets/js/vscode-app.js"></script>
 </body>

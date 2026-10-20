@@ -1,12 +1,10 @@
 /**
  * VS Code Portfolio Application Controller
- * Handles tab navigation, explorer tree, responsive sidebar, terminal CLI,
- * theme management, contact form AJAX, and secure WhatsApp action.
+ * Optimized for lightning-fast performance, low-bandwidth internet, and responsive UX.
  */
 (function () {
   "use strict";
 
-  // Available file views and metadata
   const FILE_REGISTRY = {
     "home.py": {
       title: "home.py",
@@ -61,29 +59,18 @@
 
   let currentFile = "home.py";
 
-  // Elements
-  const tabsContainer = document.querySelector(".vscode-tabs-bar");
-  const breadcrumbFile = document.getElementById("breadcrumb-current-file");
-  const statusbarLang = document.getElementById("statusbar-lang");
-  const sidebar = document.querySelector(".vscode-sidebar");
-  const sidebarBackdrop = document.querySelector(".sidebar-backdrop");
-  const terminalPanel = document.querySelector(".vscode-panel");
-  const terminalHistory = document.getElementById("terminal-history");
-  const terminalInput = document.getElementById("terminal-input");
-  const whatsappModal = document.getElementById("whatsapp-config-modal");
-  const themeModal = document.getElementById("theme-selector-modal");
-
   /**
-   * Switch the active file / editor view
+   * Switch the active file / editor view (globally accessible)
    */
-  function switchFile(filename, pushState = true) {
-    if (!FILE_REGISTRY[filename]) return;
+  window.switchFile = function (filename, pushState = true) {
+    if (!filename || !FILE_REGISTRY[filename]) return;
     currentFile = filename;
     const fileMeta = FILE_REGISTRY[filename];
 
     // Update Tabs
     document.querySelectorAll(".editor-tab").forEach((tab) => {
       tab.classList.toggle("active", tab.getAttribute("data-file") === filename);
+      tab.setAttribute("aria-selected", tab.getAttribute("data-file") === filename ? "true" : "false");
     });
 
     // Update Explorer items
@@ -92,15 +79,19 @@
     });
 
     // Update Views
-    document.querySelectorAll(".tab-view").forEach((view) => {
+    const allViews = document.querySelectorAll(".tab-view");
+    allViews.forEach((view) => {
       view.classList.remove("active");
     });
+
     const targetView = document.getElementById(fileMeta.viewId);
     if (targetView) {
       targetView.classList.add("active");
     }
 
     // Update Breadcrumbs & Status Bar
+    const breadcrumbFile = document.getElementById("breadcrumb-current-file");
+    const statusbarLang = document.getElementById("statusbar-lang");
     if (breadcrumbFile) breadcrumbFile.textContent = fileMeta.title;
     if (statusbarLang) statusbarLang.textContent = fileMeta.lang;
 
@@ -116,65 +107,78 @@
     }
 
     // Close mobile sidebar if open
-    closeMobileSidebar();
+    window.closeMobileSidebar();
 
     // Update URL hash
     if (pushState) {
-      window.history.replaceState(null, "", "#" + filename);
+      try {
+        window.history.replaceState(null, "", "#" + filename);
+      } catch (e) {
+        // Fallback
+        window.location.hash = filename;
+      }
     }
-  }
+  };
 
   /**
    * Animate skill progress bars
    */
   function animateSkillBars() {
-    setTimeout(() => {
+    requestAnimationFrame(() => {
       document.querySelectorAll(".skill-bar").forEach((bar) => {
         const val = bar.getAttribute("data-value") || "0";
         bar.style.width = val + "%";
       });
-    }, 100);
+    });
   }
 
   /**
    * Mobile Sidebar Handlers
    */
-  function toggleMobileSidebar() {
+  window.toggleMobileSidebar = function () {
+    const sidebar = document.querySelector(".vscode-sidebar");
+    const backdrop = document.querySelector(".sidebar-backdrop");
     if (!sidebar) return;
     const isOpen = sidebar.classList.toggle("mobile-open");
-    if (sidebarBackdrop) {
-      sidebarBackdrop.classList.toggle("mobile-open", isOpen);
+    if (backdrop) {
+      backdrop.classList.toggle("mobile-open", isOpen);
     }
-  }
+  };
 
-  function closeMobileSidebar() {
-    if (!sidebar) return;
-    sidebar.classList.remove("mobile-open");
-    if (sidebarBackdrop) {
-      sidebarBackdrop.classList.remove("mobile-open");
-    }
-  }
+  window.closeMobileSidebar = function () {
+    const sidebar = document.querySelector(".vscode-sidebar");
+    const backdrop = document.querySelector(".sidebar-backdrop");
+    if (sidebar) sidebar.classList.remove("mobile-open");
+    if (backdrop) backdrop.classList.remove("mobile-open");
+  };
 
-  function toggleSidebarDesktop() {
-    if (!sidebar) return;
-    sidebar.classList.toggle("collapsed");
-  }
+  window.toggleSidebarDesktop = function () {
+    const sidebar = document.querySelector(".vscode-sidebar");
+    if (sidebar) sidebar.classList.toggle("collapsed");
+  };
 
   /**
    * Terminal Drawer Controls
    */
-  function toggleTerminal() {
-    if (!terminalPanel) return;
-    terminalPanel.classList.toggle("collapsed");
-    if (!terminalPanel.classList.contains("collapsed") && terminalInput) {
-      terminalInput.focus();
+  window.toggleTerminal = function () {
+    const panel = document.querySelector(".vscode-panel");
+    const input = document.getElementById("terminal-input");
+    if (!panel) return;
+    panel.classList.toggle("collapsed");
+    if (!panel.classList.contains("collapsed") && input) {
+      setTimeout(() => input.focus(), 50);
     }
-  }
+  };
 
-  function closeTerminal() {
-    if (terminalPanel) {
-      terminalPanel.classList.add("collapsed");
-    }
+  window.closeTerminal = function () {
+    const panel = document.querySelector(".vscode-panel");
+    if (panel) panel.classList.add("collapsed");
+  };
+
+  function appendTerminalText(text) {
+    const history = document.getElementById("terminal-history");
+    if (!history) return;
+    history.textContent += text + "\n";
   }
 
   function handleTerminalCommand(cmd) {
@@ -210,7 +214,7 @@
           "Education: Higher Secondary in Computer Science; Brototype Full Stack Training\n" +
           "Building scalable, high-performance web applications with Python, Django, and React."
         );
-        switchFile("about.html");
+        window.switchFile("about.html");
         break;
 
       case "skills":
@@ -223,7 +227,7 @@
           "  • HTML5 (100%)\n" +
           "  • CSS3 (90%)"
         );
-        switchFile("skills.json");
+        window.switchFile("skills.json");
         break;
 
       case "experience":
@@ -234,7 +238,7 @@
           "  • Freelance Full Stack Developer (Present & Available)\n" +
           "    - Independent full-lifecycle client projects and deployments"
         );
-        switchFile("resume.md");
+        window.switchFile("resume.md");
         break;
 
       case "services":
@@ -247,25 +251,28 @@
           "  5. Maintenance & Optimization\n" +
           "  6. Project Planning & Support"
         );
-        switchFile("services.py");
+        window.switchFile("services.py");
         break;
 
       case "contact":
-        appendTerminalText("Opening contact view: email habeebdeveloper.india@gmail.com, WhatsApp, or contact form.");
-        switchFile("contact.html");
+        appendTerminalText("Opening contact view.");
+        window.switchFile("contact.html");
         break;
 
       case "whatsapp":
         appendTerminalText("Triggering WhatsApp action...");
-        window.handleWhatsAppContact();
+        if (typeof window.handleWhatsAppContact === "function") {
+          window.handleWhatsAppContact();
+        }
         break;
 
       case "clear":
-        if (terminalHistory) terminalHistory.textContent = "";
+        const hist = document.getElementById("terminal-history");
+        if (hist) hist.textContent = "";
         return;
 
       case "exit":
-        closeTerminal();
+        window.closeTerminal();
         break;
 
       case "repo":
@@ -283,13 +290,13 @@
             light: "light"
           };
           if (themeMap[args[1].toLowerCase()]) {
-            setTheme(themeMap[args[1].toLowerCase()]);
+            window.setTheme(themeMap[args[1].toLowerCase()]);
             appendTerminalText(`Theme set to ${args[1]}`);
           } else {
             appendTerminalText("Available themes: dark, github, dracula, onedark, light");
           }
         } else {
-          openThemeModal();
+          window.showThemeModal();
         }
         break;
 
@@ -297,21 +304,17 @@
         appendTerminalText(`Command not found: '${command}'. Type 'help' for available commands.`);
     }
 
-    if (terminalPanel) {
-      const body = terminalPanel.querySelector(".panel-body");
+    const panel = document.querySelector(".vscode-panel");
+    if (panel) {
+      const body = panel.querySelector(".panel-body");
       if (body) body.scrollTop = body.scrollHeight;
     }
-  }
-
-  function appendTerminalText(text) {
-    if (!terminalHistory) return;
-    terminalHistory.textContent += text + "\n";
   }
 
   /**
    * Theme Management
    */
-  function setTheme(themeName) {
+  window.setTheme = function (themeName) {
     if (themeName === "dark") {
       document.body.removeAttribute("data-theme");
     } else {
@@ -319,45 +322,41 @@
     }
     try {
       localStorage.setItem("vscode_portfolio_theme", themeName);
-    } catch (e) {
-      // Ignore localStorage failure in sandboxes
-    }
-    closeThemeModal();
-  }
+    } catch (e) {}
+    window.closeThemeModal();
+  };
 
   function loadSavedTheme() {
     try {
       const saved = localStorage.getItem("vscode_portfolio_theme");
       if (saved) {
-        setTheme(saved);
+        window.setTheme(saved);
       }
-    } catch (e) {
-      // Ignore
-    }
+    } catch (e) {}
   }
 
-  function openThemeModal() {
-    if (themeModal) themeModal.classList.add("active");
-  }
+  window.showThemeModal = function () {
+    const modal = document.getElementById("theme-selector-modal");
+    if (modal) modal.classList.add("active");
+  };
 
-  function closeThemeModal() {
-    if (themeModal) themeModal.classList.remove("active");
-  }
+  window.closeThemeModal = function () {
+    const modal = document.getElementById("theme-selector-modal");
+    if (modal) modal.classList.remove("active");
+  };
 
   /**
    * WhatsApp Configuration Modal
    */
   window.showWhatsAppConfigModal = function () {
-    if (whatsappModal) {
-      whatsappModal.classList.add("active");
-    }
+    const modal = document.getElementById("whatsapp-config-modal");
+    if (modal) modal.classList.add("active");
   };
 
-  function closeWhatsAppModal() {
-    if (whatsappModal) {
-      whatsappModal.classList.remove("active");
-    }
-  }
+  window.closeWhatsAppModal = function () {
+    const modal = document.getElementById("whatsapp-config-modal");
+    if (modal) modal.classList.remove("active");
+  };
 
   /**
    * Contact Form AJAX Handling
@@ -379,15 +378,13 @@
       if (submitBtn) submitBtn.disabled = true;
 
       const formData = new FormData(form);
-      const action = form.getAttribute("action") || window.PORTFOLIO_CONFIG.formAction;
+      const action = form.getAttribute("action") || (window.PORTFOLIO_CONFIG && window.PORTFOLIO_CONFIG.formAction);
 
       try {
         const response = await fetch(action, {
           method: "POST",
           body: formData,
-          headers: {
-            "Accept": "application/json"
-          }
+          headers: { "Accept": "application/json" }
         });
 
         if (response.ok) {
@@ -395,12 +392,12 @@
           if (statusSuccess) statusSuccess.style.display = "block";
           form.reset();
         } else {
-          throw new Error("Server responded with status " + response.status);
+          throw new Error("HTTP " + response.status);
         }
       } catch (err) {
         if (statusLoading) statusLoading.style.display = "none";
         if (statusError) {
-          statusError.textContent = "Error sending message. Please email directly at habeebdeveloper.india@gmail.com";
+          statusError.textContent = "Unable to send right now. Please email directly to: habeebdeveloper.india@gmail.com";
           statusError.style.display = "block";
         }
       } finally {
@@ -417,16 +414,15 @@
     document.querySelectorAll(".editor-tab").forEach((tab) => {
       tab.addEventListener("click", function (e) {
         if (e.target.closest(".tab-close")) {
-          // Tab close clicked: if only 1 tab, don't close, else switch to home
           e.preventDefault();
           e.stopPropagation();
-          switchFile("home.py");
+          window.switchFile("home.py");
           return;
         }
         const file = this.getAttribute("data-file");
         if (file) {
           e.preventDefault();
-          switchFile(file);
+          window.switchFile(file);
         }
       });
     });
@@ -437,7 +433,7 @@
         const file = this.getAttribute("data-file");
         if (file) {
           e.preventDefault();
-          switchFile(file);
+          window.switchFile(file);
         }
       });
     });
@@ -445,10 +441,11 @@
     // Mobile Navigation & Sidebar Toggles
     const mobileToggle = document.querySelector(".mobile-menu-toggle");
     if (mobileToggle) {
-      mobileToggle.addEventListener("click", toggleMobileSidebar);
+      mobileToggle.addEventListener("click", window.toggleMobileSidebar);
     }
-    if (sidebarBackdrop) {
-      sidebarBackdrop.addEventListener("click", closeMobileSidebar);
+    const backdrop = document.querySelector(".sidebar-backdrop");
+    if (backdrop) {
+      backdrop.addEventListener("click", window.closeMobileSidebar);
     }
 
     // Activity Bar Explorer Icon
@@ -457,9 +454,9 @@
       activityExplorer.addEventListener("click", function (e) {
         e.preventDefault();
         if (window.innerWidth <= 768) {
-          toggleMobileSidebar();
+          window.toggleMobileSidebar();
         } else {
-          toggleSidebarDesktop();
+          window.toggleSidebarDesktop();
         }
       });
     }
@@ -469,7 +466,7 @@
     if (activityTerminal) {
       activityTerminal.addEventListener("click", function (e) {
         e.preventDefault();
-        toggleTerminal();
+        window.toggleTerminal();
       });
     }
 
@@ -478,22 +475,23 @@
     if (activitySettings) {
       activitySettings.addEventListener("click", function (e) {
         e.preventDefault();
-        openThemeModal();
+        window.showThemeModal();
       });
     }
 
-    // Terminal Panel Controls
+    // Terminal Panel Close
     const terminalCloseBtn = document.getElementById("panel-close-btn");
     if (terminalCloseBtn) {
-      terminalCloseBtn.addEventListener("click", closeTerminal);
+      terminalCloseBtn.addEventListener("click", window.closeTerminal);
     }
 
     const statusbarTerminal = document.getElementById("statusbar-terminal-toggle");
     if (statusbarTerminal) {
-      statusbarTerminal.addEventListener("click", toggleTerminal);
+      statusbarTerminal.addEventListener("click", window.toggleTerminal);
     }
 
-    // Terminal Input Enter key
+    // Terminal Input
+    const terminalInput = document.getElementById("terminal-input");
     if (terminalInput) {
       terminalInput.addEventListener("keydown", function (e) {
         if (e.key === "Enter") {
@@ -507,8 +505,8 @@
     // Modal Close Handlers
     document.querySelectorAll(".modal-close-btn").forEach((btn) => {
       btn.addEventListener("click", function () {
-        closeWhatsAppModal();
-        closeThemeModal();
+        window.closeWhatsAppModal();
+        window.closeThemeModal();
       });
     });
 
@@ -516,30 +514,27 @@
     document.querySelectorAll(".theme-option-btn").forEach((btn) => {
       btn.addEventListener("click", function () {
         const theme = this.getAttribute("data-theme");
-        if (theme) setTheme(theme);
+        if (theme) window.setTheme(theme);
       });
     });
 
     // Keyboard Shortcuts
     document.addEventListener("keydown", function (e) {
-      // ESC closes modals and mobile sidebar
       if (e.key === "Escape") {
-        closeWhatsAppModal();
-        closeThemeModal();
-        closeMobileSidebar();
+        window.closeWhatsAppModal();
+        window.closeThemeModal();
+        window.closeMobileSidebar();
       }
-      // Ctrl + ` (backtick) toggles terminal
       if (e.ctrlKey && e.key === "`") {
         e.preventDefault();
-        toggleTerminal();
+        window.toggleTerminal();
       }
-      // Ctrl + B toggles sidebar
       if (e.ctrlKey && (e.key === "b" || e.key === "B")) {
         e.preventDefault();
         if (window.innerWidth <= 768) {
-          toggleMobileSidebar();
+          window.toggleMobileSidebar();
         } else {
-          toggleSidebarDesktop();
+          window.toggleSidebarDesktop();
         }
       }
     });
@@ -548,7 +543,7 @@
     window.addEventListener("hashchange", function () {
       const hash = window.location.hash.replace("#", "");
       if (hash && FILE_REGISTRY[hash]) {
-        switchFile(hash, false);
+        window.switchFile(hash, false);
       }
     });
   }
@@ -562,20 +557,26 @@
       return hash;
     }
     const path = window.location.pathname;
-    if (path.includes("about.html")) return "about.html";
-    if (path.includes("resume.html")) return "resume.md";
-    if (path.includes("services.html")) return "services.py";
-    if (path.includes("contact.html")) return "contact.html";
-    if (path.includes("starter-page.html")) return "socials.json";
+    if (path.endsWith("about.html")) return "about.html";
+    if (path.endsWith("resume.html")) return "resume.md";
+    if (path.endsWith("services.html")) return "services.py";
+    if (path.endsWith("contact.html")) return "contact.html";
+    if (path.endsWith("starter-page.html")) return "socials.json";
     return "home.py";
   }
 
-  // Initialize
-  document.addEventListener("DOMContentLoaded", function () {
+  // Initialize immediately or on DOM ready
+  function init() {
     loadSavedTheme();
     setupContactForm();
     initEventListeners();
     const initialFile = determineInitialFile();
-    switchFile(initialFile, false);
-  });
+    window.switchFile(initialFile, false);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
 })();
