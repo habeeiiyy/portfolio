@@ -57,7 +57,7 @@
   --titlebar-h: 36px;
   --activitybar-w: 48px;
   --sidebar-w: 240px;
-  --tabsbar-h: 36px;
+  --tabsbar-h: 42px;
   --breadcrumbs-h: 26px;
   --statusbar-h: 24px;
 }
@@ -561,10 +561,10 @@ select:focus-visible,
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 0 14px;
+  padding: 0 16px;
   background-color: var(--tab-inactive-bg);
   color: var(--tab-inactive-text);
-  font-size: 13px;
+  font-size: 13.5px;
   border-right: 1px solid var(--border-color);
   border-top: 2px solid transparent;
   cursor: pointer;
@@ -2128,6 +2128,17 @@ select:focus-visible,
   }
   .statusbar-right .hide-on-mobile {
     display: none;
+  }
+  .statusbar-recruiter-pill {
+    display: none !important;
+  }
+  .vscode-tabs-bar {
+    height: 44px;
+    min-height: 44px;
+  }
+  .editor-tab {
+    padding: 0 16px;
+    font-size: 13.5px;
   }
 }
 
