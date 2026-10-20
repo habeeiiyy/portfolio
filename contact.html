@@ -19,7 +19,12 @@
   <!-- Fonts: preconnect + only the weights actually used -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;500;600;700&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://formsubmit.co" crossorigin>
+  <link rel="preconnect" href="https://www.google.com" crossorigin>
+  <link rel="dns-prefetch" href="https://formsubmit.co">
+  <link rel="dns-prefetch" href="https://www.google.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;500;600;700&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -57,8 +62,8 @@
       <div class="header-social-links">
         <a href="https://twitter.com/habeeiiyy" target="_blank" rel="noopener noreferrer" class="twitter" aria-label="Twitter" title="Twitter"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
         <a href="https://github.com/habeeiiyy" target="_blank" rel="noopener noreferrer" class="github" aria-label="GitHub" title="GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
-        <a href="https://www.instagram.com/habeeiiyy" target="_blank" rel="noopener noreferrer" class="instagram" aria-label="Instagram" title="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
         <a href="https://www.linkedin.com/in/habeeiiyy" target="_blank" rel="noopener noreferrer" class="linkedin" aria-label="LinkedIn" title="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+        <a href="https://wa.me/919497844660" target="_blank" rel="noopener noreferrer" class="whatsapp" aria-label="WhatsApp" title="WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
       </div>
 
     </div>
@@ -91,15 +96,23 @@
                 <i class="bi bi-telephone flex-shrink-0" aria-hidden="true"></i>
                 <div>
                   <h3>Call</h3>
-                  <p><a href="tel:+919497844660">+91 9497844660</a></p>
+                  <p><a href="tel:+919497844660" data-contact="phone">+91 9497844660</a></p>
                 </div>
               </div><!-- End Info Item -->
 
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="350" class="info-item-whatsapp">
+                <i class="bi bi-whatsapp flex-shrink-0" aria-hidden="true"></i>
+                <div>
+                  <h3>WhatsApp</h3>
+                  <p><a href="https://wa.me/919497844660" data-contact="whatsapp" class="btn-whatsapp">Chat on WhatsApp</a></p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400" class="info-item-email">
                 <i class="bi bi-envelope flex-shrink-0" aria-hidden="true"></i>
                 <div>
                   <h3>Email me</h3>
-                  <p><a href="mailto:habeebdeveloper.india@gmail.com">habeebdeveloper.india@gmail.com</a></p>
+                  <p><a href="mailto:habeebdeveloper.india@gmail.com" data-contact="email" class="btn-email">habeebdeveloper.india@gmail.com</a></p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -162,9 +175,9 @@
       </div>
       <div class="social-links d-flex justify-content-center">
         <a href="https://twitter.com/habeeiiyy" target="_blank" rel="noopener noreferrer" class="twitter" aria-label="Twitter" title="Twitter"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
-        <a href="https://www.instagram.com/habeeiiyy" target="_blank" rel="noopener noreferrer" class="instagram" aria-label="Instagram" title="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
         <a href="https://www.linkedin.com/in/habeeiiyy" target="_blank" rel="noopener noreferrer" class="linkedin" aria-label="LinkedIn" title="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
-        <a href="https://github.com/habeeiiyy" target="_blank" rel="noopener noreferrer" class="github" aria-label="GitHub" title="GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
+        <a href="https://github.com/habeeiiyy" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
+        <a href="https://wa.me/919497844660" target="_blank" rel="noopener noreferrer" class="whatsapp" aria-label="WhatsApp" title="WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
       </div>
     </div>
 
@@ -172,7 +185,13 @@
 
   <button type="button" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Scroll to top"><i class="bi bi-arrow-up-short" aria-hidden="true"></i></button>
 
-  <div id="preloader"></div>
+    <!-- Floating WhatsApp contact button -->
+  <div class="fab-whatsapp" aria-label="Chat on WhatsApp">
+    <a href="https://wa.me/919497844660" target="_blank" rel="noopener noreferrer" class="fab-btn" title="Chat on WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
+    <span class="fab-label">Chat on WhatsApp</span>
+  </div>
+
+<div id="preloader"></div>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
@@ -185,6 +204,7 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js" defer></script>
 
   <!-- Main JS File -->
+  <script src="assets/js/config.js" defer></script>
   <script src="assets/js/main.js" defer></script>
 
 </body>
