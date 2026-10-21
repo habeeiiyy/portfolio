@@ -2100,6 +2100,11 @@ select:focus-visible,
   .mobile-menu-toggle {
     display: block;
   }
+  .vscode-logo {
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+  }
   .vscode-activitybar {
     display: none;
   }
