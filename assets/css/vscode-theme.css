@@ -306,10 +306,16 @@ select:focus-visible,
   background: none;
   border: none;
   color: var(--text-bright);
-  font-size: 18px;
+  font-size: 22px;
   cursor: pointer;
-  padding: 4px 8px;
-  border-radius: 4px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
 }
 
 .titlebar-controls {
